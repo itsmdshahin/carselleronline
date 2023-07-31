@@ -1,0 +1,115 @@
+.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Add box shadow here */
+    margin: 100px;
+    padding: 100px;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin: 10px;
+        width: 100%;
+        /* Change direction for smaller screens */
+    }
+
+    .containerdiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Adjust submit width for smaller screens */
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 20px;
+            width: 100%;
+            /* Change direction for smaller screens */
+        }
+    }
+
+    .froms {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        // /* Adjust submit width for smaller screens */
+        // @media (max-width: 768px) {
+        //     flex-direction: column;
+        //     /* Change direction for smaller screens */
+        // }
+
+        .column {
+            display: flex;
+            flex-direction: row;
+
+            /* Adjust submit width for smaller screens */
+            @media (max-width: 768px) {
+                flex-direction: column;
+                /* Change direction for smaller screens */
+            }
+
+            label {
+                color: #151F28;
+                margin: 5px;
+                padding: 10px;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+
+                /* Adjust label width for smaller screens */
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+            }
+
+            input {
+                width: 100%;
+                margin: 15px;
+                padding: 15px;
+                color: #000000;
+                // display: flex; 
+                border: 1px solid #f35405;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: rgb(250, 175, 82);
+
+                /* Adjust input width for smaller screens */
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .submit {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+        Button {
+            padding: 10px 100px;
+            color: #ffffff;
+            font-weight: bold;
+            background-color: green;
+            border-radius: 5px;
+            border-color: rgb(250, 175, 82);
+
+            &:hover {
+                background-color: rgb(18, 117, 18);
+                border-color: rgb(255, 255, 255);
+            }
+
+        }
+
+
+    }
+
+
+
+}

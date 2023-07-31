@@ -1,0 +1,35 @@
+@import "../../styles/variable.scss";
+
+.menu{
+    //  background-color: $vdark-bg;
+    // border: 1px solid $soft-bg;
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom:20px;
+    }
+    .title{
+        font-size: 12px;
+        font-weight: 200;
+        color: $soft-color;
+        text-transform: uppercase;
+    }
+    .listitem{
+        display: flex;
+       align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        &:hover{
+            // background-color: $soft-bg;
+            background-color: rgb(173, 177, 179);
+            color: $vdark-bg;
+        }
+    }
+    .icon{
+        color: $amriacolor;
+    }
+
+
+}

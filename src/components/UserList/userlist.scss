@@ -1,0 +1,21 @@
+.userlist{
+    align-items: center;
+    justify-content: center;
+    h2{ 
+      text-align: center;
+      margin-bottom: 20px;  
+    }
+    Table{
+        width: 100%;
+        height: 100%;
+    }
+    Table, tr, th, td{
+        border: 1px solid #fff;  
+        justify-content: center;
+        align-items: center;
+        
+
+        
+    }
+    
+}

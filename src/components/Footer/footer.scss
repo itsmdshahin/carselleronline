@@ -1,0 +1,16 @@
+.footer{
+    //background-color: rgb(38, 143, 111);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span{
+        &:first-child{
+            font-weight: bold;
+        }
+
+        &:last-child{
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    // position: relative;
+    // padding-top: 30%;
+    // margin-left: 40%;
+
+    // margin-top: 50%;
+    /* Adjust submit width for smaller screens */
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+    
+    Button{
+        margin: 20px;
+        padding: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        color: #ffffff;
+        font-weight: bold;
+        background-color: green;
+
+        border-radius: 5px;
+
+        border-color:rgb(250, 175, 82);
+
+
+        &:hover{
+            background-color: rgb(18, 117, 18);
+            border-color:rgb(255, 255, 255);
+
+        }
+    }
+
+
+}
