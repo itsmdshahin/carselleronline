@@ -16,6 +16,7 @@ import Transcation from "./pages/Transcation/Transcation";
 import Allcar from "./pages/Allcar/Allcar";
 import AddaCar from "./pages/AddaCar/AddaCar";
 import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
   
   function Admin() {
   
@@ -78,6 +79,10 @@ import Login from "./components/Login/Login";
       {
         path:"/Login",
         element:<Login />
+      },
+      {
+        path:"/Register",
+        element:<Register />
       },
  
     ]);

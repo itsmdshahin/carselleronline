@@ -1,11 +1,9 @@
-import Admin from "./Admin"; 
-import TabLog from "./components/TabLog/TabLog";
+import Admin from "./Admin";  
 
 function App() {
   return (
     <>
-       {/* <Admin />  */}
-       <TabLog />
+       <Admin /> 
     </>
   )
 }

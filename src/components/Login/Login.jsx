@@ -1,9 +1,12 @@
-import React from 'react';
+import { useState } from 'react';
 import { Button, Tab, Tabs } from 'react-bootstrap';
 import './Login.scss';
 import LOGO from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const [email, setemail] = useState('');
+
   const ConfirmSubmit = () => {
     alert("Submitted ");
   };
@@ -15,39 +18,22 @@ const Login = () => {
           <img width="300px" src={LOGO} alt='img' />
         </div>
 
-        <Tabs
-           defaultActiveKey="profile"
-           id="fill-tab-example"
-           className="mb-3"
-           fill
-        >
-          <Tab eventKey="login" title="Login">
-            <form className="froms">
-              <div className="column">
-                <div className="form" id="div1">
-                  <label>Email :</label>
-                  <input type="email" name="email" id="email" />
-                  <label>Password :</label>
-                  <input type="password" name="password" id="password" />
-                </div>
-              </div>
-            </form>
-          </Tab>
 
-          <Tab eventKey="register" title="Register">
-            <form className="froms">
-              <div className="column">
-                <div className="form" id="div2">
-                  <label>Email :</label>
-                  <input type="email" name="email" id="email" />
-                  <label>Password :</label>
-                  <input type="password" name="password" id="password" />
-                </div>
-              </div>
-            </form>
-          </Tab>
-        </Tabs>
+        <form className="froms">
+          <div className="column">
+            <div className="form" id="div1">
+              <label>Email :</label>
+              <input type="email" name="email" id="email" />
+              <label>Password :</label>
+              <input type="password" name="password" id="password" />
+            </div>
+          </div>
+        </form>
       </div>
+      <div className="Loginurl text-center pt-2">
+        <p className="text-light pt-2">Don't Have An Account?</p> <Link to="../Register">Register now</Link>
+      </div>
+
       <div className="submit" onClick={ConfirmSubmit}>
         <Button>Log-In</Button>
       </div>
