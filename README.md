@@ -1,5 +1,25 @@
 # React + Vite
 
+Install some of command
+npm install 
+
+react-bootstrap bootstrap@4.6.0
+
+npm add sass
+
+npm i react-native-vector-icons
+
+
+npm install react axios
+
+npm add recharts
+https://recharts.org/en-US/examples/LineChartAxisInterval
+
+
+https://mui.com/x/react-data-grid/
+npm install @mui/x-data-grid
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
