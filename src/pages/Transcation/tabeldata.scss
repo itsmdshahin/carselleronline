@@ -1,0 +1,19 @@
+.tabledata {
+
+    background-color: #b15e5e;
+    .datagrid {
+        background: #fff;
+        padding: 20px;
+    }
+
+    .MuiDataGrid-toolbarContainer {
+        flex-direction: row-reverse;
+    }
+
+
+    .action {
+        display: flex;
+        flex-direction: row;
+
+    }
+}

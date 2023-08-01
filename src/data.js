@@ -298,13 +298,43 @@ export const ChartBoxUser ={
       ];
  
       export const rows = [
-        { id: 1, avater: "./assets/profile.png", lastName: 'Snow', firstName: 'Jon', age: 35 , status:true },
-        { id: 2, avater: "./assets/profile.png", lastName: 'Lannister', firstName: 'Cersei', age: 42 ,status:true  },
-        { id: 3, avater: "./assets/profile.png", lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-        { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16, status:true  },
+        { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 , status:true },
+        { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 ,status:true  },
+        { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+        { id: 4, lastName: 'Rahman', firstName: 'Shahinur', age: 16, status:true  },
         { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-        { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+        { id: 6, lastName: 'MOSTAFA', firstName: 'Amira', age: 15 },
         { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 ,status:true  },
         { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
         { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65, status:true  },
+    ];
+
+    export const TransictionData = [
+        {
+            id: 1,
+            seller:'Enas',
+            buyer:'Alex',
+            transiction:'BXB121XBBS',
+            amount:'$10000',
+            date:'25/05/2023',
+            status:true,
+        },
+        {
+            id: 2,
+            name:'Shahin',
+            seller:'Shahin',
+            buyer:'Emon',
+            transiction:'BXB121XBBS',
+            amount:'$250000',
+            date:'12/09/2023',
+        },
+        {
+            id: 3,
+            name:'Amira',
+            seller:'Amira',
+            buyer:'Aryan',
+            transiction:'BXB121XBBS',
+            amount:'$15000',
+            date:'01/08/2023',
+        },
     ];

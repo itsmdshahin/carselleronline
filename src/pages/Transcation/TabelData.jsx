@@ -1,12 +1,12 @@
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import './datatabel.scss';
-import { rows } from '../../data';
+
+import { TransictionData } from '../../data';
 import { Link } from 'react-router-dom';
 import SideLogo from "../../assets/user.png";
 import DELETE from "../../assets/deletelogo.svg";
 import VIEW from "../../assets/delete.svg";
 
-const DataTabel = () => {
+const TabelData = () => {
 
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
@@ -19,38 +19,41 @@ const DataTabel = () => {
             }
         },
         {
-            field: 'firstName',
-            headerName: 'First name',
+            field: 'seller',
+            headerName: 'Seller',
             width: 150,
             editable: true,
         },
         {
-            field: 'lastName',
-            headerName: 'Last name',
+            field: 'buyer',
+            headerName: 'Buyer',
             width: 150,
             editable: true,
         },
         {
-            field: 'age',
-            headerName: 'Age',
+            field: 'transiction',
+            headerName: 'Transction No.',
+            width: 150,
+            editable: true,
+        },
+        {
+            field: 'amount',
+            headerName: 'Amount',
             type: 'number',
             width: 110,
             editable: true,
         },
         {
             field: "status",
-            headerName: "Verified",
+            headerName: "Paid",
             width: 100,
             type: "boolean",
         },
         {
-            field: 'fullName',
-            headerName: 'Full name',
-            description: 'This column has a value getter and is not sortable.',
-            sortable: false,
-            width: 160,
-            valueGetter: (params) =>
-                `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+            field: 'date',
+            headerName: 'Date',
+            width: 150,
+            editable: true,
         },
         {
             field: "actions",
@@ -78,7 +81,7 @@ const DataTabel = () => {
         <div className="datatabel">
             <DataGrid
                 className="datagrid"
-                rows={rows}
+                rows={TransictionData}
                 columns={columns}
                 initialState={{
                     pagination: {
@@ -106,4 +109,4 @@ const DataTabel = () => {
     );
 }
 
-export default DataTabel
+export default TabelData
