@@ -8,41 +8,41 @@ function Menu() {
     <div className="menu">
       <div className="item">
         <spain className="title">Main</spain>
-        <Link to="/" className='listitem'>
+        <Link to="/admin" className='listitem'>
           <FontAwesomeIcon icon={faHome} className='icon' />
           <span>Home Page</span>
         </Link>
-        <Link to="/Profile" className='listitem'>
+        <Link to="/admin/Profile" className='listitem'>
           <FontAwesomeIcon icon={faUser} className='icon' />
           <span>Profile</span>
         </Link>
       </div>
       <div className="item">
         <spain className="title">User info</spain>
-        <Link to="/Users" className='listitem'>
+        <Link to="/admin/Users" className='listitem'>
           <FontAwesomeIcon icon={faUsersCog} className='icon' />
           <span>Users</span>
         </Link>
-        <Link to="/Transaction" className='listitem'>
+        <Link to="/admin/Transaction" className='listitem'>
           <FontAwesomeIcon icon={faMoneyBill} className='icon' />
           <span>Transaction</span>
         </Link>
-        <Link to="/allcar" className='listitem'>
+        <Link to="/admin/allcar" className='listitem'>
           <FontAwesomeIcon icon={faCar} className='icon' />
           <span>All Car</span>
         </Link>
       </div>
       <div className="item">
         <spain className="title">Admin info</spain>
-        <Link to="/addacar" className='listitem'>
+        <Link to="/admin/addacar" className='listitem'>
           <FontAwesomeIcon icon={faAdd} className='icon' />
           <span>Add a Car</span>
         </Link>
-        <Link to="/showallcars" className='listitem'>
+        <Link to="/admin/showallcars" className='listitem'>
           <FontAwesomeIcon icon={faFile} className='icon' />
           <span>Show all Cars</span>
         </Link>
-        <Link to="/Setting" className='listitem'>
+        <Link to="/admin/Setting" className='listitem'>
           <FontAwesomeIcon icon={faCog} className='icon' />
           <span>Setting</span>
         </Link>

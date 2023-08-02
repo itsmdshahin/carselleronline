@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+.nav{
+   .navbar-ul{
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+    // position: absolute;
+    // left: 35%;
+    
+   }
+   .navbar-list{
+    text-decoration: none;
+    font-size:  20px;
+    font-weight: normal ;
+    font-family: 'Abril Fatface', cursive;
+    
+    .nav-link{
+        // font-family: 'Cormorant Garamond', serif;
+        color: #151F28;
+        &:hover,
+        &:active{
+            color: #FAAF52;
+            // text-shadow: 0 0 5px #0d1011,
+            // 0 0 25px #000000,
+            // 0 0 50px #000000,
+            // 0 0 100px #000000;
+        }
+    }
+   }
+}

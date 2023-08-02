@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+
+.footer{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 80px;
+    padding-top: 10%;
+
+    .footerRow{
+        font-size: larger;
+        font-weight: 60px; 
+    }
+    .footername{
+        font-size: 20px;
+    }
+    .textcl{
+        color: #FAAF52;
+        text-decoration: none;
+
+        &:hover{
+            color: #151F28;
+        }
+    }
+}

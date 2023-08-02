@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Bruno+Ace&family=Macondo&family=Monoton&family=Nunito:wght@500;700;900&family=Roboto:wght@100&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+
+.index{
+    margin: 0px;
+    padding: 0px;
+
+.header{
+   /* background-image: url(images/c.jpg) ;
+   height: 100vh;
+    background-size: cover;
+    background-position: center;  */
+    background-color: rgba(255, 255, 255, 0.944);
+    
+    .backgroundimage{
+        text-align: center;
+        padding-top: 15%;
+        margin: 0px;
+        background-image:linear-gradient(to top, rgba(255, 255, 255, 0) 0, #000000 100%), url(images/c.jpg) ;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;  
+
+        h1 {
+            padding-top: 5px;
+            /* font-family: 'Cormorant Garamond', serif; */
+          /* font-weight: 80px; */
+          font-family: 'Abril Fatface', cursive;
+          margin: 0;
+            font-size: 50px;
+            color: #FAAF52;
+            
+            /* text-shadow: 0 0 5px #000000,
+            0 0 25px #000000,
+            0 0 50px #ffffff,
+            0 0 100px #ffffff; */
+
+          }
+          
+          .search-container {
+            /* Center the search container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .formcontainer{
+                margin-top: 4px;
+                margin-bottom: 4px;
+                padding-top: 3px;
+                display: flex;
+                justify-content: center;
+                .formcontainernext{
+                    margin-left: 1rem; // Equivalent to ml-3
+                    width: 75%; // Equivalent to w-75
+                    padding: 0.5rem 1rem; // Equivalent to p-2
+                }
+            }
+          
+          }
+          .downdiv{
+            margin: 25px;
+            align-items: center;
+            justify-content: space-between;
+            //padding-top: 5px;
+            Button{
+                border-radius: 10px;
+                margin: 10px;
+                padding: 10px;
+            }
+          }
+
+      }
+}
+
+.secendheader{
+    h1{
+        /* font-family:'Rock Salt', cursive;    */
+        /* font-family: 'Cormorant Garamond', serif; */
+        font-family: 'Abril Fatface', cursive;
+        font-weight: 80px;
+        padding-top: 10%;
+        color: #FAAF52;
+      }
+      .secondpart{
+        .headerRow{
+            font-size: larger;
+            font-weight: 60px;
+          }
+          .insideRow{
+            color: #FAAF52;
+            font-weight: bolder;
+            a{
+                text-decoration: none;
+                color: #FAAF52;
+                &:hover{
+                    color: #151F28; ;
+                }
+            }
+          }
+        }
+      }
+}
+
+
