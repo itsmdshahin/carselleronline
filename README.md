@@ -2,13 +2,7 @@
 
 Install some of command
 
-npm install 
-npm install react-bootstrap bootstrap@4.6.0
-npm add sass
-npm i react-native-vector-icons
-npm install react axios
-npm add recharts
-npm install @mui/x-data-grid
+npm install react-bootstrap bootstrap@4.6.0 add sass react-native-vector-icons react axios add recharts @mui/x-data-grid
 
 https://recharts.org/en-US/examples/LineChartAxisInterval
 https://mui.com/x/react-data-grid/
