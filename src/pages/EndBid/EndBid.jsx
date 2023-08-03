@@ -1,14 +1,16 @@
-import './preview.scss'
-import Accordion from 'react-bootstrap/Accordion';
-import Header from '../../components/headerPage/header';
-import CarPreview from './CarPreview/CarPreview';
-import Footer from '../../components/Footer/Footer';
+import React from 'react'
+import Footer from '../../components/Footer/Footer'
+import Header from '../../components/headerPage/header'
+import CarPreview from '../PreviewPage/CarPreview/CarPreview'
+import { Accordion } from 'react-bootstrap'
+import './endbid.scss'
 
-const Preview = () => {
+function EndBid() {
     return (
         <>
             <Header />
-            <div className="preview">
+            <div className="endbid">
+                <h2>You sold 2023 Marcedes-Benz CLA 250 to Sahinur for $240</h2>
                 <div className="leftsidebar">
                     <div className="name">
                         <h1>2023 Mercedes-Benz CLA 250</h1>
@@ -120,4 +122,4 @@ const Preview = () => {
     )
 }
 
-export default Preview
+export default EndBid

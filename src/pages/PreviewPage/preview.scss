@@ -1,9 +1,9 @@
 .preview {
     color: #151F28;
 
-    // .clr{
-    //     clear: both;
-    // }
+    .clr{
+        clear: both;
+    }
     @media (max-width: 768px) {
         flex-direction: column;
         margin: 10px;

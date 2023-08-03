@@ -17,6 +17,9 @@ import Register from "./components/Register/Register";
 import Layout from "./components/Layout/Layout";
 import Index from "./pages/Home/Index";
 import Preview from "./pages/PreviewPage/Preview";
+import Bidding from "./pages/Bidding/Bidding";
+import EndBid from "./pages/EndBid/EndBid";
+
 
 function Admin() {
 
@@ -80,7 +83,14 @@ function Admin() {
     {
       path:"/Preview",
       element: <Preview />
-
+    },
+    {
+      path:"/bidding",
+      element:<Bidding />
+    },
+    {
+      path:"/endbid",
+      element:<EndBid />
     }
 
   ]);

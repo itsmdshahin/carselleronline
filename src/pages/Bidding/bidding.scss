@@ -1,0 +1,148 @@
+.bidding {
+    color: #151F28;
+    .headercontainer {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Add box shadow here */
+        margin: 100px;
+        padding: 100px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 10px;
+            width: 100%;
+            /* Change direction for smaller screens */
+        }
+
+        // flex-direction: column;
+        .leftside {
+            color: #151F28;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            //background: #151F28;
+            Button {
+                padding: 10px 100px;
+                color: #ffffff;
+                font-weight: bold;
+                background-color: #151F28;
+                border-radius: 5px;
+                border-color: rgb(250, 175, 82);
+
+                &:hover {
+                    background-color: rgb(250, 175, 82);
+                    border-color: rgb(0, 0, 0);
+                }
+            }
+
+        }
+
+        .rightside {
+            padding: 50px;
+            margin: 10px;
+
+            .cardivtitle {}
+
+            .cardivbody {
+                h4 {
+                    color: #00AC6F;
+                }
+            }
+
+            .cardivfotter {
+                p {
+                    color: #00AC6F;
+                }
+            }
+        }
+    }
+
+    .footercontainer {
+        display: flex;
+        flex-direction: row;
+        // background-color: #5e3c3c;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 10px;
+            width: 100%;
+            /* Change direction for smaller screens */
+        }
+        .bidhistory {
+            // background-color: #534b4b;
+            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin:100px;
+            padding: 100px;
+            width: 50%;
+            flex-direction: column;
+            float: left;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 10px;
+                width: 100%;
+                /* Change direction for smaller screens */
+            }
+
+            .bidtitle {
+                display: flex;
+                justify-content: center;
+            }
+
+            .listitems {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                span {
+                    margin: 10px;
+                }
+            }
+        }
+        .placeoption{
+            // background-color: #e64848;
+            display: flex;
+            float: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin:100px;
+            padding: 100px;
+            width: 30%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 10px;
+                width: 100%;
+                /* Change direction for smaller screens */
+            }
+            .placeabid{
+                margin: 10px;
+                // padding: 10px 100px 10px 100px;
+                input{
+                    margin: 10px;
+                    padding: 10px;
+                    overflow: hidden;
+                }
+            }
+            .btn{
+                margin: 10px;
+                padding: 10px 99px 10px 99px;
+                border-radius: 6px;
+                color: #ffffff;
+                font-weight: bold;
+
+                Button{
+                    background-color: #151F26;;
+                    &:hover{
+                        background-color: #FAAF52;
+                    }
+                }
+            }
+             
+        }
+    }
+}

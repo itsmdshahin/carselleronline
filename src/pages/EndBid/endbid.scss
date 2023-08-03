@@ -1,0 +1,72 @@
+.endbid{
+        color: #151F28;
+        background-color: #e9e0e0;
+        h2{
+            text-align: center;
+        }
+        .clr{
+            clear: both;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 10px;
+            width: 100%;
+            /* Change direction for smaller screens */
+        }
+    
+        .leftsidebar {
+    
+            float: left;
+            width: 70%;
+            // background-color: #d67e7e;
+            margin: 0px;
+            padding: 50px;
+    
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 10px;
+                width: 100%;
+                /* Change direction for smaller screens */
+            }
+    
+            .name {
+                text-align: center;
+            }
+    
+            .vehicalsfeature {
+                display: flex;
+                flex-direction: row;
+                // justify-content: center;
+                justify-content: space-between;
+                .feature1 {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            // .cardetails div{
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //      flex-direction: row;
+    
+            //      span{
+            //         flex-direction: row;
+            //      }
+    
+            // }
+        }
+    
+        .rightsliderbar {
+            width: 30%;
+            float: right;
+            // background-color: #76a6b8;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 10px;
+                width: 100%;
+                /* Change direction for smaller screens */
+            }
+        }
+    
+    
+}
