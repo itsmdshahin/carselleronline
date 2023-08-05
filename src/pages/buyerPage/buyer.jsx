@@ -1,11 +1,12 @@
+import { FaAngleRight, FaStar } from "react-icons/fa"
+import { Footer } from "../../components/headerPage/footer"
+import Header from "../../components/headerPage/header"
 import './buyer.scss';
-import Footer from '../../components/headerPage/footer';
 
-import { FaStar, FaAngleRight } from "react-icons/fa";
-import Header from '../../components/headerPage/header';
-const Buyer = () => {
+ 
+const buyer = () => {
   return (
-    <>
+   <>
       <Header />
 
       <div className='buyer'>
@@ -36,9 +37,11 @@ const Buyer = () => {
           </div>
         </div>
       </div>
+
       <Footer />
-    </>
+  
+   </>
   )
 }
 
-export default Buyer;
+export default buyer

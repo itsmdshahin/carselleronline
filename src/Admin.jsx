@@ -22,7 +22,8 @@ import EndBid from "./pages/EndBid/EndBid";
 import SellMyCar from "./pages/SellMyCar/SellMyCar";
 import ListingPage from "./pages/listingPage/listingPage";
 import Blog from "./pages/Blog/Blog";
-// import Buyer from "./pages/buyerPage/buyer";
+import Buyer from "./pages/buyerPage/buyer";
+import Sold from "./pages/Sold/Sold";
 
 
 function Admin() {
@@ -107,6 +108,14 @@ function Admin() {
     {
       path:"/Blog",
       element:<Blog />
+    },
+    {
+      path:"/buyer",
+      element:<Buyer />
+    },
+    {
+      path:"/sold",
+      element:<Sold />
     }
     // {
     //   path:"/Buyer",

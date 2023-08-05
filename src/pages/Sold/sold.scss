@@ -1,0 +1,145 @@
+.sold{
+    .soldFirst{
+      text-align: center;
+      padding: 20px;
+     .soldh1{
+      font-size: 20px;
+         .icon{
+             color: #FD8440;
+         }
+     }
+    }
+ //    .buyerSecond{
+    
+ //     display: flex;
+ //    justify-content: center;
+ //    gap: 20%;
+ //      .button{
+ //       .btn1{
+ //         padding: 20px 100px;
+ //         background-color: #ff7700f1;
+ //       }
+ //      }
+ //    }
+ .soldSecond {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+   }
+   
+   .button {
+     padding: 30px;
+   }
+   
+   .btn1 {
+     /* Your regular button styles */
+     background-color: #FD8440;
+     color: #ffffff;
+     border: none;
+     border-radius: 4px;
+     padding: 10px 20px;
+     cursor: pointer;
+   }
+   
+ 
+   .soldthird{
+    max-width: auto;
+    height: auto;
+     // padding: 100px;
+     background: rgb(255, 255, 255);
+     margin: 50px;
+     padding: 7px 7px 7px 7px;
+     border-radius: 10px;
+ 
+     .box1{
+         display: block;
+         background-color: #FAAF52;
+     padding: 10px;
+     margin-bottom: 90px;
+     text-align: justify;
+     h1{
+         a{
+             color: #151F28;
+             text-decoration: none;
+             .icon{
+                 float: right;
+                
+              }
+              &:hover{
+                color: #ffffff;
+              }
+         }
+         
+     }
+     p{
+      font-size: large;
+     }
+     }
+     .box2{
+         display: block;
+         background-color:#cac5c1f1;
+     padding: 10px;
+     margin-bottom: 30px;
+     text-align: justify;     
+ 
+     h2{
+         
+         a{
+             color: #151F28;
+             text-decoration: none;
+             .icon{
+                 float: right;
+              }
+              &:hover{
+                color: #ffffff;
+              }
+         }
+         
+     }
+     p{
+      font-size: large;
+     }
+  
+     }
+     .box3{
+         display: block;
+         background-color: #cac5c1f1;
+     padding: 10px;
+     margin-bottom: 30px;
+     text-align: justify;
+     h2{
+         
+         a{
+             color: #151F28;
+             text-decoration: none;
+             .icon{
+                 float: right;
+              }
+              &:hover{
+                color: #ffffff;
+              }
+         }
+         
+     }
+     p{
+      font-size: large;
+     }
+     }
+   }  
+ 
+ 
+   /* Media Query for small screens (e.g., mobile devices) */
+   @media screen and (max-width: 414px) {
+     .button {
+       width: 100%; /* Make the buttons take the full width of the container */
+       margin-bottom: 5px; /* Add some space between buttons */
+     }
+     
+     .btn1 {
+       /* Adjust font size and padding for smaller screens */
+       padding: 8px 16px;
+       font-size: 14px;
+     }
+   }
+ }
