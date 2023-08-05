@@ -22,7 +22,7 @@ const Slider = () => {
                 <div className="search">
                   <input type="text" className="searchTerm" id="Search" placeholder='Search'></input>
                   <button type="submit" className="searchButton">
-                    <i class="fa fa-search"><FaSistrix/> </i>
+                    <p><FaSistrix/> </p>
                   </button>
                 </div>
               </div>
