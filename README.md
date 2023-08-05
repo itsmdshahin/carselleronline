@@ -3,7 +3,13 @@
 Install some of command
 
 npm install react-bootstrap bootstrap@4.6.0 add sass react-native-vector-icons react axios add recharts @mui/x-data-grid
-
+npm install mdbreact
+npm install react-icons --save
+npm i react-router-dom
+npm install react-slick --save
+npm install slick-carousel --save
+npm install react-dropdown  --save
+npm install react-bootstrap bootstrap
 https://recharts.org/en-US/examples/LineChartAxisInterval
 https://mui.com/x/react-data-grid/
 
