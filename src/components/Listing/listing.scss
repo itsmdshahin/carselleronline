@@ -1,0 +1,91 @@
+.listing {
+
+  // color: #151F28;
+  // margin-bottom: 20%;
+  .headerlist {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 100px;
+    font-size: 50px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    color: #FAAF52;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 16px 22px 11px rgba(182, 181, 168, 0.8);
+  }
+
+  .listDiv {
+    display: flex;
+    flex-direction: row;
+
+    // align-items: center;
+    box-shadow: 0 0 10px #151F28;
+    /* Add box shadow here */
+    margin: 8px 160px;
+    margin-bottom: 50px;
+    padding: 60px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin: 10px;
+      width: 100%;
+      /* Change direction for smaller screens */
+    }
+
+
+
+    .listRow {
+      padding: 10px 50px;
+
+      .first {
+        color: #151F28;
+
+        .second {
+          display: flex;
+          flex-direction: row;
+
+          .min {
+            padding-right: 30px;
+          }
+        }
+      }
+
+      .third {
+        padding-top: 20px;
+      }
+
+      .btnrow {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        button {
+          // padding-left: 20px;
+          // padding-right: 20px;
+          padding: 8px 25px;
+          background-color: #FAAF52;
+          cursor: pointer;
+          color: #151F28;
+          border: 1px solid #fa8900;
+          border-radius: 8px;
+
+          &:hover {
+            background-color: #151F28;
+            cursor: pointer;
+            color: #ffffff;
+
+          }
+        }
+
+      }
+
+    }
+
+
+  }
+
+
+}

@@ -1,0 +1,132 @@
+.buyer{
+   .buyerFirst{
+    text-align: center;
+    padding: 20px;
+    .buyerh2{
+      font-size: 20px;
+        .icon{
+            color: #FAAF52;
+        }
+    }
+   }
+
+.buyerSecond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    padding: 40px;
+  }
+  
+  .btn1 {
+    /* Your regular button styles */
+    background-color: #FAAF52;
+    color: #ffffff;
+    border: none;
+    font-size: larger;
+    border-radius: 4px;
+    padding: 0px 70px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #151F28;
+    color: #ffffff;
+    }
+  }
+  
+
+  .buyerthird{
+   max-width: auto;
+   height: auto;
+ 
+    background: rgb(255, 255, 255);
+    margin: 50px;
+    padding: 7px 7px 7px 7px;
+    border-radius: 10px;
+
+    .box1{
+        display: block;
+        background-color: #cac5c1f1;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+    h2{
+        
+        a{
+            color: #151F28;
+            text-decoration: none;
+            .icon{
+                float: right;
+             }
+             &:hover{
+              color: #fff;
+             }
+        }
+        
+    }
+    }
+    .box2{
+        display: block;
+        background-color:#cac5c1f1;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: justify;     
+
+    h2{
+        
+        a{
+            color: #151F28;
+            text-decoration: none;
+            .icon{
+                float: right;
+             }
+             &:hover{
+              color: #fff;
+             }
+        }
+        
+    }
+    
+ 
+    }
+    .box3{
+        display: block;
+        background-color: #cac5c1f1;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+    h2{
+        
+        a{
+            color: #151F28;
+            text-decoration: none;
+            .icon{
+                float: right;
+             }
+             &:hover{
+              color: #fff;
+             }
+        }
+        
+    }
+    }
+  }  
+
+
+  /* Media Query for small screens (e.g., mobile devices) */
+  @media screen and (max-width: 414px) {
+    .button {
+      width: 100%; /* Make the buttons take the full width of the container */
+      margin-bottom: 5px; /* Add some space between buttons */
+    }
+    
+    .btn1 {
+      /* Adjust font size and padding for smaller screens */
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+}

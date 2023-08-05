@@ -1,0 +1,87 @@
+.contact {
+    color: #151F28;
+    text-align: center;
+    padding-top: 10%;
+
+    .contactContainer {
+        display: flex;
+        width: 100%;
+        background-color: #FAAF52;
+        justify-content: center;
+        align-items: center;
+
+        .contactRow {
+
+
+            .contactCol {
+                .contactDiv {
+                    padding: 50px;
+                    // margin: 10px;
+                    h1 {
+                        font-family: 'Abril Fatface', cursive;
+                        padding-top: 50px;
+                        padding-bottom: 50px;
+                        font-size: 40px;
+                        letter-spacing: 2px;
+                        // text-shadow: 16px 22px 11px rgba(215, 235, 224, 0.8);
+                        // text-shadow: 0 0 5px #ffffff,
+                        //     0 0 25px #ffffff,
+                        //     0 0 50px #ffffff,
+                        //     0 0 100px #ffffff;
+                    }
+
+                    .contact1 {
+                        padding: 0px 30px 0px;
+                        margin: 10px;
+                        input {
+                            padding: 8px;
+                            padding-right: 100px;
+                            
+                            border-radius: 5px 0 0 5px;
+
+                        }
+
+                        button {
+                            font-weight: bold;
+                            color: rgb(255, 255, 255);
+                            background-color:  #151F28;
+                            padding: 8px 20px;
+                            border-radius: 0 5px 5px 0;
+                            
+                            &:hover{
+                                background-color: #FAAF52;
+                                color: #151F28;
+                            }
+                        }
+                    }
+
+                }
+
+                .contacticon {
+                    .contacth5 {
+                        font-family: 'Cormorant Garamond', serif;
+                        font-size: 30px;
+                        font-weight: 40px;
+                        color: #151F28;
+                        margin-bottom: 20px;
+                    }
+
+                    .icon {
+                        align-items: center;
+                        font-size: 40px;
+                        color: rgb(255, 255, 255);
+                        padding: 0px 10px 10px 0px;
+                        margin: 10px;
+                        // padding-right: 30px;
+                        &:hover {
+                            color: #151F28;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

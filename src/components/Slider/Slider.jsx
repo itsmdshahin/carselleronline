@@ -6,78 +6,81 @@ import { MDBCol, MDBIcon } from "mdbreact";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import { FaSistrix} from "react-icons/fa";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Slider = () => {
     return (
         <>
-            <div className='index'>
-                <div className='header'>
-                    <div className='backgroundimage'>
-                        <h1 className='header1'>Marketplace to Buy & Sell Car</h1>
-
-                        <div className='search-container'>
-                            <MDBCol md="6">
-                                <form className="formcontainer"> {/* Add the 'd-flex justify-content-center' class */}
-                                    <MDBIcon icon="search" />
-                                    <input className="formcontainernext" type="text" placeholder="Search" aria-label="Search" />
-                                </form>
-                            </MDBCol>
-                        </div>
-
-                        <div className='downdiv pt-5'>
-                            <Button variant="outline-dark" className='m-4'>Sell My Car</Button>{' '}
-                            <Button variant="outline-dark" className='m-4'>Buy New Car</Button>{' '}
-                            <Button variant="outline-dark" className='m-4'>Buy Old Car</Button>{' '}
-                            <Button variant="outline-dark" className='m-4'>Financing</Button>
-                        </div>
-
-                    </div>
+       <div className='index'>
+        <div className='header'>
+          <div className='backgroundimage'>
+           <h1>#1 Marketplace to Buy & Sell Car</h1>
+           
+           <div className='search-container'>  
+              <div className="wrap">
+                <div className="search">
+                  <input type="text" className="searchTerm" id="Search" placeholder='Search'></input>
+                  <button type="submit" className="searchButton">
+                    <i class="fa fa-search"><FaSistrix/> </i>
+                  </button>
                 </div>
+              </div>
+           </div>
+        
+        <div className='buttoncon'>
+        <Button >Sell My Car</Button>
+      <Button >Buy New Car</Button>
+      <Button >Buy Old Car</Button>
+      <Button >Financing</Button>
+        </div>
 
+        </div>
+        </div>
+        
 
-                <div className='secendheader text-center pt-5'>
-                    <h1>Popular Cars</h1>
-                    <div className='secondpart'>
-                        <Container className='pt-5 text-dark'>
-                            <Row className='headerRow'>
-                                <Col>Popular Maker <hr /></Col>
-                                <Col>Popular Crossover <hr /></Col>
-                                <Col>Popular Sedans <hr /></Col>
-                                <Col>Popular Wagon <hr /></Col>
-                            </Row>
-                            <Row className='insideRow pt-2 '>
-                                <Col> <a href="">AUDI</a> </Col>
-                                <Col> <a href="">BMW</a> </Col>
-                                <Col> <a href="">Honda</a></Col>
-                                <Col> <a href="">Totota</a></Col>
-                            </Row>
-                            <Row className='insideRow pt-2 '>
-                                <Col> <a href="">Caddilac</a></Col>
-                                <Col> <a href="">Hyundai</a></Col>
-                                <Col> <a href="">Tesla</a></Col>
-                                <Col> <a href="">Jeep</a></Col>
-                            </Row>
-                            <Row className='insideRow pt-2 '>
-                                <Col> <a href="">Lincoln</a></Col>
-                                <Col> <a href="">Lexus</a></Col>
-                                <Col> <a href="">Maserati</a></Col>
-                                <Col> <a href="">Marcedes</a></Col>
-                            </Row>
-                            <Row className='insideRow pt-2 '>
-                                <Col> <a href="">Subaru</a></Col>
-                                <Col></Col>
-                                <Col></Col>
-                                <Col></Col>
-                            </Row>
-                        </Container>
-                    </div>
-                </div>
+        <div className='secendheader'>
+          <h1>Popular Cars</h1>
+           <div className='secondpart'>
+            <table>
+              <tr>
+                <th>Popular Maker <hr /></th>
+                <th>Popular Crossover <hr /> </th>
+                <th>Popular Sedans <hr /> </th>
+                <th>Popular Wagon <hr /> </th>
+              </tr>
+              <tr>
+                <td><a href="">AUDI</a> </td>
+                <td><a href="">BMW</a></td>
+                <td><a href="">Honda</a></td>
+                <td><a href="">Totota</a></td>
 
+              </tr>
+              <tr>
+                <td><a href="">Caddilac</a></td>
+                <td><a href="">Hyundai</a></td>
+                <td><a href="">Tesla</a></td>
+                <td><a href="">Jeep</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Lincoln</a></td>
+                <td><a href="">Lexus</a></td>
+                <td><a href="">Maserati</a></td>
+                <td><a href="">Marcedes</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><a href="">Subaru</a></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+           </div>
+        </div>
+             
 
-            </div>
-        </>
+      </div>
+     </>
     )
 }
 

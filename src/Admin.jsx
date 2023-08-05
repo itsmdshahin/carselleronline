@@ -19,6 +19,10 @@ import Index from "./pages/Home/Index";
 import Preview from "./pages/PreviewPage/Preview";
 import Bidding from "./pages/Bidding/Bidding";
 import EndBid from "./pages/EndBid/EndBid";
+import SellMyCar from "./pages/SellMyCar/SellMyCar";
+import ListingPage from "./pages/listingPage/listingPage";
+import Blog from "./pages/Blog/Blog";
+// import Buyer from "./pages/buyerPage/buyer";
 
 
 function Admin() {
@@ -91,7 +95,23 @@ function Admin() {
     {
       path:"/endbid",
       element:<EndBid />
+    },
+    {
+      path:"/sellmycar",
+      element:<SellMyCar />
+    },
+    {
+      path:"/Listing",
+      element:<ListingPage />
+    },
+    {
+      path:"/Blog",
+      element:<Blog />
     }
+    // {
+    //   path:"/Buyer",
+    //   element:<Buyer />
+    // }
 
   ]);
   return (

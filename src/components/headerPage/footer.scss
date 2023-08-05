@@ -1,23 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 
 .footer{
+    color: #161E25;
+    display: flex;
+    justify-content: center;
     font-family: 'Abril Fatface', cursive;
     font-weight: 80px;
     padding-top: 10%;
+    justify-content: space-between;
+    flex-direction: column;
+    // background-color: #2d2739;
+    // width: 100%;
+    .footerSecond{
+        // display: flex;
+        // justify-content: center;
+    //    flex-direction: row;
+    // background-color: #413333;
+    width: 100%;
+        table{  
 
-    .footerRow{
-        font-size: larger;
-        font-weight: 60px; 
+          width: 100%;
+           tr{
+      
+            th{
+            
+              font-size: 20px;
+              color: #151F28;
+              padding: 2%;
+            } 
+            td{
+              font-family: 'Abril Fatface', cursive;
+              text-align: center;
+              padding-top: 15px;
+           
+              a{
+                font-size: larger;
+                text-decoration: none;
+                color: #FAAF52;
+            
+                &:hover{
+                  color: #151F28;
+           
+                }
+              }
+              
+            }
+           }
+        }
     }
     .footername{
         font-size: 20px;
+        text-align: center;
+        padding-top: 50px;
+        
     }
-    .textcl{
-        color: #FAAF52;
-        text-decoration: none;
-
-        &:hover{
-            color: #151F28;
-        }
-    }
+  
 }
