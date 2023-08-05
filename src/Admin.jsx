@@ -118,7 +118,7 @@ function Admin() {
       path:"/sold",
       element:<Sold />
     },{
-      path:"/Carvalucation",
+      path:"/Carvaluation",
       element:<Carvalucation />
     }
     // {
