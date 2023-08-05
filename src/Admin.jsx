@@ -24,6 +24,7 @@ import ListingPage from "./pages/listingPage/listingPage";
 import Blog from "./pages/Blog/Blog";
 import Buyer from "./pages/buyerPage/buyer";
 import Sold from "./pages/Sold/Sold";
+import Carvalucation from "./pages/Carvalucation/Carvalucation";
 
 
 function Admin() {
@@ -116,6 +117,9 @@ function Admin() {
     {
       path:"/sold",
       element:<Sold />
+    },{
+      path:"/Carvalucation",
+      element:<Carvalucation />
     }
     // {
     //   path:"/Buyer",

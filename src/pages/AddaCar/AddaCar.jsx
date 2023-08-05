@@ -132,8 +132,8 @@ const AddaCar = () => {
 
                     </div>
                 </form>
-                <div className="submit" onClick={ConfirmSubmit}>
-                    <Button>Submit</Button>
+                <div className="submit" >
+                    <Button onClick={ConfirmSubmit}>Submit</Button>
                 </div>
 
 

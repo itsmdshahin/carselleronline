@@ -1,0 +1,121 @@
+.addacar {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: row;
+    color: #132029;
+    font-weight: bold;
+    background-color: #eec797;
+    h1 {
+        // font-size: 15px;
+        background-color: #eec797;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+
+    p {
+        text-align: left;
+    }
+
+    .froms {
+        display: flex;
+        width: 100%;
+
+        .column {
+            width: 100%;
+            float: left;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+
+            // flex-direction: column;
+            label {
+                float: left;
+                margin: 5px;
+                padding: 10px;
+                width: 40%;
+
+                /* Adjust label width for smaller screens */
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+            }
+
+            input {
+                float: right;
+                width: 50%;
+                margin: 5px;
+                padding: 10px;
+                color: #000000;
+                // display: flex; 
+                border: 1px solid #f35405;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: rgb(250, 175, 82);
+
+                /* Adjust input width for smaller screens */
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+        } 
+       
+    }
+    .submit {
+        background-color:#eec797;
+        // width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        padding: 10px;
+        // position: relative;
+        // padding-top: 30%;
+        // margin-left: 40%;
+
+        // margin-top: 50%;
+        /* Adjust submit width for smaller screens */
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        
+        Button{
+            margin: 20px;
+            padding: 10px;
+            padding-left: 100px;
+            padding-right: 100px;
+            font-weight: bold;
+            color: #ffffff;
+            font-weight: bold;
+            background-color: #132029;
+
+            border-radius: 5px;
+
+            border-color:rgb(250, 175, 82);
+
+
+            &:hover{
+                background-color: rgb(250, 175, 82);
+                border-color:rgb(0, 0, 0);
+                color: #000000;
+                font-weight: bold;
+            }
+        }
+
+        
+
+    } 
+    .thepredictprice{
+        h2{
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }       
+    }
+
+}

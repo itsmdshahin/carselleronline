@@ -12,8 +12,6 @@ const Sold = () => {
                 <div className='soldFirst '>
                     <h5 className='soldh1'><FaStar className='icon' /> You sold 2023 Marcedes-Benz CLA 250 to Sahinur for $240</h5>
                 </div>
-
-
                 <div className='soldthird'>
 
                     <div className='box1'>
