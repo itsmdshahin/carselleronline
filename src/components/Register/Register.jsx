@@ -11,13 +11,48 @@ const Register = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [conpassword, setConPassword] = useState('');
-  const [mobile, setMobile] = useState('');
+  const [mobile, setMobile] = useState(''); 
 
 
-  
+
+
 
   const handleRegister = async () => {
+
+    const fullname_pattern = /[A-Za-z .]{3,20}/
+    const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const password_pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]{8,}$/;
+    const mobile_pattern = /(\+88)?-?01[3-9]\d{8}/
+
+    if (email === "" || password === "" || name === "" || conpassword === "" || mobile === "") {
+      alert("Must Fill-up all form!");
+      window.open("/register");
+    }
+    else if (!email_pattern.test(email)){
+      alert("Email is not Valid");
+      window.open("/register");
+    }
+    else if(!mobile_pattern.test(mobile)){
+      alert("Yuor mobile number is not valid!");
+      window.open("/register");
+    }
+    else if(password !== conpassword ){
+      alert("Password is Not Match!");
+      window.open("/register");
+    }
+    else if(!fullname_pattern.test(name)){
+      alert("Name not Valid");
+      window.open("/register");
+    }
+    else if(!password_pattern.test(password)){
+      alert("Password Must me one Uppercase one lowercase one char. and one special char!");
+      window.open("/register");
+    }
+
     try {
+
+
+
       const response = await fetch('http://localhost:5000/register', {
         method: 'POST',
         headers: {
@@ -59,6 +94,7 @@ const Register = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
+                {/* {errors.name && <span className="error">{errors.name}</span>} */}
                 <label>Email:</label>
                 <input
                   type="email"
@@ -67,6 +103,7 @@ const Register = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {/* {errors.email && <span className="error">{errors.email}</span>} */}
 
                 <label>Password:</label>
                 <input
