@@ -30,20 +30,14 @@ import { useState } from "react";
 
 
 function Admin() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-
-  const handleLogout = () => {
-    // Implement your logout logic here, e.g., clearing the user's session or token
-    setIsLoggedIn(false);
-  };
+ 
   
-  <Nav isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
+ 
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Index />,
+      element: <Index  />,
     },
     {
       path: "/admin",
@@ -92,27 +86,27 @@ function Admin() {
       element: <Register />
     },
     {
-      path: "/home",
+      path: "/home", 
       element: <Home />
     },
     {
-      path: "/Preview",
+      path: "/Preview", 
       element: <Preview />
     },
     {
-      path: "/bidding",
+      path: "/bidding", // most login
       element: <Bidding />
     },
     {
-      path: "/endbid",
+      path: "/endbid", // most login
       element: <EndBid />
     },
     {
-      path: "/sellmycar",
+      path: "/sellmycar", // most login
       element: <SellMyCar />
     },
     {
-      path: "/Listing",
+      path: "/Listing", 
       element: <ListingPage />
     },
     {
@@ -120,14 +114,14 @@ function Admin() {
       element: <Blog />
     },
     {
-      path: "/buyer",
+      path: "/buyer", // most login
       element: <Buyer />
     },
     {
-      path: "/sold",
+      path: "/sold", // most login
       element: <Sold />
     }, {
-      path: "/Carvaluation",
+      path: "/Carvaluation", // most login
       element: <Carvalucation />
     }
     // {
