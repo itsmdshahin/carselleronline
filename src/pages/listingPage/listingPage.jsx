@@ -15,7 +15,7 @@ import { Footer } from "../../components/headerPage/footer";
 const data = [
   {
     id: 1,
-    types: "Mercedes-Benz CLA 250",
+    types: "Mercedes-Benz CLA",
     netprice: "30000",
     year: "2019",
     price: "50,000",
@@ -37,7 +37,7 @@ const data = [
   },
   {
     id: 4,
-    types: "Mercedes-Benz CLA 250",
+    types: "Mercedes-Benz CLA",
     netprice: "30000",
     year: "2015",
     price: "50,000",
@@ -103,7 +103,7 @@ const ListingPage = () => {
 
       <div className='firstPart'>
 
-        <div className='forthPart'>
+        {/* <div className='forthPart'>
           <div>
             <h7><BiBookmarkAlt /> Buy(206)</h7>
           </div>
@@ -118,7 +118,7 @@ const ListingPage = () => {
           </div>
           <div>
             <Dropdown>
-              <Dropdown.Toggle variant="outline-dark rounded-pill" id="dropdown-basic">
+              <Dropdown.Toggle id="dropdown-basic">
                 Sort By
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -128,16 +128,16 @@ const ListingPage = () => {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-        </div>
+        </div> */}
 
         <hr />
-        <div className='secondPart m-5'>
-          <h5> <span><FaRegHandshake /> </span>Get Deal First. 21 Days Before the Rest.</h5>
-          <p> Gain an edge and beat the competition. Did you know? 67% of businesses go under offer within the first 21 days. <a href="">Learn More</a></p>
+        <div className='secondPart '>
+          <h3> <FaRegHandshake className="icon"/>Get Deal First. 21 Days Before the Rest.</h3>
+          <p className="seconpartp"> Gain an edge and beat the competition. Did you know? 67% of businesses go under offer within the first 21 days. <a href="">Learn More</a></p>
 
-          <div className='button p-2'>
-            <button type="button" className="btn btn-dark  rounded-pill"><h6>Get First Access</h6></button>
-            <button type="button" className="btn btn-dark rounded-pill"><h6>View 20 More First Access Listings</h6> </button>
+          <div className='button'>
+            <button type="button" className="bn1 "><h6>Get First Access</h6></button>
+            <button type="button" className="bn1 "><h6>View 20 More First Access Listings</h6> </button>
           </div>
 
           <div className='thirdPart'>
@@ -146,26 +146,30 @@ const ListingPage = () => {
               <Slider {...settings}>
                 {
                   data.map((item) => (
-                    <div className='box text-center'>
-                      <h6 className='p-3'>First Access Ends in <a href="">10days</a></h6>
-                      <button type="button" className="btn btn-dark rounded-pill"><h7>Verified Listing <FaCheck /></h7></button>
-                      <div className='pt-3 text-center'>
-                        <p className='mb-1 text-dark'>Types</p>
-                        <h6>{item.types}</h6>
+                    <div className='box'>
+                      <h6 className="bh6">First Access Ends in <a href="">10days</a></h6>
+                      <div className="boxx">
+                      <button type="button"><h7>Verified Listing <FaCheck /></h7></button>
+                      <div className='box1'>
+                       <div className="box3">
+                       <p className="boxp">Types</p>
+                        <h6 className="boh6">{item.types}</h6>
+                       </div>
+                       <div className="box3">
+                       <p className="boxp">Net Price</p>
+                        <h6 className="boh6">USD ${item.netprice}</h6>
+                       </div>
+                       <div className="box3">
+                       <p className="boxp">Year</p>
+                        <h6 className="boh6">{item.year}</h6>
+                       </div>
+                       <div className="box4">
+                       <h6 className="boh6">USD ${item.price}</h6>
+                       </div>
                       </div>
-                      <div className='pt-2 text-center'>
-                        <p className='mb-1 text-dark'>Net Price</p>
-                        <h6>USD ${item.netprice}</h6>
+                      <div className=' box2'>
+                        <button type="button" className="bt2"><h7>View Listing</h7></button>
                       </div>
-                      <div className='pt-2 text-center'>
-                        <p className='mb-1 text-dark'>Year</p>
-                        <h6>{item.year}</h6>
-                      </div>
-                      <div className='pt-2 text-center'>
-                        <h6>USD ${item.price}</h6>
-                      </div>
-                      <div className=' pt-2 text-center'>
-                        <button type="button" className="col-lg-6 col-md-8 col-sm-12 btn2 btn btn-dark rounded-pill"><h7 className="p-2">View Listing</h7></button>
                       </div>
                     </div>
                   ))
