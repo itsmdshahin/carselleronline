@@ -100,8 +100,12 @@ const Listing = () => {
               </div>
 
               <div className='btnrow'>
-                <button type="button"> <FaRegEyeSlash className='icon' />Watch</button>
-                <button type="button">View Listing</button>
+                <button type="button"> <FaRegEyeSlash className='icon' />
+                  <Link to="/bidding">Bid Now</Link>
+                </button>
+                <button type="button">
+                <Link to="/preview">View Listing</Link>  
+                </button>
               </div>
 
             </div>

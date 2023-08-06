@@ -25,11 +25,20 @@ import Blog from "./pages/Blog/Blog";
 import Buyer from "./pages/buyerPage/buyer";
 import Sold from "./pages/Sold/Sold";
 import Carvalucation from "./pages/Carvalucation/Carvalucation";
+import Nav from "./components/headerPage/navbar/nav";
+import { useState } from "react";
 
 
 function Admin() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
+  const handleLogout = () => {
+    // Implement your logout logic here, e.g., clearing the user's session or token
+    setIsLoggedIn(false);
+  };
+  
+  <Nav isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
 
   const router = createBrowserRouter([
     {
@@ -87,39 +96,39 @@ function Admin() {
       element: <Home />
     },
     {
-      path:"/Preview",
+      path: "/Preview",
       element: <Preview />
     },
     {
-      path:"/bidding",
-      element:<Bidding />
+      path: "/bidding",
+      element: <Bidding />
     },
     {
-      path:"/endbid",
-      element:<EndBid />
+      path: "/endbid",
+      element: <EndBid />
     },
     {
-      path:"/sellmycar",
-      element:<SellMyCar />
+      path: "/sellmycar",
+      element: <SellMyCar />
     },
     {
-      path:"/Listing",
-      element:<ListingPage />
+      path: "/Listing",
+      element: <ListingPage />
     },
     {
-      path:"/Blog",
-      element:<Blog />
+      path: "/Blog",
+      element: <Blog />
     },
     {
-      path:"/buyer",
-      element:<Buyer />
+      path: "/buyer",
+      element: <Buyer />
     },
     {
-      path:"/sold",
-      element:<Sold />
-    },{
-      path:"/Carvaluation",
-      element:<Carvalucation />
+      path: "/sold",
+      element: <Sold />
+    }, {
+      path: "/Carvaluation",
+      element: <Carvalucation />
     }
     // {
     //   path:"/Buyer",
@@ -129,7 +138,11 @@ function Admin() {
   ]);
   return (
     <>
-      <RouterProvider router={router} />
+      
+
+      <RouterProvider 
+        router={router}  
+      />
       {/* <LoginReg /> */}
 
     </>
