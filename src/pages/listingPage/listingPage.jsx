@@ -1,7 +1,6 @@
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Listing from "../../components/Listing/Listing";
 import "./listingPage.scss";
 import { FaRegHandshake, FaCheck } from "react-icons/fa";

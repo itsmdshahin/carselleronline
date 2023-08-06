@@ -3,8 +3,9 @@ import './addacar.scss';
 import { useState } from 'react';
 import Header from '../../components/headerPage/header';
 import { Footer } from '../../components/headerPage/footer';
+import { Link } from 'react-router-dom';
 
-const SellMyCar = () => {
+const Carvalucation = () => {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -60,7 +61,7 @@ const SellMyCar = () => {
             <Header />
             <div className='addacar'>
                 <div className="header">
-                    <h1>Sell My Car</h1>
+                    <h1>Car Valudation</h1>
                 </div>
                 <div >
                     <form className="froms">
@@ -86,14 +87,17 @@ const SellMyCar = () => {
                                 <input type="text" name="vin" id="vin" value={formData.vin} onChange={handleChange} />
                                 <label >Stock number :</label>
                                 <input type="text" name="stocknumber" id="stocknumber" value={formData.stocknumber} onChange={handleChange} />
-                                <label >Fuel type: :</label>
-                                <input type="text" name="fueltype" id="fueltype" value={formData.fueltype} onChange={handleChange} />
 
                             </div>
                         </div>
 
                         <div class="column">
                             <div class="form" id="div1">
+                                <label >Stock number :</label>
+                                <input type="text" name="stocknumber" id="stocknumber" value={formData.stocknumber} onChange={handleChange} />
+                                <label >Fuel type: :</label>
+                                <input type="text" name="fueltype" id="fueltype" value={formData.fueltype} onChange={handleChange} />
+
                                 <label >Gas mileage :</label>
                                 <input type="text" name="gasmilage" id="gasmilage" value={formData.gasmileage} onChange={handleChange} />
                                 <label >Fuel tank size :</label>
@@ -110,31 +114,16 @@ const SellMyCar = () => {
                                 <label >Brand :</label>
                                 <input type="text" name="Brand" id="Brand" value={formData.Brand} onChange={handleChange} />
 
-                                <label>Car Picture:</label>
-                                <input
-                                    type="file"
-                                    name="picture"
-                                    id="picture"
-                                    onChange={handlePictureChange}
-                                />
-                                <label>Car Gallery:</label>
-                                <input
-                                    type="file"
-                                    name="gallery"
-                                    id="gallery"
-                                    multiple
-                                    onChange={handleGalleryChange}
-                                />
-
-                                <label >Car Price :</label>
-                                <input type="text" name="price" id="price" value={formData.price} onChange={handleChange} />
-
                             </div>
-
                         </div>
                     </form>
+                    <div className="thepredictprice">
+                        <h2>The Prediction Price is : $40505 </h2>
+                    </div>
                     <div className="submit" >
-                        <Button onClick={ConfirmSubmit}>Sell Now</Button>
+                        <Button onClick={ConfirmSubmit}>
+                            <Link to="/sellmycar">Sell My Car</Link>
+                        </Button>
                     </div>
 
 
@@ -146,4 +135,4 @@ const SellMyCar = () => {
     )
 }
 
-export default SellMyCar
+export default Carvalucation
