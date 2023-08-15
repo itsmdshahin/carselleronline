@@ -27,6 +27,7 @@ import Sold from "./pages/Sold/Sold";
 import Carvalucation from "./pages/Carvalucation/Carvalucation";
 import Nav from "./components/headerPage/navbar/nav";
 import { useState } from "react";
+import Research from "./components/Research/Research";
 
 
 function Admin() {
@@ -123,11 +124,11 @@ function Admin() {
     }, {
       path: "/Carvaluation", // most login
       element: <Carvalucation />
-    }
-    // {
-    //   path:"/Buyer",
-    //   element:<Buyer />
-    // }
+    },
+    {
+      path: "/research",
+      element: <Research />
+    },
 
   ]);
   return (

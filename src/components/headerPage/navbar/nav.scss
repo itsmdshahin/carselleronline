@@ -26,5 +26,33 @@
             // 0 0 100px #000000;
         }
     }
+
+    .dropdown {
+        display: none; /* Hide dropdown by default */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+        min-width: 150px;
+    
+        .dropdown-link {
+          display: block;
+          padding: 5px 10px;
+          text-decoration: none;
+          color: black;
+    
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+      .navbar-list:hover .dropdown {
+        display: block; /* Show dropdown when parent list item is hovered */
+      }
+
+
    }
 }
