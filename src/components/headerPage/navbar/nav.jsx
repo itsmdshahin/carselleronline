@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import "./nav.scss";
 
-const Nav = ({ isLoggedIn, handleLogout }) => {
-    const [showBuyDropdown, setShowBuyDropdown] = useState(false);
+const Nav = () => {
+    const isLoggedIn = localStorage.getItem('token') !== null;
 
-    const toggleBuyDropdown = () => {
-        setShowBuyDropdown(!showBuyDropdown);
+    const handleLogout = () => {
+        console.log("LOGIN-IN");
+        localStorage.removeItem('token');
     }
+
     return (
         <div className="menuIcon nav">
             <ul className='navbar-ul'>
@@ -32,7 +34,10 @@ const Nav = ({ isLoggedIn, handleLogout }) => {
                             </NavLink>
                         </li>
                         <li className="navbar-list">
-                            <button onClick={handleLogout}>Logout</button>
+                            <NavLink className="nav-link" to="/login" onClick={handleLogout}>
+                                LogOut
+                            </NavLink>
+                            {/* <button onClick={handleLogout}>Logout</button> */}
                         </li>
                     </>
                 ) : (
