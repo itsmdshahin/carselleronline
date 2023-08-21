@@ -24,23 +24,22 @@ import ListingPage from "./pages/listingPage/listingPage";
 import Blog from "./pages/Blog/Blog";
 import Buyer from "./pages/buyerPage/buyer";
 import Sold from "./pages/Sold/Sold";
-import Carvalucation from "./pages/Carvalucation/Carvalucation";
-import Nav from "./components/headerPage/navbar/nav";
-import { useState } from "react";
+import Carvalucation from "./pages/Carvalucation/Carvalucation"; 
 import Research from "./components/Research/Research";
 import UserProfile from "./pages/UserProfile/UserProfile";
 
 
 function Admin() {
-  
-  const isLoggedIn = localStorage.getItem('token') !== null;
 
-  
+  const isLoggedIn = localStorage.getItem('token') !== null;
+  //  const adminToken  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiaWF0IjoxNjkyNjMyMzk2fQ.1-3duBogFh7kFHMeS4LhsNBQyPuru-6cY7m_RwdlIm8";
+  //  const token = localStorage.getItem('token');
+
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Index  />,
+      element: <Index />,
     },
     {
       path: "/admin",
@@ -52,31 +51,31 @@ function Admin() {
         },
         {
           path: "/admin/users",
-          element: !isLoggedIn ? <Login /> : <Users />
+          element: isLoggedIn ? <Users /> : <Login />,
         },
         {
           path: "/admin/profile",
-          element: <Profile />
+          element: isLoggedIn ? <Profile /> : <Login />,
         },
         {
           path: "/admin/Transaction",
-          element: <Transcation />
+          element: isLoggedIn ? <Transcation /> : <Login />,
         },
         {
           path: "/admin/allcar",
-          element: <Allcar />
+          element: isLoggedIn ? <Allcar /> : <Login />,
         },
         {
           path: "/admin/addacar",
-          element: <AddaCar />
+          element: isLoggedIn ? <AddaCar /> : <Login />,
         },
         {
           path: "/admin/showallcars",
-          element: <Allcar />
+          element: isLoggedIn ? <Allcar /> : <Login />,
         },
         {
           path: "/admin/setting",
-          element: <Allcar />
+          element: isLoggedIn ? <Allcar /> : <Login />,
         },
       ]
     },
@@ -86,27 +85,27 @@ function Admin() {
     },
     {
       path: "/Register",
-      element: isLoggedIn ? <Index /> : <Register />
+      element: isLoggedIn ? <Index /> : <Register />,
     },
     {
-      path: "/Preview", 
-      element: !isLoggedIn ? <Login /> :  <Preview />
+      path: "/Preview",
+      element: isLoggedIn ? <Preview /> : <Login />,
     },
     {
       path: "/bidding", // most login
-      element: !isLoggedIn ? <Login /> : <Bidding />
+      element: isLoggedIn ? <Bidding /> : <Login />,
     },
     {
       path: "/endbid", // most login
-      element: !isLoggedIn ? <Login /> : <EndBid />
+      element: isLoggedIn ? <EndBid /> : <Login />,
     },
     {
       path: "/sellmycar", // most login
-      element: !isLoggedIn ? <Login /> : <SellMyCar />
+      element: isLoggedIn ? <SellMyCar /> : <Login />,
     },
     {
-      path: "/Listing", 
-      element: !isLoggedIn ? <Login /> : <ListingPage />
+      path: "/Listing",
+      element: isLoggedIn ? <ListingPage /> : <Login />,
     },
     {
       path: "/Blog",
@@ -114,30 +113,30 @@ function Admin() {
     },
     {
       path: "/buyer", // most login
-      element: !isLoggedIn ? <Login /> : <Buyer />
+      element: isLoggedIn ? <Buyer /> : <Login />,
     },
     {
       path: "/sold", // most login
-      element: <Sold />
+      element: isLoggedIn ? <Sold /> : <Login />
     }, {
       path: "/Carvaluation", // most login
-      element: !isLoggedIn ? <Login /> : <Carvalucation />
+      element: isLoggedIn ? <Carvalucation /> : <Login />,
     },
     {
       path: "/research",
       element: <Research />
     },
     {
-      path:"/profile",
-      element: !isLoggedIn ? <Login /> : <UserProfile />
+      path: "/profile",
+      element: isLoggedIn ? <UserProfile /> : <Login />,
     }
 
   ]);
   return (
     <>
-       
-      <RouterProvider 
-        router={router}  
+
+      <RouterProvider
+        router={router}
       />
       {/* <LoginReg /> */}
 
