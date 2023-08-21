@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+ 
+import { NavLink, useNavigate } from 'react-router-dom'
 import "./nav.scss";
 
 const Nav = () => {
     const isLoggedIn = localStorage.getItem('token') !== null;
-
+    const nagivate = useNavigate();
     const handleLogout = () => {
         console.log("LOGIN-IN");
         localStorage.removeItem('token');
+        nagivate('/');
     }
+    
 
     return (
         <div className="menuIcon nav">
@@ -29,7 +31,7 @@ const Nav = () => {
                 {isLoggedIn ? (
                     <>
                         <li className="navbar-list">
-                            <NavLink className="nav-link" to="/../admin/profile">
+                            <NavLink className="nav-link" to="/profile">
                                 Profile
                             </NavLink>
                         </li>

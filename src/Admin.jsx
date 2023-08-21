@@ -28,12 +28,14 @@ import Carvalucation from "./pages/Carvalucation/Carvalucation";
 import Nav from "./components/headerPage/navbar/nav";
 import { useState } from "react";
 import Research from "./components/Research/Research";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 
 function Admin() {
- 
   
- 
+  const isLoggedIn = localStorage.getItem('token') !== null;
+
+  
 
   const router = createBrowserRouter([
     {
@@ -42,15 +44,15 @@ function Admin() {
     },
     {
       path: "/admin",
-      element: <Layout />,
+      element: isLoggedIn ? <Layout /> : <Login />,
       children: [
         {
           path: "/admin",
-          element: <Home />
+          element: isLoggedIn ? <Home /> : <Login />,
         },
         {
           path: "/admin/users",
-          element: <Users />
+          element: !isLoggedIn ? <Login /> : <Users />
         },
         {
           path: "/admin/profile",
@@ -80,35 +82,31 @@ function Admin() {
     },
     {
       path: "/Login",
-      element: <Login />
+      element: isLoggedIn ? <Index /> : <Login />
     },
     {
       path: "/Register",
-      element: <Register />
-    },
-    {
-      path: "/home", 
-      element: <Home />
+      element: isLoggedIn ? <Index /> : <Register />
     },
     {
       path: "/Preview", 
-      element: <Preview />
+      element: !isLoggedIn ? <Login /> :  <Preview />
     },
     {
       path: "/bidding", // most login
-      element: <Bidding />
+      element: !isLoggedIn ? <Login /> : <Bidding />
     },
     {
       path: "/endbid", // most login
-      element: <EndBid />
+      element: !isLoggedIn ? <Login /> : <EndBid />
     },
     {
       path: "/sellmycar", // most login
-      element: <SellMyCar />
+      element: !isLoggedIn ? <Login /> : <SellMyCar />
     },
     {
       path: "/Listing", 
-      element: <ListingPage />
+      element: !isLoggedIn ? <Login /> : <ListingPage />
     },
     {
       path: "/Blog",
@@ -116,25 +114,28 @@ function Admin() {
     },
     {
       path: "/buyer", // most login
-      element: <Buyer />
+      element: !isLoggedIn ? <Login /> : <Buyer />
     },
     {
       path: "/sold", // most login
       element: <Sold />
     }, {
       path: "/Carvaluation", // most login
-      element: <Carvalucation />
+      element: !isLoggedIn ? <Login /> : <Carvalucation />
     },
     {
       path: "/research",
       element: <Research />
     },
+    {
+      path:"/profile",
+      element: !isLoggedIn ? <Login /> : <UserProfile />
+    }
 
   ]);
   return (
     <>
-      
-
+       
       <RouterProvider 
         router={router}  
       />

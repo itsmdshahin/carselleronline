@@ -53,7 +53,6 @@ const Login = () => {
         }else{
           nagivate('/');
         }
-        
         // Redirect to Admin.jsx if email and password are "admin"
         
       } else {
@@ -74,9 +73,8 @@ const Login = () => {
         <div className="containerdiv">
           <div className="logo">
             <img width="300px" src={LOGO} alt='img' />
-          </div>
-
-
+          </div> 
+          
           <form className="froms">
             <div className="column">
               <div className="form" id="div1">
