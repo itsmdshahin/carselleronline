@@ -160,7 +160,7 @@ export const ChartBoxUser ={
         id:1,
         color:"gold",
         icon: "./assets/user.png",
-        title:"Total Profite",
+        title:"Total Profit",
         dataKey:"users",
         number:"$225,233",
         percentage: 30,

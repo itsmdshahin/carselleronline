@@ -18,15 +18,11 @@ const ChartBox = (props) => {
         <div className="chartbox">
             <div className="boxinfo">
                 <div className='title'>
-                    {/* <img src={Logo} alt="logo" /> */}
-                    {/* <FontAwesomeIcon icon={faUser} className='icon' /> */}
-                    {/* Wrap the title text in a Link */}
+                    
                     <span>{props.title}</span>
 
                 </div>
-                <h1>{props.number}</h1>
-                {/* Remove the incorrect <link> tag */}
-                {/* <link To="/" style={{ color: props.color }}></link> */}
+                <h1>{props.number}</h1> 
                 <Link to="/" style={{ color: props.color }}>
                     <span>View All</span>
                 </Link>

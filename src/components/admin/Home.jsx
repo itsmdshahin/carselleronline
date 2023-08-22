@@ -13,17 +13,19 @@ const Home = () => {
       <div className="box box1">
         <TopBox />
       </div>
+      
+    
+      {/* <div className="box box4">
+        <ChartBox {...ChartBoxUser} />
+      </div> */}
+      <div className="box box5">
+        <Userlist />
+      </div>
       <div className="box box2">
         <ChartBox {...ChartBoxUser} />
       </div>
       <div className="box box3">
         <ChartBox {...Profite} />
-      </div>
-      <div className="box box4">
-        <ChartBox {...ChartBoxUser} />
-      </div>
-      <div className="box box5">
-        <Userlist />
       </div>
       <div className="box box6">
         <ChartBox {...ChartBoxUsers} />

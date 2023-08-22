@@ -31,6 +31,7 @@
 
     .froms {
         display: flex;
+       
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -44,6 +45,7 @@
         .column {
             display: flex;
             flex-direction: row;
+            
 
             /* Adjust submit width for smaller screens */
             @media (max-width: 768px) {

@@ -24,9 +24,16 @@
         grid-column: span 1;
         grid-row: span 2; 
         &:hover {
-            // background-color: rgb(227, 132, 49);
+             background-color: rgb(227, 132, 49);
         }
     }
+    // .box2 {
+    //     grid-column: span 1;
+    //     grid-row: span 1; 
+    //     &:hover {
+    //          background-color: rgb(128, 65, 9);
+    //     }
+    // }
 
     // .box9{
     //     grid-column: span 2;
@@ -35,6 +42,9 @@
     .box4 {
         grid-column: span 1;
         grid-row: span 3;
+        &:hover {
+            background-color: rgb(106, 96, 87);
+       }
     }
 
     .box5 {
@@ -44,7 +54,7 @@
 
     .box6 {
         grid-row: span 1;
-        grid-column: span 1;
+        grid-column: span 4;
     }
     .box7{
         grid-row: span 3;

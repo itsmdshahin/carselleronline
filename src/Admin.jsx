@@ -123,6 +123,10 @@ function Admin() {
     }, {
       path: "/Carvaluation", // most login
       element: <Carvalucation />
+    },
+    {
+      path:"/profile",
+      element:<Profile />
     }
     // {
     //   path:"/Buyer",

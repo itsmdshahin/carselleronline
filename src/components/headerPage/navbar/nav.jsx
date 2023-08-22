@@ -7,10 +7,10 @@ const Nav = ({ isLoggedIn, handleLogout }) => {
         <div className="menuIcon nav">
             <ul className='navbar-ul'>
                 <li className='navbar-list'>
-                    <NavLink className="nav-link" to="/../buyPage/buy">Buy</NavLink>
+                    <NavLink className="nav-link" to="/../listing">Buy</NavLink>
                 </li>
                 <li className='navbar-list'>
-                    <NavLink className="nav-link" to="/../sellPage/sell">Sell</NavLink>
+                    <NavLink className="nav-link" to="/../sellmycar">Sell</NavLink>
                 </li>
                 <li className='navbar-list'>
                     <NavLink className="nav-link" to="/../Blog">Vlog</NavLink>

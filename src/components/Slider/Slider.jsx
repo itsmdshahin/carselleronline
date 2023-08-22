@@ -34,7 +34,7 @@ const Slider = () => {
                 <Link to="/sellmycar">Sell My Car</Link>
               </Button>
               <Button >
-                <Link to="/listing">Buy Band Car</Link>
+                <Link to="/listing">Buy Brand Car</Link>
               </Button>
               <Button >
                 <Link to="/listing">Buy Old Car</Link>
