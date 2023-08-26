@@ -3,7 +3,7 @@ import { NavLink } from 'react-bootstrap'
 import Nav from './navbar/nav'
 import "./header.scss";
 import { Link } from 'react-router-dom';
-
+import { FaAlignJustify } from "react-icons/fa";
 const Header = () => {
   return (
    <div className="mainheader">
@@ -12,6 +12,7 @@ const Header = () => {
       </Link>
       <Nav/>
    
+
     </div>
 
   )

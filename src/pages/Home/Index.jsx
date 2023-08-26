@@ -13,8 +13,15 @@ import { Footer } from '../../components/headerPage/footer';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Index() {
+ 
+  const isLoggedIn = localStorage.getItem('token') !== null;
+
+  
   return (
     <div className="index">
+      {/* {
+        isLoggedIn? (" Login "): (" Login not ")
+      } */}
       <HEADER />
 
       <Slider />

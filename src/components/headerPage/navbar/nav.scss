@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 .nav{
+  display: flex;
+  gap: 20px;
    .navbar-ul{
     list-style: none;
     display: flex;
@@ -26,5 +28,67 @@
             // 0 0 100px #000000;
         }
     }
+
+    .dropdown {
+        display: none; /* Hide dropdown by default */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+        min-width: 150px;
+    
+        .dropdown-link {
+          display: block;
+          padding: 5px 10px;
+          text-decoration: none;
+          color: black;
+    
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+      .navbar-list:hover .dropdown {
+        display: block; /* Show dropdown when parent list item is hovered */
+      }
+
+
    }
+
+   @media screen and (max-width: 768px) {
+    .navbar-ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color:  #FAAF52;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+      
+    }
+
+    
+}
+
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+  
+    
+}
 }

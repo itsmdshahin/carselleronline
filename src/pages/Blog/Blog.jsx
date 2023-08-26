@@ -1,8 +1,14 @@
-import React from 'react'
+import { Footer } from "../../components/headerPage/footer"
+import Header from "../../components/headerPage/header"
 
-function Blog() {
+
+const Blog = () => {
   return (
-    <div>Blog</div>
+    <>
+      <Header />
+      <div>Blog</div>
+      <Footer />
+    </>
   )
 }
 

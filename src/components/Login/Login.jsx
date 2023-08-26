@@ -5,9 +5,11 @@ import LOGO from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import Header from '../headerPage/header';
 import Footer from '../Footer/Footer'; 
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+  const nagivate = useNavigate();
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
   
@@ -44,12 +46,13 @@ const Login = () => {
         // location.href('../../pages/Home/Index.jsx');
         // window.location.href("/");
         // alert('Login Successful!');
+        // console.log(localStorage.setItem('jwtToken', token));
         if(email === "admin" ){
-          window.open("/admin");
+          nagivate('/admin');
+          //window.open("/admin");
         }else{
-          window.open("/");
+          nagivate('/');
         }
-        
         // Redirect to Admin.jsx if email and password are "admin"
         
       } else {
@@ -70,9 +73,8 @@ const Login = () => {
         <div className="containerdiv">
           <div className="logo">
             <img width="300px" src={LOGO} alt='img' />
-          </div>
-
-
+          </div> 
+          
           <form className="froms">
             <div className="column">
               <div className="form" id="div1">

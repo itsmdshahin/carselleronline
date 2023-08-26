@@ -1,5 +1,5 @@
 .addacar {
-
+    //background-color: #5e2c2c;
     h3 {
      }
 
@@ -10,7 +10,8 @@
     .froms {
         display: flex;
         width: 100%;
-
+       // box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 1.0);
+       //background-color: #5e2c2c;
         .column {
             width: 100%;
             float: left;
@@ -42,7 +43,7 @@
                 border: 1px solid #f35405;
                 border-radius: 4px;
                 font-size: 16px;
-                background-color: rgb(250, 175, 82);
+               // background-color: rgb(250, 175, 82);
 
                 /* Adjust input width for smaller screens */
                 @media (max-width: 768px) {
