@@ -3,9 +3,12 @@ import './bidding.scss';
 import { Button } from 'react-bootstrap';
 import CAR from '../../../images/ca6.jpg';
 import Header from '../../components/headerPage/header';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/Footer/Footer'; 
+import BidHistory from './BidHistory';
+import PlaceABid from './PlaceABid';
 
 const Bidding = () => {
+     
     return (
         <>
             <div className="bidding">
@@ -41,49 +44,13 @@ const Bidding = () => {
                 </div>
                 <div className="footercontainer">
 
-                    <div className="bidhistory">
-                        <div className="bidtitle">
-                            <h3>Bidding History</h3>
-                        </div>
-                        <hr />
-                        <div className="listitems">
-                            <span>Bidder 1</span>
-                            <span>$260</span>
-                            <span>2 hours ago</span>
-                        </div>
-                        <hr />
-                        <div className="listitems">
-                            <span>Bidder 2</span>
-                            <span>$160</span>
-                            <span>7 hours ago</span>
-                        </div>
-                        <hr />
-                        <div className="listitems">
-                            <span>Bidder 3</span>
-                            <span>$60</span>
-                            <span>10 hours ago</span>
-                        </div>
-                        <hr />
-                        <p>
-                            <Link to="/bidhistory">View more</Link>
-                        </p>
-                    </div>
-                    <div className="placeoption">
-                        <div className="placetitle">
-                            <h2>Place a bid</h2>
-                        </div>
-                        <div className="placeabid">
-                            <input
-                                type='text'
-                                name='bid'
-                                placeholder='place a bid'
-                            />
-                        </div>
-                        <div className="btn">
-                            <Button>Bid</Button>
+                    {/* Bid History list previews */}
+                    <BidHistory />
 
-                        </div>
-                    </div>
+                    {/* // place a bid page */}
+                    <PlaceABid />
+
+
 
                 </div>
             </div>
