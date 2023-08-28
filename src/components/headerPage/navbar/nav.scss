@@ -67,13 +67,35 @@
         left: 0;
         background-color:  #FAAF52;
         width: 100%;
+        height: 100vh;
         text-align: center;
+      
     }
-
+       
     .navbar-ul.active {
         display: flex;
     }
-
+      
+    .navbar-list{
+      padding-top: 35px;
+      text-decoration: none;
+      font-size:  20px;
+      font-weight: normal ;
+      font-family: 'Abril Fatface', cursive;
+      
+      .nav-link{
+          // font-family: 'Cormorant Garamond', serif;
+          color: #151F28;
+          &:hover,
+          &:active{
+              color: #ffffff;
+              // text-shadow: 0 0 5px #0d1011,
+              // 0 0 25px #000000,
+              // 0 0 50px #000000,
+              // 0 0 100px #000000;
+          }
+      }
+    }  
     .menu-toggle {
         display: block;
         cursor: pointer;

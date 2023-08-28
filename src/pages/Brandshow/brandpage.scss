@@ -1,0 +1,105 @@
+.brandshow{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   padding-top: 20px;
+  
+    .firstbrandshow{
+        .firstbrandshowone{
+            padding: 50px 10px 10px 10px;
+        }
+        .firstbrandshowtwo{
+            padding: 10px 10px 70px 10px ;
+        }
+    }
+
+    .secondbrandshow{
+        font-family: Raleway;
+        background-color: #FAAF52;
+      padding-bottom: 80px;
+
+        .heading {
+            text-align: center;
+            font-size: 2.9em;
+            letter-spacing: 1px;
+            padding: 40px;
+            color: white;
+            font-family: 'Abril Fatface', cursive;
+            font-weight: 100px;
+         
+           
+        }
+        .gallery-image {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          
+           
+              
+            .img-box {
+                box-sizing: content-box;
+                margin: 10px;
+                height: 250px;
+                width: 350px;
+                overflow: hidden;
+                display: inline-block;
+                color: white;
+                position: relative;
+                background-color: white;
+                  
+                img {
+                    height: 250px;
+                    width: 350px;
+                    transform: scale(1.0);
+                    transition: transform 0.4s ease;
+                  }
+    
+                
+                  .transparent-box {
+                    height: 250px;
+                    width: 350px;
+                    background-color: rgba(0, 0, 0, 0);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: background-color 0.3s ease;
+              
+                    .caption {
+                      position: absolute;
+                      bottom: 5px;
+                      left: 20px;
+                      opacity: 0.0;
+                      transition: transform 0.3s ease, opacity 0.3s ease;
+              
+                      p:nth-child(2) {
+                        font-size: 0.8em;
+                      }
+                      .opacity-low {
+                        opacity: 0.5;
+                      }
+                    }
+                  }
+
+
+
+                  &:hover {
+                    cursor: pointer;
+              
+                    img {
+                      transform: scale(1.1);
+                    }
+              
+                    .transparent-box {
+                      background-color: rgba(0, 0, 0, 0.5);
+                    }
+              
+                    .caption {
+                      transform: translateY(-20px);
+                      opacity: 1.0;
+                    }
+                  }
+              }
+          }
+    }
+}

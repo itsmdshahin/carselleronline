@@ -26,6 +26,7 @@ import Sold from "./pages/Sold/Sold";
 import Carvalucation from "./pages/Carvalucation/Carvalucation"; 
 import Research from "./components/Research/Research";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import Brandshow from "./pages/Brandshow/brandshow";
 
 
 function Admin() {
@@ -128,7 +129,11 @@ function Admin() {
     {
       path: "/profile",
       element: isLoggedIn ? <UserProfile /> : <Login />,
-    }
+    },
+    {
+      path: "/Brandshow",
+      element: <Brandshow />
+    },
 
   ]);
   return (
