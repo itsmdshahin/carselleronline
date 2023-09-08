@@ -11,7 +11,7 @@ const Register = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [conpassword, setConPassword] = useState('');
-  const [mobile, setMobile] = useState(''); 
+  const [mobile, setMobile] = useState('');
 
 
 
@@ -28,23 +28,23 @@ const Register = () => {
       alert("Must Fill-up all form!");
       window.open("/register");
     }
-    else if (!email_pattern.test(email)){
+    else if (!email_pattern.test(email)) {
       alert("Email is not Valid");
       window.open("/register");
     }
-    else if(!mobile_pattern.test(mobile)){
+    else if (!mobile_pattern.test(mobile)) {
       alert("Yuor mobile number is not valid!");
       window.open("/register");
     }
-    else if(password !== conpassword ){
+    else if (password !== conpassword) {
       alert("Password is Not Match!");
       window.open("/register");
     }
-    else if(!fullname_pattern.test(name)){
+    else if (!fullname_pattern.test(name)) {
       alert("Name not Valid");
       window.open("/register");
     }
-    else if(!password_pattern.test(password)){
+    else if (!password_pattern.test(password)) {
       alert("Password Must me one Uppercase one lowercase one char. and one special char!");
       window.open("/register");
     }
