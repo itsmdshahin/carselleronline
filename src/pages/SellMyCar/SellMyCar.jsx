@@ -25,11 +25,12 @@ const SellMyCar = () => {
     const [Brand, setBrand] = useState('');
     const [price, setPrice] = useState('');
     const [picture, setPicture] = useState(null);
-    const [gallery, setGallery] = useState(null);
-
+    const [gallery, setGallery] = useState([]);
+ 
 
     const ConfirmSubmit = async () => {
-         
+        
+
         try {
             const response = await fetch('http://localhost:5000/api/sellmycar', {
                 method: 'POST',
@@ -39,7 +40,7 @@ const SellMyCar = () => {
                 body: JSON.stringify({ name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price, picture, gallery }),
             });
             console.log(response.ok);
-            
+
             alert(`Submitted: ${name} ${model} ${response.ok} ${response.status} `);
             if (response.ok) {
                 // Registration successful
@@ -48,7 +49,7 @@ const SellMyCar = () => {
                 // Registration failed
                 console.log(response);
                 alert('Failed to add car!');
-            }   
+            }
         } catch (error) {
             console.error('Error while adding car:', error);
         }
@@ -115,7 +116,7 @@ const SellMyCar = () => {
                                     type="file"
                                     name="picture"
                                     id="picture"
-                                    value={picture} onChange={(e) => setPicture(e.target.value)}
+                                    value={picture} onChange={(e) => setPicture(e.target.files[0])}
                                 />
                                 <label>Car Gallery:</label>
                                 <input
@@ -123,7 +124,7 @@ const SellMyCar = () => {
                                     name="gallery"
                                     id="gallery"
                                     multiple
-                                    value={gallery} onChange={(e) => setGallery(e.target.value)}
+                                    value={gallery} onChange={(e) => setGallery(e.target.files[0])}
                                 />
 
                                 <label >Car Price :</label>

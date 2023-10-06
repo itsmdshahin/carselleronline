@@ -1,0 +1,181 @@
+
+.mainn {
+    display: flex;
+
+    .logo img{
+        height: 90px;
+        width: auto;
+      
+        border-radius: 50%;
+        border: 2px solid #fff;
+        padding: 10px;
+
+      .h4{
+        align-items: center;
+      }
+    }
+    .left1,
+    .left2 {
+
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .left2 {
+        .address {
+
+            text-decoration: underline;
+            color: rgb(126, 151, 235);
+        }
+
+        .cell {
+            color: rgb(227, 132, 49);
+
+        }
+
+    }
+
+    .right {
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .link {
+        color: rgb(227, 132, 49);
+    }
+
+    .deals {
+        flex-direction: row;
+    }
+
+    img {
+
+        width: 100%;
+
+    }
+}
+
+.deals {
+    .gallery {
+        display: flex;
+
+
+        .img1,
+        .img2 {
+            flex-direction: row;
+
+            .card {
+                width: 250px;
+                height: 100px;
+                padding: 20px;
+                margin: 40px;
+
+               
+
+              
+              
+
+            }
+
+            .cell2 {
+                color: blue;
+            }
+
+
+            .btn {
+                position: relative;
+                right: -25px;
+                top: -27px;
+                border-color: coral;
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+
+                
+
+                margin: 15px -43px;
+                height: 40px;
+                width: 150px;
+
+               
+               
+
+                cursor: pointer;
+
+            }
+
+
+            .btn:hover {
+
+                color: rgb(255, 255, 255);
+                background-color: rgb(227, 132, 49);
+
+
+               
+
+            }
+          
+
+           
+
+
+        }
+
+    }
+
+}
+
+.gallery2 {
+    display: flex;
+    padding-top: 450px;
+    
+
+    .img1,
+    .img2 {
+        flex-direction: row;
+        
+
+        .card {
+            width: 250px;
+            height: 100px;
+            padding: 10px;
+            margin: 40px;
+
+
+            .cell2 {
+                color: blue;
+            }
+          
+
+            .btn {
+                position: relative;
+                left: -25px;
+                top: -15px;
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+
+                
+
+                margin: 10px 20px;
+                height: 40px;
+                width: 150px;
+
+                border-color: coral;
+                transition: color 0.5s ease-in-out;
+
+                cursor: pointer;
+
+            }
+
+
+            .btn:hover {
+                color: rgb(255, 255, 255);
+                background-color: rgb(227, 132, 49);
+
+
+
+            }
+
+           
+        }
+    }
+}
