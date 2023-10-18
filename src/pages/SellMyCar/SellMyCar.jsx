@@ -26,10 +26,10 @@ const SellMyCar = () => {
     const [price, setPrice] = useState('');
     const [picture, setPicture] = useState(null);
     const [gallery, setGallery] = useState([]);
- 
+
 
     const ConfirmSubmit = async () => {
-        
+
 
         try {
             const response = await fetch('http://localhost:5000/api/sellmycar', {
@@ -116,26 +116,19 @@ const SellMyCar = () => {
                                     type="file"
                                     name="picture"
                                     id="picture"
-<<<<<<< HEAD
-                                   /* value={picture} */
-                                    onChange={(e) => setPicture(e.target.files[0])}
-=======
-                                    value={picture} onChange={(e) => setPicture(e.target.files[0])}
->>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
-                                />
+                                   value={picture}  
+                                    onChange={(e) => setPicture(e.target.value)} 
+                                     
+                                 />
                                 <label>Car Gallery:</label>
                                 <input
                                     type="file"
                                     name="gallery"
                                     id="gallery"
                                     multiple
-<<<<<<< HEAD
-                                    /*value={gallery} */
-                                    onChange={(e) => setGallery(e.target.files)}
-=======
-                                    value={gallery} onChange={(e) => setGallery(e.target.files[0])}
->>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
-                                />
+                                    value={gallery}   
+                                    onChange={(e) => setGallery(e.target.files)} 
+                                 />
 
                                 <label >Car Price :</label>
                                 <input type="text" name="price" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
