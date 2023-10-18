@@ -135,6 +135,10 @@ function Admin() {
       path: "/Brandshow",
       element: <Brandshow />
     },
+    {
+      path: "/BrandPrevious",
+      element: <BrandPrevious />
+    },
 
   ]);
   return (

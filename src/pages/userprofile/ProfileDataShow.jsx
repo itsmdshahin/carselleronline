@@ -40,5 +40,9 @@ const ProfileDataShow = () => {
     )
 }
 
+<<<<<<< HEAD
+export default ProfileDataShow
+=======
 export default ProfileDataShow
 
+>>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9

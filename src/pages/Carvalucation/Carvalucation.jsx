@@ -80,7 +80,7 @@ const Carvalucation = () => {
                                 <input type="text" name="bodytype" id="bodytype" value={formData.bodytype} onChange={handleChange} />
 
                                 <label >Mileage :</label>
-                                <input type="text" name="milage" id="milage" value={formData.mileage} onChange={handleChange} />
+                                <input type="text" name="mileage" id="mileage" value={formData.mileage} onChange={handleChange} />
                                 <label >Condition :</label>
                                 <input type="text" name="condition" id="condition" value={formData.condition} onChange={handleChange} />
                                 <label >VIN :</label>
@@ -99,7 +99,7 @@ const Carvalucation = () => {
                                 <input type="text" name="fueltype" id="fueltype" value={formData.fueltype} onChange={handleChange} />
 
                                 <label >Gas mileage :</label>
-                                <input type="text" name="gasmilage" id="gasmilage" value={formData.gasmileage} onChange={handleChange} />
+                                <input type="text" name="gasmileage" id="gasmileage" value={formData.gasmileage} onChange={handleChange} />
                                 <label >Fuel tank size :</label>
                                 <input type="text" name="fueltanksize" id="fueltanksize" value={formData.fueltanksize} onChange={handleChange} />
                                 <label >Transmission :</label>

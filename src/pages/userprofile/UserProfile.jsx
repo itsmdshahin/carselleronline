@@ -6,7 +6,50 @@ import ProfileShow from "../Profile/profileShow";
 
 
 const UserProfile = () => {
+<<<<<<< HEAD
+    const [users, setUsers] = useState([]);
+    const [currentUser, setCurrentUser] = useState(null);
+    
+    useEffect(() => {
+        fetch('http://localhost:5000/api/users', {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}` // Include the JWT token
+          }
+        })
+          .then(response => response.json())
+          .then(data => {
+            setUsers(data);
+      
+            // Find the logged-in user based on the stored user ID
+            const loggedInUserId = localStorage.getItem('userId');
+            const loggedInUser = data.find(user => user._id === loggedInUserId);
+            setCurrentUser(loggedInUser);
+          })
+          .catch(error => {
+            console.log('Error fetching data ' + error);
+          });
+      }, []);
+
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/api/users', {
+    //         headers: {
+    //             Authorization: `Bearer ${localStorage.getItem('token')}` // Include the JWT token
+    //         }
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => setUsers(data))
+
+
+
+    //     .catch(error => {
+    //         console.log('Error fetching data ' + error);
+    //     }); 
+    
+    // }, []);
+=======
    
+>>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
     return (
         <>
             <Header />  

@@ -116,7 +116,12 @@ const SellMyCar = () => {
                                     type="file"
                                     name="picture"
                                     id="picture"
+<<<<<<< HEAD
+                                   /* value={picture} */
+                                    onChange={(e) => setPicture(e.target.files[0])}
+=======
                                     value={picture} onChange={(e) => setPicture(e.target.files[0])}
+>>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
                                 />
                                 <label>Car Gallery:</label>
                                 <input
@@ -124,7 +129,12 @@ const SellMyCar = () => {
                                     name="gallery"
                                     id="gallery"
                                     multiple
+<<<<<<< HEAD
+                                    /*value={gallery} */
+                                    onChange={(e) => setGallery(e.target.files)}
+=======
                                     value={gallery} onChange={(e) => setGallery(e.target.files[0])}
+>>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
                                 />
 
                                 <label >Car Price :</label>
