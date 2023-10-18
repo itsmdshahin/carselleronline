@@ -27,6 +27,7 @@ import Carvalucation from "./pages/Carvalucation/Carvalucation";
 import Research from "./components/Research/Research";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import Brandshow from "./pages/Brandshow/brandshow";
+import AllCarClient from "./pages/AllCarClient/AllCarClient";
 
 
 function Admin() {
@@ -63,7 +64,7 @@ function Admin() {
         },
         {
           path: "/admin/allcar",
-          element: isLoggedIn ? <Allcar /> : <Login />,
+          element: isLoggedIn ? <AllCarClient /> : <Login />,
         },
         {
           path: "/admin/addacar",
