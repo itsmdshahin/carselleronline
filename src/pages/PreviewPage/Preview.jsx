@@ -5,6 +5,9 @@ import CarPreview from './CarPreview/CarPreview';
 import Footer from '../../components/Footer/Footer';
 
 const Preview = () => {
+
+    
+
     return (
         <>
             <Header />
