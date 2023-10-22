@@ -6,7 +6,7 @@ import ProfileShow from "../Profile/profileShow";
 
 
 const UserProfile = () => {
-<<<<<<< HEAD
+
     const [users, setUsers] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
     
@@ -47,9 +47,9 @@ const UserProfile = () => {
     //     }); 
     
     // }, []);
-=======
+
    
->>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
+
     return (
         <>
             <Header />  

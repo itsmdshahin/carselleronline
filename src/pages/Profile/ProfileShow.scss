@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
- 
->>>>>>> 9defe47bfe65903c39bb066360fe9a822bc8ecc9
 .mainn {
     display: flex;  
+   
     .logo img{
         height: 90px;
         width: auto;
@@ -14,6 +11,8 @@
 
       .h4{
         align-items: center;
+        // padding-left: 30px;
+        // color: aqua;
       }
     }
     .left1,
@@ -61,14 +60,15 @@
     
     .gallery, .gallery2 {
         display: flex;
-
+        
 
         .img1,
         .img2 {
             flex-direction: row;
-
+             
             .card {
                 width: auto;
+             
                 height: 250px;
                 // padding: 10px;
                 // margin: 10px;   

@@ -1,5 +1,6 @@
- 
-function profile() {
+import React from 'react'
+
+const profile = () => {
   return (
     <div>profile</div>
   )

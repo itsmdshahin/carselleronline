@@ -8,6 +8,8 @@ import {
 import Home from './components/admin/Home'
 import Users from "./components/Users/Users";
 import Profile from "./pages/Profile/profile";
+// import Profile from "./pages/Profile/profileShow";
+import Profilee from "./pages/Profilee/Profilee";
 import Transcation from "./pages/Transcation/Transcation";
 import Allcar from "./pages/Allcar/Allcar";
 import AddaCar from "./pages/AddaCar/AddaCar";
@@ -139,6 +141,10 @@ function Admin() {
       path: "/BrandPrevious",
       element: <BrandPrevious />
     },
+    {
+      path: "/Profilee",
+      element: <Profilee/>
+    }
 
   ]);
   return (
