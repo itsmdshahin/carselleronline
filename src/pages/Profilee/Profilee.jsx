@@ -1,5 +1,4 @@
-import Header from '../../components/headerPage/header';
-import { Footer } from '../../components/headerPage/footer';
+
 import { FaAngleDown, FaRegCheckCircle } from "react-icons/fa";
 import "./profilee.scss";
 
