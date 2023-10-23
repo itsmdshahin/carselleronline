@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Footer } from "../../components/headerPage/footer";
 import Header from "../../components/headerPage/header";
 
-import ProfileShow from "../Profile/profileShow";
+ import ProfileShow from "../Profile/profileShow";
 
 
 const UserProfile = () => {
@@ -56,6 +56,7 @@ const UserProfile = () => {
         <>
             <Header />  
             <ProfileShow />
+            
             <Footer />
         </>
     );
