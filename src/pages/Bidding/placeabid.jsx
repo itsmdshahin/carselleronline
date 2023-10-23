@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
-const PlaceABid = () => {
+const placeabid = () => {
     const currentBid = 19;
     const onBidPlaced = 20;
     const [bidAmount, setBidAmount] = useState('');
@@ -47,4 +47,4 @@ const PlaceABid = () => {
     )
 }
 
-export default PlaceABid;
+export default placeabid;
