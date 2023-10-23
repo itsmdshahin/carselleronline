@@ -27,7 +27,7 @@ import Buyer from "./pages/buyerPage/buyer";
 import Sold from "./pages/Sold/Sold";
 import Carvalucation from "./pages/Carvalucation/Carvalucation"; 
 import Research from "./components/Research/Research";
-import UserProfile from "./pages/UserProfile/UserProfile";
+import UserProfile from "./pages/userprofile/UserProfile";
 import Brandshow from "./pages/Brandshow/brandshow";
 import AllCarClient from "./pages/AllCarClient/AllCarClient";
 import BrandPrevious from "./pages/BrandPrevious/brandprevious";

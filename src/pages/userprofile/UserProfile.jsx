@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Footer } from "../../components/headerPage/footer";
 import Header from "../../components/headerPage/header";
-
-import ProfileShow from "../Profile/profileShow";
+import Profilee from "../Profilee/Profilee";
+ 
 
 
 const UserProfile = () => {
@@ -55,7 +55,7 @@ const UserProfile = () => {
 
         <>
             <Header />  
-            <ProfileShow />
+              <Profilee />
             <Footer />
         </>
     );
