@@ -50,7 +50,9 @@ const UserProfile = () => {
 
    
 
-    return (
+    
+     return (
+
         <>
             <Header />  
             <ProfileShow />

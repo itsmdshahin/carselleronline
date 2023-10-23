@@ -26,10 +26,10 @@ const SellMyCar = () => {
     const [price, setPrice] = useState('');
     const [picture, setPicture] = useState(null);
     const [gallery, setGallery] = useState([]);
- 
+
 
     const ConfirmSubmit = async () => {
-        
+
 
         try {
             const response = await fetch('http://localhost:5000/api/sellmycar', {
@@ -117,24 +117,33 @@ const SellMyCar = () => {
                                     name="picture"
                                     id="picture"
 
+
                                    /* value={picture} */
                                     onChange={(e) => setPicture(e.target.files[0])}
 
-                                    value={picture} onChange={(e) => setPicture(e.target.files[0])}
+                                    value={picture}
+                                    //  onChange={(e) => setPicture(e.target.files[0])}
 
                                 />
+
+                               
+
                                 <label>Car Gallery:</label>
                                 <input
                                     type="file"
                                     name="gallery"
                                     id="gallery"
                                     multiple
+
                                     /*value={gallery} */
                                     onChange={(e) => setGallery(e.target.files)}
 
-                                    value={gallery} onChange={(e) => setGallery(e.target.files[0])}
+                                    value={gallery} 
+                                    // onChange={(e) => setGallery(e.target.files[0])}
 
                                 />
+
+                                 
 
                                 <label >Car Price :</label>
                                 <input type="text" name="price" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
