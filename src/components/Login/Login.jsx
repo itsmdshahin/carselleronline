@@ -30,7 +30,7 @@ const Login = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data, email),
       });
 
 
@@ -39,7 +39,14 @@ const Login = () => {
       if (response.status === 200) {
         // Login successful
         const data = await response.json();
-        
+        console.log(data);
+
+        const userId = data.id;
+        const userEmail = data.email;
+        console.log(userId+" "+ email);
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('userEmail', userEmail);
+
         const token = data.token; // Assuming the server returns the JWT as 'token'
         localStorage.setItem('jwtToken', token); // Store the JWT in local storage
         window.localStorage.setItem("token", data.data);
