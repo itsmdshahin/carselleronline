@@ -8,70 +8,37 @@ import { useEffect, useState } from "react";
 
 const Profilee = () => {
 
-    const [profileData, setProfileData] = useState({});
+    const [profileDatas, setProfileData] = useState([]);
     const token = localStorage.getItem("token");
+    const userId = localStorage.getItem('userId');
+    const userEmail = localStorage.getItem('userEmail');
 
+    console.log(userEmail+" "+userId);
 
     useEffect(() => {
-        const fetchProfileData = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/profileData', {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json',
-                    },
-                });
-
-                if (response.status === 200) {
-                    const data = await response.json();
-                    setProfileData(data);
-                } else {
-                    console.error('Error fetching profile data:', response.status);
-                }
-            } catch (error) {
-                console.error('Error during profile data fetch:', error);
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:5000/profileData', {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+              },
+            });
+      
+            if (response.status === 200) {
+              const data = await response.json();
+              setProfileData(data);
+            } else {
+              console.error('Error fetching profile data:', response.status);
             }
+          } catch (error) {
+            console.error('Error during profile data fetch:', error);
+          }
         };
-
-        fetchProfileData();
-    }, [token]);
-
-
-    // useEffect(() => {
-    //     const fetchProfileData = async () => {
-    //       try {
-    //         const response = await axios.get("http://localhost:5000/profileData", {
-    //           headers: {
-    //             Authorization: `Bearer ${localStorage.getItem("token")}`,
-    //           },
-    //         });
-    //         setProfileData(response.data);
-    //       } catch (error) {
-    //         // Handle error
-    //         console.log(error);
-    //       }
-    //     };
-
-    //     fetchProfileData();
-    //   }, []);
-
-    // useEffect(() => {
-    //     const headers = {
-    //       Authorization: `Bearer ${localStorage.getItem('token')}`,
-    //     };
-
-    //     axios
-    //       .get('http://localhost:5000/profileData', { headers })
-    //       .then((response) => {
-    //         setProfileData(response.data);
-    //       })
-    //       .catch((error) => {
-    //         console.error(error);
-    //       });
-    //   }, []);
-
-
+      
+        fetchData();
+      }, [token]);
 
     return (
         <>
@@ -80,7 +47,7 @@ const Profilee = () => {
 
                 <div className='firstdiv'>
                     <h1>
-                        {profileData.name} <FaRegCheckCircle className='logo1' />
+                        {profileDatas.name} <FaRegCheckCircle className='logo1' />
                     </h1>
                 </div>
 
@@ -90,9 +57,9 @@ const Profilee = () => {
                     </div>
 
                     <div className='secondtwo'>
-                        <p className="email">{profileData.email}</p>
+                        <p className="email">{profileDatas.email}</p>
 
-                        <p className="email">{profileData.email}</p>
+                        <p className="email">{profileDatas.email}</p>
 
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident sometimes on purpose (injected humour and the like).</p>
 
