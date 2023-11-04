@@ -1,0 +1,67 @@
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.searchinput{
+    width: 450px;
+    height: 40px;
+   outline: none;
+    border: 1px solid rgb(140, 54, 1);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgb(250, 175, 82);
+}
+.blog-icon{
+display: flex;
+justify-content: space-between;
+margin: 10px 100px;
+align-items: center;
+border-bottom: 3px solid rgb(250, 175, 82);
+}
+.post-container{
+    display: grid;
+   justify-content: center;
+   height: 300rem;
+  
+   grid-template-columns: 400px 400px 400px;
+    gap: 50px;
+    margin: 20px 10px;
+    margin-top: 30px;
+}
+.blog{
+    border: 1px solid black;
+border-radius: 10px;
+box-shadow: 10px 10px 15px 0px #aaa8a7 ;
+   overflow: hidden;
+   cursor: pointer;
+   transition: transform 0.6s ease-in-out;
+   
+   background: linear-gradient( #FAAF52 50%, rgba(0, 0, 0, 0) );
+   /* background-color: rgb(250, 175, 82); */
+   
+}
+.blog:hover{
+    transform: scale(1.08);
+   
+}
+.blog-image{
+    width: 100%;
+    height: 300px;
+}
+
+.blog-title h2{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+.post-link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.date{
+color: #606060;
+}
