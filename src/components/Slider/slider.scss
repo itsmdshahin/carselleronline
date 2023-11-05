@@ -13,6 +13,7 @@
     .backgroundimage {
       background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0, #000000 100%), url(images/c.jpg);
       height: 100vh;
+    
       background-size: cover;
       background-position: center;
 
@@ -107,9 +108,9 @@
           margin: 2%;
           background-color: #151F28;
           color: white;
-          font-size: 18px;
+          font-size: 80%;
           font-weight: bold;
-          padding: 10px 40px;
+          padding: 1% 1%;
           border: 1px solid #fa8900;
           border-radius: 8px;
           cursor: pointer;
@@ -176,4 +177,5 @@
 
     }
   }
+
 }

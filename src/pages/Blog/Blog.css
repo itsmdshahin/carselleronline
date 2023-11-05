@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     margin: 50px 0px;
+    
 }
 .searchinput{
     width: 450px;
@@ -12,6 +13,7 @@
     border-radius: 4px;
     font-size: 16px;
     background-color: rgb(250, 175, 82);
+    padding: 20px;
 }
 .blog-icon{
 display: flex;
