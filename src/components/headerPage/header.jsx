@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 import { FaAlignJustify } from "react-icons/fa";
 const Header = () => {
   return (
-   <div className="mainheader">
+    <div className="mainheader">
       <Link to="/../">
-      <img src="/images/mainlogo.png" alt="" className='logo' />
+        <img src="/images/mainlogo.png" alt="" className='logo' />
       </Link>
-      <Nav/>
-   
+      <Nav />
+
 
     </div>
 

@@ -25,7 +25,7 @@ import ListingPage from "./pages/listingPage/listingPage";
 import Blog from "./pages/Blog/Blog";
 import Buyer from "./pages/buyerPage/buyer";
 import Sold from "./pages/Sold/Sold";
-import Carvalucation from "./pages/Carvalucation/Carvalucation"; 
+import Carvalucation from "./pages/Carvalucation/Carvalucation";
 import Research from "./components/Research/Research";
 import UserProfile from "./pages/userprofile/UserProfile";
 import Brandshow from "./pages/Brandshow/brandshow";
@@ -143,20 +143,21 @@ function Admin() {
     },
     {
       path: "/Profilee",
-      element: <Profilee/>
+      element: <Profilee />
     }
 
   ]);
   return (
     <>
-
+      {/* const isLoggedIn = localStorage.getItem('token') !== null; */}
+      <h1>{isLoggedIn}</h1>
       <RouterProvider
         router={router}
+        
       />
-      {/* <LoginReg /> */}
-
+      
     </>
   )
 }
 
-export default Admin
+export default Admin;

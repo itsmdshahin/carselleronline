@@ -4,8 +4,8 @@ import { Button } from 'react-bootstrap';
 import CAR from '../../../images/ca6.jpg';
 import Header from '../../components/headerPage/header';
 import Footer from '../../components/Footer/Footer'; 
-import BidHistory from './BidHistory';
-import PlaceABid from './PlaceABid';
+import BidHistory from './BidHistory'; 
+import PlaceABid from './placeabid';
 
 const Bidding = () => {
      

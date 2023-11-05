@@ -4,7 +4,7 @@ import './Login.scss';
 import LOGO from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import Header from '../headerPage/header';
-import Footer from '../Footer/Footer'; 
+import Footer from '../Footer/Footer';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -12,55 +12,56 @@ const Login = () => {
   const nagivate = useNavigate();
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
-  
 
 
-  const handleLogin = async () => { 
-    
 
-    console.log(email+" "+password);
+  const handleLogin = async () => {
+
+
+    console.log(email + " " + password);
     const data = {
-      email:email,
-      password:password
+      email: email,
+      password: password
     };
-    console.log(email+" "+password);
+    console.log(email + " " + password);
     try {
       const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data, email),
       });
 
 
-      console.log("this is a res "+ response.ok);
-      
+      console.log("this is a res " + response.ok);
+
       if (response.status === 200) {
         // Login successful
         const data = await response.json();
-        
-        const token = data.token; // Assuming the server returns the JWT as 'token'
-        localStorage.setItem('jwtToken', token); // Store the JWT in local storage
-        window.localStorage.setItem("token", data.data);
-        // location.href('../../pages/Home/Index.jsx');
-        // window.location.href("/");
-        // alert('Login Successful!');
-        // console.log(localStorage.setItem('jwtToken', token));
-        if(email === "admin" ){
+        console.log(data);
+
+        const userId = data.id;
+        const userEmail = data.email;
+        console.log(userId + " " + email);
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('userEmail', userEmail);
+        localStorage.setItem("token", data.data);
+        if (email === "admin") {
           nagivate('/admin');
-          //window.open("/admin");
-        }else{
-          nagivate('/');
+
+        } else {
+          // nagivate('/profile');
+          <Link to="/profile"></Link>
         }
         // Redirect to Admin.jsx if email and password are "admin"
-        
+
       } else {
         // Login failed
         alert('Login failed!');
       }
 
-      
+
     } catch (error) {
       console.error('Error during login:', error);
     }
@@ -73,8 +74,8 @@ const Login = () => {
         <div className="containerdiv">
           <div className="logo">
             <img width="300px" src={LOGO} alt='img' />
-          </div> 
-          
+          </div>
+
           <form className="froms">
             <div className="column">
               <div className="form" id="div1">
@@ -104,8 +105,9 @@ const Login = () => {
         </div>
 
         <div className="submit" >
-          <Button onClick={handleLogin} >Log-In</Button>
+          <button onClick={handleLogin} >Log-In</button>
         </div>
+
       </div>
       <Footer />
     </>

@@ -19,9 +19,7 @@ function Index() {
   
   return (
     <div className="index">
-      {/* {
-        isLoggedIn? (" Login "): (" Login not ")
-      } */}
+ 
       <HEADER />
 
       <Slider />
