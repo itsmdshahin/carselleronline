@@ -2,6 +2,8 @@
 import { FaAngleDown, FaRegCheckCircle } from "react-icons/fa";
 import "./profilee.scss";
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import Edit from "../EditProfile/Edit";
 
 import { useEffect, useState } from "react";
 
@@ -54,7 +56,9 @@ const Profilee = () => {
                     <div className='secondone'>
                         <img src="../../../../images/ca7.jpg" alt="Logo" />
                        <div className="editbtn">
-                        <button className="edit">EDIT</button>
+                        {/* <button className="edit"><a href="">EDIT</a></button> */}
+                        {/* <a href={`/edit/${userId}`} className="edit">EDIT</a> */}
+                        <Link to={`/edit/${userId}`} className="edit">Edit</Link>
                        </div>
                     </div>
 

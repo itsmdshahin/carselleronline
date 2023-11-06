@@ -147,7 +147,7 @@ function Admin() {
       element: <Profilee />
     },
     {
-      path: "/Edit",
+      path: "/Edit/:userId",
       element: <Edit />
     }
 
