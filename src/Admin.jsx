@@ -34,7 +34,7 @@ import BrandPrevious from "./pages/BrandPrevious/brandprevious";
 
 function Admin() {
 
-  const isLoggedIn = localStorage.getItem('token') !== null;
+  const isLoggedIn = window.localStorage.getItem('token') !== null;
   //  const adminToken  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluIiwiaWF0IjoxNjkyNjMyMzk2fQ.1-3duBogFh7kFHMeS4LhsNBQyPuru-6cY7m_RwdlIm8";
   //  const token = localStorage.getItem('token');
 

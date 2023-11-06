@@ -20,7 +20,7 @@ function Blog() {
     const inputValue = event.target.value.toLowerCase();
     setBlogs(records.filter(blog => blog.title.toLowerCase().includes(inputValue)));
   }
-  
+
   // useEffect(() => {
   //   axios.get('../../Data/CarBlog.json')
   //     .then(res => {
@@ -36,33 +36,33 @@ function Blog() {
   //   setBlogs(records.filter(r => r.title.tolowerCase().includes(event.target.value.tolowerCase())))
   // }
 
-return (
+  return (
 
-  <>
-    <Header />
+    <>
+      <Header />
 
-    <div className='post'>
-      <div className='searchbar'>
+      <div className='post'>
+        <div className='searchbar'>
 
-        <input type="text" placeholder='Search' onChange={getInputData} className="searchinput"></input>
+          <input type="text" placeholder='Search' onChange={getInputData} className="searchinput"></input>
+        </div>
+        <div className='blog-icon'>
+          <h3>Blogs</h3>
+
+        </div>
+
+
+        <div className="post-container">
+          {blogs.map((blog, index) => (
+            <Post blog={blog} key={index} />
+
+          ))}
+        </div>
+
       </div>
-      <div className='blog-icon'>
-        <h3>Blogs</h3>
-
-      </div>
-
-
-      <div className="post-container">
-        {blogs.map((blog, index) => (
-          <Post blog={blog} key={index} />
-
-        ))}
-      </div>
-
-    </div>
-    <Footer />
-  </>
-)
+      <Footer />
+    </>
+  )
 }
 
 export default Blog
