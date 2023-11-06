@@ -24,6 +24,21 @@
             border: 2px solid #fff;
             // padding: 1px;
            }
+          .editbtn{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            .edit{
+              padding: 2px 20px;
+             color: #1b1815;
+             background-color: #FAAF52;
+            cursor: pointer;
+            &:hover{
+                background-color: #1b1815;
+                color:#ffffff;;
+             }
+            }
+          }
         }
         .secondtwo{
             padding: 10px;

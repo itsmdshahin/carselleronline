@@ -53,6 +53,9 @@ const Profilee = () => {
                 <div className="seconddiv">
                     <div className='secondone'>
                         <img src="../../../../images/ca7.jpg" alt="Logo" />
+                       <div className="editbtn">
+                        <button className="edit">EDIT</button>
+                       </div>
                     </div>
 
                     <div className='secondtwo'>

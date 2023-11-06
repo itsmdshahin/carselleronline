@@ -3,15 +3,16 @@ import Header from "../../components/headerPage/header";
 import Profilee from "../Profilee/Profilee";
 
 
-const UserProfile = () => {
+const UserProfile = () => { 
+     return (
 
-  return (
-    <>
-      <Header />
-      <Profilee />
-      <Footer />
-    </>
-  );
+        <>
+            <Header />      
+              <Profilee />
+            <Footer />
+        </>
+    );
+
 }
 
 export default UserProfile;

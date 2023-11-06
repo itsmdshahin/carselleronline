@@ -31,6 +31,7 @@ import UserProfile from "./pages/userprofile/UserProfile";
 import Brandshow from "./pages/Brandshow/brandshow";
 import AllCarClient from "./pages/AllCarClient/AllCarClient";
 import BrandPrevious from "./pages/BrandPrevious/brandprevious";
+import Edit from "./pages/EditProfile/Edit";
 
 function Admin() {
 
@@ -144,6 +145,10 @@ function Admin() {
     {
       path: "/Profilee",
       element: <Profilee />
+    },
+    {
+      path: "/Edit",
+      element: <Edit />
     }
 
   ]);
