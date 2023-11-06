@@ -1,6 +1,7 @@
 // import { Button } from 'bootstrap'
 import './carpreview.scss'
 import PROFILEPIC from '../../../assets/usersprofileimg/itsmdshahinpro.png';
+import { Link } from 'react-router-dom';
 
 const CarPreview = () => {
     return (
@@ -32,7 +33,8 @@ const CarPreview = () => {
                 </div>
 
                 <div className="desadmin">
-                    <button>Message me</button>
+                    <button><Link to=''>Message me</Link></button>
+                    
                 </div>
             </div>
         </>
