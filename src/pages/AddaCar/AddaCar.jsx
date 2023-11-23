@@ -27,7 +27,7 @@ const AddaCar = () => {
 
     const ConfirmSubmit = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/addacar', {
+            const response = await fetch('http://localhost:5000/api/addacars', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -38,7 +38,6 @@ const AddaCar = () => {
 
             alert(`Submitted: ${name} ${model} ${response.ok} ${response.status} `);
             if (response.ok) {
-                // Registration successful
                 alert('Car added successfully!');
             } else {
                 // Registration failed
@@ -136,4 +135,4 @@ const AddaCar = () => {
     )
 }
 
-export default AddaCar
+export default AddaCar;
