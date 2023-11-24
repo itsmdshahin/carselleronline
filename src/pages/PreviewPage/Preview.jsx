@@ -3,10 +3,32 @@ import Accordion from 'react-bootstrap/Accordion';
 import Header from '../../components/headerPage/header';
 import CarPreview from './CarPreview/CarPreview';
 import Footer from '../../components/Footer/Footer';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 const Preview = () => {
 
-    
+    const { carId } = useParams();
+    console.log(carId);
+
+    const [carData, setCarData] = useState({});
+
+    useEffect(() => {
+        // Fetch the car details based on the id using axios
+        axios.get(`http://localhost:5000/api/getcalldatalisting/${carId}`)
+            .then((response) => {
+                console.log(response.data, "CarData");
+                setCarData(response.data.carProfile); // Assuming name is in response.data
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+                // Handle error, e.g., show a user-friendly message
+            });
+    }, [carId]); // Include id in the dependency// Include id in the dependency array to refetch data when id changes
+
+    console.log("This is :"+carData);
 
     return (
         <>
@@ -14,7 +36,7 @@ const Preview = () => {
             <div className="preview">
                 <div className="leftsidebar">
                     <div className="name">
-                        <h1>2023 Mercedes-Benz CLA 250</h1>
+                        <h1>{carData.name}</h1>
                     </div>
                     <h3>Vehicle Highlights:</h3>
                     <div className="viewhighlight">
@@ -27,18 +49,18 @@ const Preview = () => {
                     <div className="vehicalsfeature">
 
                         <div className="feature1">
-                            <span>Price: $45000</span>
-                            <span>Year: 2022</span>
+                            <span>Price: ${carData.price}</span>
+                            <span>Year: {carData.year}</span>
                             <span>Trim: 250</span>
                         </div>
                         <div className="feature1">
-                            <span>Transmission: Automatic</span>
-                            <span>Mileage: 2,745 miles</span>
-                            <span>Interior color: Tan</span>
+                            <span>Transmission: {carData.transmission}</span>
+                            <span>Mileage: {carData.gasmileages} miles</span>
+                            <span>Interior color: {carData.color}</span>
                         </div>
                         <div className="feature1">
-                            <span>Fuel type: Gasoline </span>
-                            <span>Exterior color: White</span>
+                            <span>Fuel type: {carData.fueltype} </span>
+                            <span>Exterior color: {carData.color}</span>
                             <span>Drivetrain: Front-Whee</span>
                         </div>
                     </div>
@@ -113,7 +135,7 @@ const Preview = () => {
                 <div className="rightsliderbar">
                     <CarPreview />
                 </div>
-                
+
                 <div className='clr'></div>
             </div>
             <div className='endgame'>

@@ -92,7 +92,7 @@ function Admin() {
       element: isLoggedIn ? <Index /> : <Register />,
     },
     {
-      path: "/Preview",
+      path: "/Preview/:carId",
       element: isLoggedIn ? <Preview /> : <Login />,
     },
     {

@@ -118,15 +118,15 @@ const SellMyCar = () => {
                                     id="picture"
 
 
-                                   /* value={picture} */
+                                    /* value={picture} */
                                     onChange={(e) => setPicture(e.target.files[0])}
 
                                     value={picture}
-                                    //  onChange={(e) => setPicture(e.target.files[0])}
+                                //  onChange={(e) => setPicture(e.target.files[0])}
 
                                 />
 
-                               
+
 
                                 <label>Car Gallery:</label>
                                 <input
@@ -138,12 +138,12 @@ const SellMyCar = () => {
                                     /*value={gallery} */
                                     onChange={(e) => setGallery(e.target.files)}
 
-                                    value={gallery} 
-                                    // onChange={(e) => setGallery(e.target.files[0])}
+                                    value={gallery}
+                                // onChange={(e) => setGallery(e.target.files[0])}
 
                                 />
 
-                                 
+
 
                                 <label >Car Price :</label>
                                 <input type="text" name="price" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
