@@ -101,34 +101,6 @@ const ListingPage = () => {
 
 
       <div className='firstPart'>
-
-        {/* <div className='forthPart'>
-          <div>
-            <h7><BiBookmarkAlt /> Buy(206)</h7>
-          </div>
-          <div>
-            <h7><BiSearch />Off Market(206)</h7>
-          </div>
-          <div>
-            <h7><BiDollarCircle />Invest</h7>
-          </div>
-          <div className='bn3'>
-            <button type="button" className="btn3"><h7><BiSolidBell />Create Alert</h7></button>
-          </div>
-          <div>
-            <Dropdown>
-              <Dropdown.Toggle id="dropdown-basic">
-                Sort By
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
-        </div> */}
-
         <hr />
         <div className='secondPart '>
           <h3> <FaRegHandshake className="icon"/>Get Deal First. 21 Days Before the Rest.</h3>
