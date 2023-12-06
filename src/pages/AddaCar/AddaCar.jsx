@@ -26,21 +26,21 @@ const AddaCar = () => {
     const [gallery, setGallery] = useState([]);
 
     const ConfirmSubmit = async () => {
+
         try {
-            const response = await fetch('http://localhost:5000/api/addacars', {
+            const response = await fetch('http://localhost:5000/api/addacar', {
                 method: 'POST',
+                body: JSON.stringify({ name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price }),
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price, picture, gallery }),
             });
             console.log(response.ok);
-
+            // console.log(req.params.id);
             alert(`Submitted: ${name} ${model} ${response.ok} ${response.status} `);
             if (response.ok) {
                 alert('Car added successfully!');
             } else {
-                // Registration failed
                 console.log(response);
                 alert('Failed to add car!');
             }
@@ -48,6 +48,7 @@ const AddaCar = () => {
             console.error('Error while adding car:', error);
         }
     };
+
 
 
     return (

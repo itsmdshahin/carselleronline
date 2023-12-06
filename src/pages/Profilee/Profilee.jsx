@@ -312,12 +312,7 @@ const Profilee = () => {
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
+ 
 
                 </div>
 

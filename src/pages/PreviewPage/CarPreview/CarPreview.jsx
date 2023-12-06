@@ -71,7 +71,7 @@ const CarPreview = () => {
                 </div>
 
                 <div className="desadmin">
-                    <button><Link to=''>Message me</Link></button>
+                    <button><Link to='mailto:mdshahinurrahman8@gmail.com'>Message me</Link></button>
                     
                 </div>
             </div>

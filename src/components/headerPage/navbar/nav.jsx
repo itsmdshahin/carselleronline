@@ -32,6 +32,9 @@ const Nav = () => {
         <div className="menuIcon nav">
             <ul className='navbar-ul'>
                 <li className='navbar-list'>
+                    <NavLink className="nav-link" to="/../">Home</NavLink>
+                </li>
+                <li className='navbar-list'>
                     <NavLink className="nav-link" to="/../listing">Buy</NavLink>
                 </li>
                 <li className='navbar-list'>
