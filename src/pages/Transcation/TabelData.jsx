@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 import SideLogo from "../../assets/user.png";
 import DELETE from "../../assets/deletelogo.svg";
 import VIEW from "../../assets/delete.svg";
+import { useEffect, useState } from 'react';
 
 const TabelData = () => {
-
+    
+    console.log(TransictionData);
+    
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         {

@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import DELETE from "../../assets/deletelogo.svg";
+
+import VIEW from "../../assets/delete.svg";
 import './allcar.scss';
 
 export default function Allcar() {
@@ -68,7 +71,7 @@ export default function Allcar() {
         console.error('Error updating car:', error);
       });
   };
-  
+
 
 
   const handleDelete = (id) => {
@@ -112,8 +115,9 @@ export default function Allcar() {
               <h2>{car.id}</h2>
               <h2>{car.name}</h2>
               <p>Price : {car.price}</p>
-              <button onClick={() => handleUpdate(car._id)}>Update</button>
-              <button onClick={() => handleDelete(car._id)}>Delete</button>
+              <button className='delete' onClick={() => handleUpdate(car._id)}><img src={VIEW} alt="logo" /></button>
+              
+              <button className='delete' onClick={() => handleDelete(car._id)}><img src={DELETE} alt="logo" /></button>
             </li>
           ))}
         </ul>

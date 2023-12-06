@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import DELETE from "../../assets/deletelogo.svg";
+import './allcarclient.scss';
 
 const AllCarClient = () => {
     const [CARS, setCARS] = useState([]);
@@ -62,7 +64,7 @@ const AllCarClient = () => {
                                 <h2>{user.id}</h2>
                                 <h2>{user.name}</h2>
                                 <p>Price : {user.price}</p>
-                                <button onClick={() => handleDelete(user._id)}>Delete</button>
+                                <button className='delete' onClick={() => handleDelete(user._id)}><img src={DELETE} alt="logo" /></button>
                             </li>
                         ))}
                     </ul>

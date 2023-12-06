@@ -41,10 +41,10 @@ const Nav = () => {
                     <NavLink className="nav-link" to="/../sellmycar">Sell</NavLink>
                 </li>
                 <li className='navbar-list'>
-                    <NavLink className="nav-link" to="/../Blog">Vlog</NavLink>
+                    <NavLink className="nav-link" to="/../Blog">Blog</NavLink>
                 </li>
                 <li className='navbar-list'>
-                    <NavLink className="nav-link" to="/../research">Research</NavLink>
+                    <NavLink className="nav-link" to="/../events">Events</NavLink>
                 </li>
 
                 {isLoggedIn ? (
