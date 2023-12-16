@@ -1,11 +1,17 @@
 // Importing any external SCSS files or libraries goes here
 
+<<<<<<< HEAD
 .mainevent {
+=======
+.mainforeventonly {
+>>>>>>> 72135e2e968e69dac8b691affe75a22ab15d7f5a
     position: relative;
+    // width: 100%;
+    // height: 100vh;
 
     video {
         width: 100%;
-        height: 50%;
+        height: 75vh;
         object-fit: cover;
     }
 
@@ -14,8 +20,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
-        background-color: rgba(0, 0, 0, 0.6);
+        height: 47%;
+        background-color: rgba(21, 31, 40, 0.6);
     }
 
     .content {
@@ -29,79 +35,118 @@
         color: white;
 
         // Add other styles for .content here
+        .location {
+            position: relative;
+            display: flex;
+            top: 30px;
+            gap: 20px;
+
+            // Add other styles for .location here
+        }
+
+        .register {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn1 {
+                position: relative;
+                top: 76px;
+                width: 120px;
+                height: 40px;
+                border-radius: 8px;
+                right: 200px;
+                box-shadow: 0 3px 5px rgb(255, 255, 255);
+                font-weight: bolder;
+                background-color: rgb(250, 175, 82);
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #151F28;
+                    color: white;
+                }
+                // Add other styles for .btn1 here
+            }
+
+            .form {
+                background: linear-gradient(to bottom, rgb(250, 175, 82), #817e7e);
+                width: 200px;
+                height: 180px;
+                // position: absolute;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                // margin-right: 500px;
+                // margin-top: -200px;
+                // Add other styles for .form here
+                .name {
+                    margin-top: 8px;
+
+                    // Add other styles for .name here
+                }
+
+                .email {
+                    margin-top: 10px;
+
+                    // Add other styles for .email here
+                }
+
+                .phone {
+                    margin-top: 10px;
+
+                    // Add other styles for .phone here
+                }
+                .submit {
+                    top: 76px;
+                    width: 100px;
+                    height: 30px;
+                    border-radius: 8px;
+                    right: 200px;
+                    box-shadow: 0 3px 5px rgb(255, 255, 255);
+                    font-weight: bolder;
+                    background-color: rgb(250, 175, 82);
+                    cursor: pointer;
+            
+                    // Add other styles for .submit here
+                }
+            }
+
+
+        }
+
+        // Add other styles for .btn1:hover here
+
+        
+        .btn2 {
+            position: relative;
+            top: 35px;
+            width: 120px;
+            height: 40px;
+            border-radius: 8px;
+            left: 200px;
+            box-shadow: 0 3px 5px white;
+            font-weight: bolder;
+            background-color: rgb(250, 175, 82);
+            cursor: pointer;
+
+            // Add other styles for .btn2 here
+            
+            &:hover{
+                background-color: #151F28;
+                color: white;
+            }
+        }
+
+
+
     }
 
-    .location {
-        position: relative;
-        display: flex;
-        top: 30px;
-        gap: 20px;
 
-        // Add other styles for .location here
-    }
 
-    .form {
-        background: linear-gradient(to bottom, rgb(250, 175, 82), #817e7e);
-        width: 200px;
-        height: 180px;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
 
-        // Add other styles for .form here
-    }
 
-    .name {
-        margin-top: 8px;
 
-        // Add other styles for .name here
-    }
-
-    .email {
-        margin-top: 10px;
-
-        // Add other styles for .email here
-    }
-
-    .phone {
-        margin-top: 10px;
-
-        // Add other styles for .phone here
-    }
-
-    .btn1 {
-        position: relative;
-        top: 76px;
-        width: 120px;
-        height: 40px;
-        border-radius: 8px;
-        right: 200px;
-        box-shadow: 0 3px 5px rgb(255, 255, 255);
-        font-weight: bolder;
-        background-color: rgb(250, 175, 82);
-        cursor: pointer;
-
-        // Add other styles for .btn1 here
-    }
-
-    // Add other styles for .btn1:hover here
-
-    .btn2 {
-        position: relative;
-        top: 35px;
-        width: 120px;
-        height: 40px;
-        border-radius: 8px;
-        left: 200px;
-        box-shadow: 0 3px 5px white;
-        font-weight: bolder;
-        background-color: rgb(250, 175, 82);
-        cursor: pointer;
-
-        // Add other styles for .btn2 here
-    }
 
     // Add other styles for .btn2:hover here
 
@@ -109,102 +154,139 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        background-color: rgb(187, 176, 176);
+        // position: absolute;
+        // width: 100%;
+        // height: 100vh;
+        top: 70px;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // color: white;
+      
 
         // Add other styles for .container here
-    }
-
-    .card {
-        background: rgb(222, 222, 222);
-        width: 430px;
-        height: auto;
-        margin: 10px;
-        margin-top: 40px;
-        box-shadow: 0 5px 5px 3px rgb(198, 196, 196);
-
-        // Add other styles for .card here
-
-        &:hover {
-            transform: scale(1.02);
-            transition: all 1s ease-in-out;
-        }
-
-        .card-img {
-            width: auto;
-            height: 280px;
-            background-size: cover;
-            margin-bottom: 15px;
-
-            &.img1 {
-                background-image: url('../../assets/c5.png');
-            }
-
-            &.img2 {
-                background-image: url('../../assets/c2.jpg');
-            }
-
-            &.img3 {
-                background-image: url('/src/Assets/ca10.jpg');
-            }
-
-            // Add other styles for .card-img here
-        }
-
-        .upcoming-btn {
-            position: absolute;
-            padding-left: 300px;
-
-            // Add other styles for .upcoming-btn here
-        }
-
-        .upcoming {
-            height: 35px;
-            width: 120px;
-            margin-top: 8px;
-            background-color: rgb(250, 175, 82);
-            box-shadow: 0px 3px 5px white;
-            border-radius: 8px;
-
-            // Add other styles for .upcoming here
-        }
-
-        // Add other styles for .upcoming:hover here
-
-        p {
-            padding: 10px;
-
-            // Add other styles for p here
-        }
-
-        a {
-            background-color: black;
-            box-shadow: 0 3px 5px 2px rgb(250, 175, 82);
-            color: rgb(250, 175, 82);
-            padding: 10px 15px;
-            display: block;
-            text-align: center;
-            margin: 20px 100px;
+        .card {
+            position: relative;
+            background: rgb(222, 222, 222);
+            width: 430px;
             border-radius: 10px;
-            cursor: pointer;
+            height: auto;
+            margin: 10px;
+            margin-top: 70px;
+            box-shadow: 0 5px 5px 3px rgb(198, 196, 196);
+            color:#151f28;
+            // Add other styles for .card here
+    
+            &:hover {
+                transform: scale(1.02);
+                transition: all 1s ease-in-out;
+            }
+    
+            .card-img {
+                width: auto;
+                height: 280px;
+                background-size: cover;
+                margin-bottom: 15px;
+    
+                &.img1 {
+                    background-image: url('../../assets/c5.png');
+                }
+    
+                &.img2 {
+                    background-image: url('../../assets/c2.jpg');
+                }
+    
+                &.img3 {
+                    background-image: url('/src/Assets/ca10.jpg');
+                }
+    
+                // Add other styles for .card-img here
+            }
+    
+            .upcoming-btn {
+                position: absolute;
+                padding-left: 300px;
+    
+                // Add other styles for .upcoming-btn here
+            }
+    
+            .upcoming {
+                height: 35px;
+                width: 120px;
+                margin-top: 8px;
+                background-color: rgb(250, 175, 82);
+                box-shadow: 0px 3px 5px white;
+                border-radius: 8px;
+                
+                &:hover{
+                    background-color: #151F28;
+                    color: white;
+                }
+                // Add other styles for .upcoming here
+            }
+    
+            // Add other styles for .upcoming:hover here
+    
+            p {
+                padding: 10px;
+    
+                // Add other styles for p here
+            }
+    
+            a {
+                background-color: black;
+                box-shadow: 0 3px 5px 2px rgb(250, 175, 82);
+                color: rgb(250, 175, 82);
+                padding: 10px 15px;
+                display: block;
+                text-align: center;
+                margin: 20px 100px;
+                border-radius: 10px;
+                cursor: pointer;
+                
+                &:hover{
+                    color: #151f28;
+                    background-color: rgb(172, 106, 106);
+                }
+                // Add other styles for a here
+            }
+            .body11{
+                position: relative;
+                justify-content: center;
+                align-items: center; 
+                .btn3 {
+                    position: relative;
+                    // top: 35px; 
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 8px;
+                    // left: 200px;
+                    // box-shadow: 0 3px 5px white;
+                    font-weight: bolder;
+                    background-color: rgb(250, 175, 82);
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+        
+                    // Add other styles for .btn2 here
+                    
+                    &:hover{
+                        background-color: #151F28;
+                        color: white;
+                    }
+                }
+        
+            }
 
-            // Add other styles for a here
+           
+            // Add other styles for a:hover here
         }
-
-        // Add other styles for a:hover here
+    
     }
 
-    .submit {
-        top: 76px;
-        width: 100px;
-        height: 30px;
-        border-radius: 8px;
-        right: 200px;
-        box-shadow: 0 3px 5px rgb(255, 255, 255);
-        font-weight: bolder;
-        background-color: rgb(250, 175, 82);
-        cursor: pointer;
-
-        // Add other styles for .submit here
-    }
+    
+   
 
     // Add other styles for .submit:hover here
 }
