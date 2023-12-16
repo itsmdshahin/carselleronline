@@ -14,13 +14,28 @@ const Preview = () => {
     console.log(carId);
 
     const [carData, setCarData] = useState({});
-
+    const [userIdInfo, setUserIdInfo] = useState({});
     useEffect(() => {
         // Fetch the car details based on the id using axios
         axios.get(`http://localhost:5000/api/getcalldatalisting/${carId}`)
             .then((response) => {
                 console.log(response.data, "CarData");
                 setCarData(response.data.carProfile); // Assuming name is in response.data
+                const userId = response.data.carProfile.userId;
+                // Make a new API request to get user details
+                axios.get(`http://localhost:5000/profile/${userId}`)
+                    .then((userResponse) => {
+                        // Assuming user name is in userResponse.data
+                        console.log(userResponse.data, "UserData");
+                        // Update state with user details
+                        setUserIdInfo(userResponse.data);
+                        console.log("ALL DATE FOUND USER!" + userResponse.data);
+                    })
+                    .catch((userError) => {
+                        console.error('Error fetching user data:', userError);
+                        // Handle error, e.g., show a user-friendly message
+                    });
+
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -28,7 +43,7 @@ const Preview = () => {
             });
     }, [carId]); // Include id in the dependency// Include id in the dependency array to refetch data when id changes
 
-    console.log("This is :"+carData);
+    console.log("This is :" + carData);
 
     return (
         <>
@@ -36,7 +51,7 @@ const Preview = () => {
             <div className="preview">
                 <div className="leftsidebar">
                     <div className="name">
-                        <h1>{carData.name}</h1>
+                        <h1>{carData.name} </h1>
                     </div>
                     <h3>Vehicle Highlights:</h3>
                     <div className="viewhighlight">

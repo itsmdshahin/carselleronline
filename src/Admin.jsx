@@ -32,6 +32,7 @@ import Brandshow from "./pages/Brandshow/brandshow";
 import AllCarClient from "./pages/AllCarClient/AllCarClient";
 import BrandPrevious from "./pages/BrandPrevious/brandprevious";
 import Edit from "./pages/EditProfile/Edit";
+import Events from "./pages/Events/Events";
 
 function Admin() {
 
@@ -149,6 +150,10 @@ function Admin() {
     {
       path: "/Edit/:userId",
       element: <Edit />
+    },
+    {
+      path: "/Events",
+      element: <Events />
     }
 
   ]);

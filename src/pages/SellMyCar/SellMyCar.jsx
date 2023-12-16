@@ -3,10 +3,14 @@ import './addacar.scss';
 import { useState } from 'react';
 import Header from '../../components/headerPage/header';
 import { Footer } from '../../components/headerPage/footer';
+
 import { FaCreativeCommonsSamplingPlus } from 'react-icons/fa';
 
-const SellMyCar = () => {
+import axios from 'axios';
 
+
+const SellMyCar = () => {
+    const userId = localStorage.getItem('userId');
     const [name, setName] = useState('');
     const [model, setModel] = useState('');
     const [year, setYear] = useState('');
@@ -30,24 +34,30 @@ const SellMyCar = () => {
 
 
     const ConfirmSubmit = async () => {
+        console.log(userId);
 
-        
+
+
+
+
         try {
-
 
             const response = await fetch('http://localhost:5000/api/sellmycar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price,  picture, 
-                gallery }),
+
+
+
+                body: JSON.stringify({ userId, name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price, picture, gallery }),
             });
             console.log(response.ok);
-
+            // console.log(req.params.id);
             alert(`Submitted: ${name} ${model} ${response.ok} ${response.status} `);
             if (response.ok) {
                 // Registration successful
+
                 alert('Car added successfully!');
             } else {
                 // Registration failed

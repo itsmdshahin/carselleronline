@@ -15,39 +15,39 @@ const Profilee = () => {
     const userId = localStorage.getItem('userId');
     const userEmail = localStorage.getItem('userEmail');
 
-    console.log(userEmail+" "+userId);
+    console.log(userEmail + " " + userId);
 
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            const response = await axios.get(`http://localhost:5000/profile/${userId}`, {
-              headers: {
-                'Authorization': `Bearer ${token}`,
-              },
-            });
-    
-            if (response.status === 200) {
-              const data = response.data;
-              setUserProfile(data);
-            } else {
-              console.error('Error fetching profile data:', response.status);
+            try {
+                const response = await axios.get(`http://localhost:5000/profile/${userId}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                    },
+                });
+
+                if (response.status === 200) {
+                    const data = response.data;
+                    setUserProfile(data);
+                } else {
+                    console.error('Error fetching profile data:', response.status);
+                }
+            } catch (error) {
+                console.error('Error during profile data fetch:', error);
             }
-          } catch (error) {
-            console.error('Error during profile data fetch:', error);
-          }
         };
-    
+
         fetchData();
     }, [token, userId]);
 
-    
+
     return (
         <>
 
             <div className='profilee'>
 
                 <div className='firstdiv'>
-                    <h1> 
+                    <h1>
                         {userProfile.name} <FaRegCheckCircle className='logo1' />
                     </h1>
                 </div>
@@ -55,11 +55,11 @@ const Profilee = () => {
                 <div className="seconddiv">
                     <div className='secondone'>
                         <img src="../../../../images/ca7.jpg" alt="Logo" />
-                       <div className="editbtn">
-                        {/* <button className="edit"><a href="">EDIT</a></button> */}
-                        {/* <a href={`/edit/${userId}`} className="edit">EDIT</a> */}
-                        <Link to={`/edit/${userId}`} className="edit">Edit</Link>
-                       </div>
+                        <div className="editbtn">
+                            {/* <button className="edit"><a href="">EDIT</a></button> */}
+                            {/* <a href={`/edit/${userId}`} className="edit">EDIT</a> */}
+                            <Link to={`/edit/${userId}`} className="edit">Edit</Link>
+                        </div>
                     </div>
 
                     <div className='secondtwo'>
@@ -312,12 +312,7 @@ const Profilee = () => {
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
+ 
 
                 </div>
 
