@@ -17,11 +17,19 @@ const Events = () => {
         setShowPopup(!showPopup);
     };
     return (
-        <>
+
+       <>
+        {/* <Header />
+        <div className="mainevent">
+            <div className="overlay"></div>
+            <video src={video} autoPlay loop muted />
+
+        <> */}
             <Header />
             <div className="mainforeventonly">
                 <div className="overlay"></div>
                 <video src={video} autoPlay loop muted />
+
 
                 <div className="content">
                     <h1>Welcome To  CarSeller Online</h1>

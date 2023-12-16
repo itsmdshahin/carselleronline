@@ -3,7 +3,11 @@ import './addacar.scss';
 import { useState } from 'react';
 import Header from '../../components/headerPage/header';
 import { Footer } from '../../components/headerPage/footer';
+
+import { FaCreativeCommonsSamplingPlus } from 'react-icons/fa';
+
 import axios from 'axios';
+
 
 const SellMyCar = () => {
     const userId = localStorage.getItem('userId');
@@ -32,13 +36,20 @@ const SellMyCar = () => {
     const ConfirmSubmit = async () => {
         console.log(userId);
 
-        try { 
-            
+
+
+
+
+        try {
+
             const response = await fetch('http://localhost:5000/api/sellmycar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
+
+
+
                 body: JSON.stringify({ userId, name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price, picture, gallery }),
             });
             console.log(response.ok);
@@ -46,7 +57,7 @@ const SellMyCar = () => {
             alert(`Submitted: ${name} ${model} ${response.ok} ${response.status} `);
             if (response.ok) {
                 // Registration successful
-                
+
                 alert('Car added successfully!');
             } else {
                 // Registration failed
@@ -67,7 +78,7 @@ const SellMyCar = () => {
                     <h1>Sell My Car</h1>
                 </div>
                 <div >
-                    <form className="froms">
+                    <form className="froms" encType='multipart/form-data'>
                         <div className="column">
                             <div className="form" id="div1">
                                 <label >Car Name :</label>
@@ -119,33 +130,23 @@ const SellMyCar = () => {
                                     type="file"
                                     name="picture"
                                     id="picture"
-
-
+                                    accept=".jpeg, .png, .jpg"
                                     /* value={picture} */
                                     onChange={(e) => setPicture(e.target.files[0])}
 
-                                    value={picture}
-                                //  onChange={(e) => setPicture(e.target.files[0])}
-
                                 />
-
-
 
                                 <label>Car Gallery:</label>
                                 <input
                                     type="file"
                                     name="gallery"
                                     id="gallery"
+                                    accept=".jpeg, .png, .jpg"
                                     multiple
-
                                     /*value={gallery} */
                                     onChange={(e) => setGallery(e.target.files)}
 
-                                    value={gallery}
-                                // onChange={(e) => setGallery(e.target.files[0])}
-
                                 />
-
 
 
                                 <label >Car Price :</label>
