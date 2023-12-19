@@ -26,7 +26,7 @@ const Events = () => {
 
         <> */}
             <Header />
-            <div className="mainforeventonly">
+            <div className="mainevent">
                 <div className="overlay"></div>
                 <video src={video} autoPlay loop muted />
 

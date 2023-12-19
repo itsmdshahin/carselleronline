@@ -4,6 +4,7 @@ import PROFILEPIC from '../../../assets/usersprofileimg/itsmdshahinpro.png';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { FaRegCheckCircle } from 'react-icons/fa';
 
 const CarPreview = () => {
 
@@ -58,20 +59,23 @@ const CarPreview = () => {
                 </div>
                 <div className="button">
                     <button>Buy Now</button>
-                    <button>Place A Bid</button>
+                    <button> <Link to={`/bidding/${carId}`}>Place A Bid</Link></button>
                 </div>
             </div>
             <div className="carpreview">
                 <div className="headeradmin">
                     <img width='100px' src={PROFILEPIC} alt="profile" />
                     <div className="headerdes">
-                        <h3>{userIdInfo.name}</h3>
+                        <h3>{userIdInfo.name} {userIdInfo.isVerified ?
+                            <FaRegCheckCircle className='logo1' /> :
+                            <button>Not Verified</button>} 
+                            </h3>
                         <h4>Sylhet, Bangladesh</h4>
                     </div>
                 </div>
 
                 <div className="desadmin">
-                    <button><Link to='mailto:mdshahinurrahman8@gmail.com'>Message me</Link></button>
+                    <button><Link to={`mailto:${userIdInfo.email}`}>Message me</Link></button>
                     
                 </div>
             </div>

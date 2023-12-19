@@ -1,0 +1,94 @@
+.BidPlaceandHistory {
+    // background-color: aquamarine;
+    flex: content;
+
+    .history {
+        float: left;
+        display: flex;
+        // float: left;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        // margin: 100px;
+        padding: 100px;
+        width: 45%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 10px;
+            width: 100%;
+        }
+
+        h4 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 8px;
+                padding: 8px;
+                background-color: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .placeabid {
+        display: flex;
+        float: right;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        // margin: 1px;
+        padding: 100px;
+        width: 45%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 10px;
+            width: 100%;
+        }
+
+        h4 {
+            color: #151F26;
+            font-size: 2rem;
+        }
+
+        .placeabidinput {
+            margin: 10px;
+
+            // padding: 10px 100px 10px 100px;
+            input {
+                margin: 10px;
+                padding: 10px 10px 10px 50px;
+                overflow: hidden;
+            }
+        }
+
+        .btn {
+            margin: 10px;
+            padding: 10px 99px 10px 99px;
+            border-radius: 6px;
+            color: #151F26;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #FAAF52;
+            }
+
+        }
+
+    }
+}
