@@ -64,14 +64,14 @@ const Bidding = () => {
                     <div className="rightside">
                         <div className="cardivtitle">
                             <h2>{carData.name} </h2>
-                            <h3>Current Price : {carData.price}</h3>
+                            <h3>Starting Price : {carData.price}</h3>
                         </div>
                         <div className="cardivbody">
                             <p>London, United Kingdom</p>
                             <h3>Reserve Price: USD $58,000</h3>
-                            <h4>
+                            {/* <h4>
                                 <Link to="/">3 bids</Link>
-                            </h4>
+                            </h4> */}
                         </div>
                         <div className='cardivfotter'>
                             <p>
@@ -83,12 +83,9 @@ const Bidding = () => {
                     </div>
                 </div>
                 <div className="footercontainer">
+ 
 
-                    {/* <BidHistory carId={carId} />
-
-                    <PlaceABid carId={carId} /> */}
-
-                    <BidPlaceH carId ={carId} />
+                    <BidPlaceH carId ={carId} bidMinAmount={carData.price} />
 
                 </div>
             </div>

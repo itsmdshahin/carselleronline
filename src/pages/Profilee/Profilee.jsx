@@ -73,7 +73,19 @@ const Profilee = () => {
         }
     };
 
+    const [carList, setCarList] = useState([]);
 
+    useEffect(() => {
+        // Fetch car data from the API
+        axios.get('http://localhost:5000/api/sellmycar')
+            .then(response => {
+                setCarList(response.data
+                    .filter((user) => user.userId === userId));
+            })
+            .catch(error => {
+                console.error('Error fetching car data:', error);
+            });
+    }, []);
 
     return (
         <>
@@ -146,222 +158,37 @@ const Profilee = () => {
 
 
                     <div className='thirdone'>
-                        <div className="thirdtwo">
-                            <img src="../../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
+                        {carList.map((car, index) => (
+                            <div className="thirdtwo" key={index}>
+                                <img src={`../../../images/ca1.jpeg`} alt="Car" className='thirdimg' />
+                                <div className="thirdthree">
+                                    <h3>{car.name}  {car.year}</h3>
 
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
+                                    <div className='thirdfour'>
+                                        <div className='thirdfourone'>
+                                            <p className='thirdp'>BDT : ৳{car.price} </p>
+                                            <p className='thirdp'>Model : {car.model}</p>
+                                            <p className='thirdpp'>({car.mileages})</p>
+                                        </div>
+
+                                        <div className='thirdfourtwo'>
+                                            {/* You can display additional details or remove this part if not needed */}
+                                            <p>{car.marketStatus}</p>
+                                        </div>
                                     </div>
 
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
+                                    <div className='thirdfive'>
+                                        <div className='thirdfiveone'>
+                                            <button className="btn2">Update Data</button>
+                                        </div>
+                                        <div className='thirdfiveone'>
+                                            <button className="btn">Delete Now</button>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
                             </div>
-                        </div>
+                        ))}
 
-                        <div className="thirdtwo">
-                            <img src="../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
-
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
-                                    </div>
-
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
-                                    </div>
-                                </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="thirdtwo">
-                            <img src="../../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
-
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
-                                    </div>
-
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
-                                    </div>
-                                </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="thirdtwo">
-                            <img src="../../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
-
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
-                                    </div>
-
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
-                                    </div>
-                                </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="thirdtwo">
-                            <img src="../../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
-
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
-                                    </div>
-
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
-                                    </div>
-                                </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="thirdtwo">
-                            <img src="../../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
-
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
-                                    </div>
-
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
-                                    </div>
-                                </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="thirdtwo">
-                            <img src="../../../../images/ca6.jpg" alt="Car" className='thirdimg' />
-                            <div className="thirdthree">
-                                <h3>2015 Marcedes-Benz Sprinter Cab</h3>
-
-                                <div className='thirdfour'>
-                                    <div className='thirdfourone'>
-                                        <p className='thirdp'>$25,500</p>
-                                        <p className='thirdp'>163,383 mile</p>
-                                        <p className='thirdp'>Clarksville,MD</p>
-                                        <p className='thirdpp'>(880)1234567</p>
-                                    </div>
-
-                                    <div className='thirdfourtwo'>
-                                        <p>$9,730 below market</p>
-                                    </div>
-                                </div>
-
-                                <div className='thirdfive'>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn2">Request Info</button>
-                                    </div>
-                                    <div className='thirdfiveone'>
-                                        <button className="btn">Start Purchasing</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
 
 
