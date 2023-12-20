@@ -100,7 +100,7 @@ function Admin() {
       element: isLoggedIn ? <Preview /> : <Login />,
     },
     {
-      path: "/bidding", // most login
+      path: "/bidding/:carId", // most login
       element: isLoggedIn ? <Bidding /> : <Login />,
     },
     {

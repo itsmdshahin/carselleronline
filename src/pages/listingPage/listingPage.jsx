@@ -103,7 +103,7 @@ const ListingPage = () => {
       <div className='firstPart'>
         <hr />
         <div className='secondPart '>
-          <h3> <FaRegHandshake className="icon"/>Get Deal First. 21 Days Before the Rest.</h3>
+          <h3> <FaRegHandshake className="icon" />Get Deal First. 21 Days Before the Rest.</h3>
           <p className="seconpartp"> Gain an edge and beat the competition. Did you know? 67% of businesses go under offer within the first 21 days. <a href="">Learn More</a></p>
 
           <div className='button'>
@@ -120,27 +120,27 @@ const ListingPage = () => {
                     <div className='box'>
                       <h6 className="bh6">First Access Ends in <a href="">10days</a></h6>
                       <div className="boxx">
-                      <button type="button"><h7>Verified Listing <FaCheck /></h7></button>
-                      <div className='box1'>
-                       <div className="box3">
-                       <p className="boxp">Types</p>
-                        <h6 className="boh6">{item.types}</h6>
-                       </div>
-                       <div className="box3">
-                       <p className="boxp">Net Price</p>
-                        <h6 className="boh6">USD ${item.netprice}</h6>
-                       </div>
-                       <div className="box3">
-                       <p className="boxp">Year</p>
-                        <h6 className="boh6">{item.year}</h6>
-                       </div>
-                       <div className="box4">
-                       <h6 className="boh6">USD ${item.price}</h6>
-                       </div>
-                      </div>
-                      <div className=' box2'>
-                        <button type="button" className="bt2"><h7>View Listing</h7></button>
-                      </div>
+                        <button type="button"><h7>Verified Listing <FaCheck /></h7></button>
+                        <div className='box1'>
+                          <div className="box3">
+                            <p className="boxp">Types</p>
+                            <h6 className="boh6">{item.types}</h6>
+                          </div>
+                          <div className="box3">
+                            <p className="boxp">Net Price</p>
+                            <h6 className="boh6">USD ${item.netprice}</h6>
+                          </div>
+                          <div className="box3">
+                            <p className="boxp">Year</p>
+                            <h6 className="boh6">{item.year}</h6>
+                          </div>
+                          <div className="box4">
+                            <h6 className="boh6">USD ${item.price}</h6>
+                          </div>
+                        </div>
+                        <div className=' box2'>
+                          <button type="button" className="bt2"><h7>View Listing</h7></button>
+                        </div>
                       </div>
                     </div>
                   ))

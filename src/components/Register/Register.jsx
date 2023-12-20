@@ -12,7 +12,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [conpassword, setConPassword] = useState('');
   const [mobile, setMobile] = useState('');
- 
+
 
   const handleRegister = async () => {
 
@@ -134,7 +134,7 @@ const Register = () => {
           <p className="text-light pt-2">Already Have An Account?</p>{' '}
           <Link to="../../Login">Log-in</Link>
         </div>
-        <div className="submit" onClick={handleRegister}> 
+        <div className="submit" onClick={handleRegister}>
           <Button>Register</Button>
         </div>
       </div>

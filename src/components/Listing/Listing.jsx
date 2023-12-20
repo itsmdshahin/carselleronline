@@ -108,7 +108,7 @@ const Listing = () => {
             <div className='btnrow'>
               <button type="button">
                 <FaRegEyeSlash className='icon' />
-                <Link to="/bidding">Bid Now</Link>
+                <Link to={`/bidding/${item._id}`}>Bid Now</Link>
               </button>
               <button type="button">
                 <Link to={`/preview/${item._id}`}>View Listing</Link>

@@ -15,6 +15,9 @@ const Preview = () => {
 
     const [carData, setCarData] = useState({});
     const [userIdInfo, setUserIdInfo] = useState({});
+
+   
+
     useEffect(() => {
         // Fetch the car details based on the id using axios
         axios.get(`http://localhost:5000/api/getcalldatalisting/${carId}`)

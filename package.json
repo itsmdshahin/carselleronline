@@ -30,13 +30,15 @@
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
     "react-icons": "^4.10.1",
+    "react-modal": "^3.16.1",
     "react-native-vector-icons": "^10.0.0",
     "react-router-dom": "^6.14.2",
     "react-slick": "^0.29.0",
     "react-vector-icons": "^0.0.1",
     "recharts": "^2.7.2",
     "sass": "^1.64.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.7.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
