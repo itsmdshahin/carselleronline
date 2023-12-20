@@ -57,7 +57,7 @@ const CarPreview = () => {
                     <p>12 days left*</p>
                 </div>
                 <div className="button">
-                    <button>Buy Now</button>
+                    <button><Link to='/Buynow'>Buy Now</Link></button>
                     <button>Place A Bid</button>
                 </div>
             </div>
