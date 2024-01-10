@@ -79,18 +79,16 @@ const CarPreview = () => {
                 </div>
                 {bidisEnd === null && (
                     <div className="button">
-                        {winnerUserId ===
-                        localStorage.getItem('userId') ? (
-                            <button>Buy Now</button>
-                        ) : null}
+                       <button><Link to='/Buynow'>Buy Now</Link></button>
+
                         <button>
                             <Link to={`/bidding/${carId}`}>Place A Bid</Link>
                         </button>
                     </div>
                 )}
-                 <button>
-                            <Link to={`/bidding/${carId}`}>Place A Bid</Link>
-                        </button>
+                <button>
+                    <Link to={`/bidding/${carId}`}>Place A Bid</Link>
+                </button>
             </div>
             <div className="carpreview">
                 <div className="headeradmin">

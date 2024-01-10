@@ -33,6 +33,9 @@ import AllCarClient from "./pages/AllCarClient/AllCarClient";
 import BrandPrevious from "./pages/BrandPrevious/brandprevious";
 import Edit from "./pages/EditProfile/Edit";
 import Events from "./pages/Events/Events";
+import Buynow from "./pages/Payment/Buynow";
+import Error from "./pages/Payment/Error";
+import Success from "./pages/Payment/Success";
 
 function Admin() {
 
@@ -154,6 +157,18 @@ function Admin() {
     {
       path: "/Events",
       element: <Events />
+    },
+    {
+      path: "/Buynow",
+      element: <Buynow />
+    },
+    {
+      path: "/error?",
+      element: <Error />
+    },
+    {
+      path: "/success",
+      element: <Success />
     }
 
   ]);
