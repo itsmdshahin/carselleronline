@@ -1,22 +1,11 @@
 // BidHistory.jsx
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import io from "socket.io-client";
+import { Link } from "react-router-dom"; 
 
-const socket = io("http://localhost:5000");
-
+ 
 const BidHistory = () => {
   const [bids, setBids] = useState([]);
-
-  useEffect(() => {
-    socket.on("newBid", (bid) => {
-      setBids((prevBids) => [...prevBids, bid]);
-    });
-
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
+ 
 
   return (
     <>

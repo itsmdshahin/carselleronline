@@ -48,10 +48,9 @@ const BidPlaceH = ({ carId, bidMinAmount }) => {
         try {
             const response = await axios.get('http://localhost:5000/api/get-all-bids');
             const filteredBidHistory = response.data
-                .filter((bid) => bid.carId === carId) // Filter based on carId
+                .filter((bid) => bid.carId === carId)
                 .sort((a, b) => b.bidAmount - a.bidAmount);
 
-            // Calculate pagination
             const indexOfLastItem = currentPage * itemsPerPage;
             const indexOfFirstItem = indexOfLastItem - itemsPerPage;
             const currentItems = filteredBidHistory.slice(indexOfFirstItem, indexOfLastItem);
@@ -71,7 +70,7 @@ const BidPlaceH = ({ carId, bidMinAmount }) => {
     };
 
     return (
-        <div className='BidPlaceandHistory'> 
+        <div className='BidPlaceandHistory'>
 
             <div className="history">
                 <h4>Total {bidHistory.length} bid's Placed</h4>
