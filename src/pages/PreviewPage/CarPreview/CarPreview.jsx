@@ -8,10 +8,14 @@ import { FaRegCheckCircle } from 'react-icons/fa';
 const CarPreview = () => {
     const { carId } = useParams();
     console.log(carId);
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
     const [carData, setCarData] = useState({});
     const [userIdInfo, setUserIdInfo] = useState({});
     const [bidisEnd, setBidisEnd] = useState(null);
+    const [highestBid, setHighestBid] = useState({});
+    const [WinnerInfo, setWinnerInfo] = useState({});
+    const userId = localStorage.getItem('userId'); 
 
     const calculateRemainingTime = () => {
         const createdAtDate = new Date(carData.createdAt);
@@ -32,13 +36,13 @@ const CarPreview = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/api/getcalldatalisting/${carId}`)
+            .get(`${apiURL}/api/getcalldatalisting/${carId}`)
             .then((response) => {
                 console.log(response.data, 'CarData');
                 setCarData(response.data.carProfile);
                 const userId = response.data.carProfile.userId;
                 axios
-                    .get(`http://localhost:5000/profile/${userId}`)
+                    .get(`${apiURL}/profile/${userId}`)
                     .then((userResponse) => {
                         console.log(userResponse.data, 'UserData');
                         setUserIdInfo(userResponse.data);
@@ -49,6 +53,30 @@ const CarPreview = () => {
                     .catch((userError) => {
                         console.error('Error fetching user data:', userError);
                     });
+                 // Fetch the highest bid for the car
+                 axios
+                 .get(`${apiURL}/api/get-highest-bid/${carId}`)
+                 .then((highestBidResponse) => {
+                     console.log(highestBidResponse.data, 'Highest Bid');
+                     setHighestBid(highestBidResponse.data);
+ 
+                     // Fetch the winner's information based on the winnerUserId
+                     if (highestBidResponse.data.bidderUserId) {
+                         axios
+                             .get(`${apiURL}/profile/${highestBidResponse.data.bidderUserId}`)
+                             .then((winnerResponse) => {
+                                 console.log(winnerResponse.data, 'Winner Data');
+                                 setWinnerInfo(winnerResponse.data);
+                             })
+                             .catch((winnerError) => {
+                                 console.error('Error fetching winner data:', winnerError);
+                             });
+                     }
+                 })
+                 .catch((bidError) => {
+                     console.error('Error fetching highest bid:', bidError);
+                 });
+                
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -57,8 +85,8 @@ const CarPreview = () => {
 
     console.log('This is :' + carData);
 
-    const winnerUserId = carData.bidderUserId; // Assuming you have the winner's user ID in carData
-
+    const winnerUserId = highestBid; // Assuming you have the winner's user ID in carData
+    console.log("HE IS WINNER"+ winnerUserId.bidderUserId);
     return (
         <>
             <div className="carpreview">
@@ -74,7 +102,7 @@ const CarPreview = () => {
                     <p>
                         {bidisEnd === null
                             ? calculateRemainingTime()
-                            : 'Car is Sucessfully Sold!'}
+                            : `${WinnerInfo.name} Bought by $${highestBid.bidAmount} dollars!`}
                     </p>
                 </div>
                 {bidisEnd === null && (
@@ -86,9 +114,12 @@ const CarPreview = () => {
                         </button>
                     </div>
                 )}
-                <button>
-                    <Link to={`/bidding/${carId}`}>Place A Bid</Link>
-                </button>
+                {userId === highestBid.bidderUserId ? 
+                    <div className="button">
+                        <button><Link to='/Buynow'>Buy Now</Link></button>
+                    </div> : ""}
+
+                
             </div>
             <div className="carpreview">
                 <div className="headeradmin">

@@ -5,9 +5,11 @@ import './allcarclient.scss';
 
 const AllCarClient = () => {
     const [CARS, setCARS] = useState([]);
+    
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/CarDataFormClient', {
+        fetch(`${apiURL}/api/CarDataFormClient`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}` // Include the JWT token
             }
@@ -31,7 +33,7 @@ const AllCarClient = () => {
         }
 
         // Make an API request to delete the car with the given ID
-        fetch(`http://localhost:5000/api/sellmycar/${id}`, {
+        fetch(`${apiURL}/api/sellmycar/${id}`, {
             method: 'DELETE',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,

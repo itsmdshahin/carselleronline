@@ -5,8 +5,10 @@ const ProfileDataShow = () => {
     const [users, setUsers] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
 
+    const apiURL =  `http://localhost:5000` ; // || `https://carseller-server.onrender.com` ||
+
     useEffect(() => {
-        fetch('http://localhost:5000/api/users', {
+        fetch(`${apiURL}/api/users`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}` // Include the JWT token
             }

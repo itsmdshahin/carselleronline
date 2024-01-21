@@ -7,8 +7,7 @@ import {
 
 import Home from './components/admin/Home'
 import Users from "./components/Users/Users";
-import Profile from "./pages/Profile/profile";
-// import Profile from "./pages/Profile/profileShow";
+import Profile from "./pages/Profile/profile"; 
 import Profilee from "./pages/Profilee/Profilee";
 import Transcation from "./pages/Transcation/Transcation";
 import Allcar from "./pages/Allcar/Allcar";

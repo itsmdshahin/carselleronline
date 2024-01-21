@@ -13,6 +13,7 @@ const Register = () => {
   const [conpassword, setConPassword] = useState('');
   const [mobile, setMobile] = useState('');
 
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
   const handleRegister = async () => {
 
@@ -48,7 +49,7 @@ const Register = () => {
 
     try {
 
-      const response = await fetch('http://localhost:5000/register', {
+      const response = await fetch(`${apiURL}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

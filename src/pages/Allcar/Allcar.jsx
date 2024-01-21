@@ -10,8 +10,9 @@ export default function Allcar() {
   const [updatedCarData, setUpdatedCarData] = useState({});
   const [selectedCarId, setSelectedCarId] = useState(null);
 
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
   useEffect(() => {
-    fetch('http://localhost:5000/api/addacar', {
+    fetch(`${apiURL}/api/addacar`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
@@ -47,7 +48,7 @@ export default function Allcar() {
 
   const handleUpdateSubmit = () => {
     // Make an API request to update the car with the given ID
-    fetch(`http://localhost:5000/api/addacar/${selectedCarId}`, {
+    fetch(`${apiURL}/api/addacar/${selectedCarId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -84,7 +85,7 @@ export default function Allcar() {
     }
 
     // Make an API request to delete the car with the given ID
-    fetch(`http://localhost:5000/api/addacar/${id}`, {
+    fetch(`${apiURL}/api/addacar/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,

@@ -10,6 +10,8 @@ const BidPlaceH = ({ carId, bidMinAmount }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5; // Adjust this value as needed
 
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
+
     useEffect(() => {
         // Fetch bid history when the component mounts or when the currentPage changes
         fetchBidHistory();
@@ -19,7 +21,7 @@ const BidPlaceH = ({ carId, bidMinAmount }) => {
         try {
             console.log("Handling bidding place: " + bidAmount + " Car ID " + carId);
 
-            const response = await fetch('http://localhost:5000/api/place-bid', {
+            const response = await fetch(`${apiURL}/api/place-bid`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -46,7 +48,7 @@ const BidPlaceH = ({ carId, bidMinAmount }) => {
 
     const fetchBidHistory = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/get-all-bids');
+            const response = await axios.get(`${apiURL}/api/get-all-bids`);
             const filteredBidHistory = response.data
                 .filter((bid) => bid.carId === carId)
                 .sort((a, b) => b.bidAmount - a.bidAmount);

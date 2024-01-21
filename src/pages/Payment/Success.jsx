@@ -1,9 +1,15 @@
 import React from 'react'
 import './payment.scss'
+import Header from '../../components/headerPage/header'
+import { Footer } from '../../components/headerPage/footer'
 
 const Success = () => {
     return (
-        <div className='mainpayment'>Success</div>
+        <> 
+        <Header />
+            <div className='mainpayment'>Success</div>
+            <Footer />
+        </>
     )
 }
 

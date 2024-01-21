@@ -7,6 +7,7 @@ import "./brandprevious.scss";
 
 const BrandPrevious = () => {
 
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
   const [cars, setCars] = useState([]);
   const [selectedCar, setSelectedCar] = useState(null);
   useEffect(() => {
@@ -15,7 +16,7 @@ const BrandPrevious = () => {
 
   const fetchCars = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/cars');
+      const response = await fetch(`${apiURL}/api/cars`);
       const data = await response.json();
       setCars(data);
     } catch (error) {

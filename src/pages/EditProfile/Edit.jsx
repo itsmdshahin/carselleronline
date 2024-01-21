@@ -5,6 +5,8 @@ import axios from 'axios';
 import './edit.scss';
 
 const Edit = () => {
+  
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
   const { userId } = useParams();
   const [userData, setUserData] = useState({
     name: '',
@@ -14,7 +16,7 @@ const Edit = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/profile/${userId}`, {
+        const response = await axios.get(`${apiURL}/profile/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

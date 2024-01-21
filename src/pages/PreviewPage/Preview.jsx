@@ -16,17 +16,18 @@ const Preview = () => {
     const [carData, setCarData] = useState({});
     const [userIdInfo, setUserIdInfo] = useState({});
 
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
    
 
     useEffect(() => {
         // Fetch the car details based on the id using axios
-        axios.get(`http://localhost:5000/api/getcalldatalisting/${carId}`)
+        axios.get(`${apiURL}/api/getcalldatalisting/${carId}`)
             .then((response) => {
                 console.log(response.data, "CarData");
                 setCarData(response.data.carProfile); // Assuming name is in response.data
                 const userId = response.data.carProfile.userId;
                 // Make a new API request to get user details
-                axios.get(`http://localhost:5000/profile/${userId}`)
+                axios.get(`${apiURL}/profile/${userId}`)
                     .then((userResponse) => {
                         // Assuming user name is in userResponse.data
                         console.log(userResponse.data, "UserData");
