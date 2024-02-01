@@ -31,6 +31,7 @@ const SellMyCar = () => {
     const [price, setPrice] = useState('');
     const [picture, setPicture] = useState(null);
     const [gallery, setGallery] = useState([]);
+    const apiURL =  `http://localhost:5000` ; // || `https://carseller-server.onrender.com` ||
 
 
     const ConfirmSubmit = async () => {
@@ -42,7 +43,7 @@ const SellMyCar = () => {
 
         try {
 
-            const response = await fetch('http://localhost:5000/api/sellmycar', {
+            const response = await fetch(`${apiURL}/api/sellmycar`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -2,59 +2,15 @@ import React, { useEffect, useState } from 'react';
 import "./listing.scss";
 import { Link } from 'react-router-dom';
 import { FaLocationDot, FaRegEyeSlash } from "react-icons/fa6";
-// const data = [
-//   {
-//     id: 1,
-//     img: "../../images/ca10.jpg",
-//     carName: "Range Rover",
-//     location: "United State",
-//     transmission: "Automatic With Manual Mode",
-//     askingPrice: "50,000",
-//     currentPrice: "38,000",
-//     engine: "2.0L V8",
-//     power: "518 hp",
-//   },
-//   {
-//     id: 2,
-//     img: "../../images/ca10.jpg",
-//     carName: "BMW",
-//     location: "United Arab",
-//     transmission: "Automatic With Manual Mode",
-//     askingPrice: "50,000",
-//     currentPrice: "38,000",
-//     engine: "2.0L V8",
-//     power: "518 hp",
-//   },
-//   {
-//     id: 3,
-//     img: "../../images/ca10.jpg",
-//     carName: "Toyota",
-//     location: "Bangladesh",
-//     transmission: "Automatic With Manual Mode",
-//     askingPrice: "50,000",
-//     currentPrice: "38,000",
-//     engine: "2.0L V8",
-//     power: "518 hp",
-//   },
-//   {
-//     id: 4,
-//     img: "../../images/ca10.jpg",
-//     carName: "Ferari",
-//     location: "United State",
-//     transmission: "Automatic With Manual Mode",
-//     askingPrice: "50,000",
-//     currentPrice: "38,000",
-//     engine: "2.0L V8",
-//     power: "518 hp",
-//   },
-// ]
+
 
 const Listing = () => {
 
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/getcalldatalisting", {
+    fetch(`${apiURL}/api/getcalldatalisting`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -69,9 +25,10 @@ const Listing = () => {
     <div className='listing'>
       <h1 className='headerlist'>Listing</h1>
 
-      {data.map((item) => (
-        <div className='listDiv' key={item._id}>
+      {data && data.map((item) => (
+        <div className='listDiv' key={item._id}> 
           <img width="350px" src='../../images/ca10.jpg' alt="Pic" />
+
 
           <div className='listRow'>
             <div className='first'>

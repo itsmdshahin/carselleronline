@@ -17,13 +17,14 @@ const Profilee = () => {
     const [otp, setOtp] = useState('');
     const [showModal, setShowModal] = useState(false);
 
+    const apiURL =  `http://localhost:5000` ; // || `https://carseller-server.onrender.com` ||
 
     console.log(userEmail + " " + userId);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/profile/${userId}`, {
+                const response = await axios.get(`${apiURL}/profile/${userId}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                     },
@@ -51,7 +52,7 @@ const Profilee = () => {
     const handleVerifySubmit = async () => {
         try {
             const response = await axios.post(
-                'http://localhost:5000/verifyOTP',
+                `${apiURL}/verifyOTP`,
                 {
                     userId: userId,
                     otp: otp,
@@ -77,7 +78,7 @@ const Profilee = () => {
 
     useEffect(() => {
         // Fetch car data from the API
-        axios.get('http://localhost:5000/api/sellmycar')
+        axios.get(`${apiURL}/api/sellmycar`)
             .then(response => {
                 setCarList(response.data
                     .filter((user) => user.userId === userId));

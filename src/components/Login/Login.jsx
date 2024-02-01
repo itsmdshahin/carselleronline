@@ -14,6 +14,7 @@ const Login = () => {
   const [password, setpassword] = useState('');
 
 
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
   const handleLogin = async () => {
 
@@ -25,7 +26,7 @@ const Login = () => {
     };
     console.log(email + " " + password);
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch(`${apiURL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,8 +52,7 @@ const Login = () => {
           nagivate('/admin');
 
         } else {
-          // nagivate('/profile');
-          <Link to="/profile"></Link>
+          <Link to={`/profile/${userId}`}></Link>
         }
         // Redirect to Admin.jsx if email and password are "admin"
 

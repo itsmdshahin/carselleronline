@@ -4,6 +4,8 @@ import { Footer } from "../../components/headerPage/footer";
 import Header from "../../components/headerPage/header";
 import "./sold.scss";
 const Sold = () => {
+    const apiURL =  `http://localhost:5000` ; // || `https://carseller-server.onrender.com` ||
+
     return (
         <>
             <Header />

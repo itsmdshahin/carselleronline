@@ -7,19 +7,20 @@ const PlaceABid = ({ carId }) => {
   const [bidAmount, setBidAmount] = useState("");
   const [currentBid, setCurrentBid] = useState(0);
 
+  const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
   const handleBidSubmit = async () => {
     try {
       // Fetch car data
-      const carResponse = await axios.get(`http://localhost:5000/api/getcalldatalisting/${carId}`);
+      const carResponse = await axios.get(`${apiURL}/api/getcalldatalisting/${carId}`);
       const carData = carResponse.data.carProfile;
 
       // Update the price on the server
-      await axios.put(`http://localhost:5000/api/getcalldatalisting/${carId}`, {
+      await axios.put(`${apiURL}/api/getcalldatalisting/${carId}`, {
         price: bidAmount, // Assuming you want to update the price
       });
 
       // Place bid history to MongoDB
-      await axios.post(`http://localhost:5000/api/place-bid`, {
+      await axios.post(`${apiURL}/api/place-bid`, {
         carId: carId,
         userId: userId,
         bidAmount: bidAmount,

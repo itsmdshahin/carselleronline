@@ -1,0 +1,40 @@
+.mainpayment {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.makepaymentcontainer {
+    display: flex;
+    justify-content: center;
+
+    button {
+        padding: 50px;
+        margin: 10px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &.bkash-button {
+            background-image: url('https://image.winudf.com/v2/image/Y29tLmNyZWF0aXZlYXBwc2JkLmJrYXNoX3NjcmVlbl8wXzE1MjY5MDkzOTdfMDU1/screen-0.jpg?h=710&fakeurl=1&type=.jpg');
+            background-size: cover; // Adjust as needed
+        }
+
+        &.card-button {
+            background-image: url('https://th.bing.com/th/id/OIP.3oJG6k7jSxQHmkjN9aRvNQHaDA?rs=1&pid=ImgDetMain');
+            background-size: cover; // Adjust as needed
+        }
+
+        &.paypal-button {
+            background-image: url('https://opendocs.com/wp-content/uploads/2018/11/Paypal-Logo.png');
+            background-size: cover; // Adjust as needed
+        }
+
+        &.rocket-button {
+            background-image: url('https://th.bing.com/th/id/R.30a4e42613a30af996ba45510a5150e3?rik=vI4Am1Q1nsd06w&riu=http%3a%2f%2fiubat.edu%2fpayment%2fvendor%2frocket.png&ehk=09Suk7nPSIeoD05wT1kJMSGaybg9kbo4%2f3gKXLAFGA4%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1');
+            background-size: cover; // Adjust as needed
+        }
+    }
+}

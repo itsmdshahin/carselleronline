@@ -10,6 +10,7 @@ import { Footer } from "../../components/headerPage/footer";
 
 
 const Events = () => {
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
     const [showPopup, setShowPopup] = useState(false);
 

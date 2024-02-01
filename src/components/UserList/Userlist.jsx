@@ -6,19 +6,21 @@ import axios from 'axios';
 
 
 const Userlist = (userData) => {
-    
+
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
+
     const [data, setData] = useState([]);
 
- useEffect(()=>{
-    fetch("http://localhost:5000/getAllUser",{
-      method: "GET",
-    })
-    .then((res)=> res.json())
-    .then((data) => {
-        console.log(data, "userData");
-        setData(data.data);
-    });
- }, []);
+    useEffect(() => {
+        fetch(`${apiURL}/getAllUser`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data, "userData");
+                setData(data.data);
+            });
+    }, []);
 
     return (
         <div className='userlist text-center'>
@@ -36,19 +38,19 @@ const Userlist = (userData) => {
                 </thead>
                 <tbody>
                     {
-                        data.map((user)=>(
+                        data.map((user) => (
                             <tr key={user._id}>
-                            <td>{user.id}</td>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
-                            {/* <td>{user.password}</td> */}
-                            <td>{user.mobile}</td>
-                            {/* <td>{users.address}</td> */}
-                        </tr>
+                                <td>{user.id}</td>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                {/* <td>{user.password}</td> */}
+                                <td>{user.mobile}</td>
+                                {/* <td>{users.address}</td> */}
+                            </tr>
                         ))
                     }
-                  
-                  
+
+
                 </tbody>
             </Table>
 

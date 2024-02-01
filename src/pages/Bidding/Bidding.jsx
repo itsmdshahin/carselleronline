@@ -12,6 +12,7 @@ import BidPlaceH from '../BidPlaceH/BidPlaceH';
 
 const Bidding = () => {
 
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
     const { carId } = useParams();
     console.log(carId);
 
@@ -19,7 +20,7 @@ const Bidding = () => {
     const [userIdInfo, setUserIdInfo] = useState({});
     useEffect(() => {
 
-        axios.get(`http://localhost:5000/api/getcalldatalisting/${carId}`)
+        axios.get(`${apiURL}/api/getcalldatalisting/${carId}`)
             .then((response) => {
                 console.log(response.data, "CarData");
                 setCarData(response.data.carProfile);

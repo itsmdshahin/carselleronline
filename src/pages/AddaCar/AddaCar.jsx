@@ -25,10 +25,11 @@ const AddaCar = () => {
     const [picture, setPicture] = useState(null);
     const [gallery, setGallery] = useState([]);
 
+    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
     const ConfirmSubmit = async () => {
 
         try {
-            const response = await fetch('http://localhost:5000/api/addacar', {
+            const response = await fetch(`${apiURL}/api/addacar`, {
                 method: 'POST',
                 body: JSON.stringify({ name, model, year, color, bodytype, mileages, condition, vin, stocknumber, fueltype, gasmileages, fueltanksize, transmission, Engine, Horsepower, Doors, Brand, price }),
                 headers: {
