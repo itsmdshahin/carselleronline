@@ -33,10 +33,8 @@ import AllCarClient from "./pages/AllCarClient/AllCarClient";
 import BrandPrevious from "./pages/BrandPrevious/brandprevious";
 import Edit from "./pages/EditProfile/Edit";
 import Events from "./pages/Events/Events";
-import Buynow from "./pages/Payment/Buynow";
-import Success from "./pages/Payment/Success";
-import Error from "./pages/Payment/Error";
 
+import ForgotPassword from "./components/Login/ForgotPassword"
 function Admin() {
 
   const isLoggedIn = window.localStorage.getItem('token') !== null;
@@ -159,16 +157,8 @@ function Admin() {
       element: <Events />
     },
     {
-      path: "/Buynow",
-      element: <Buynow />
-    },
-    {
-      path: "/Success",
-      element: <Success/>
-    },
-    {
-      path: "/error",
-      element: <Error />
+      path: "/forgot-password",
+      element: <ForgotPassword />
     }
 
   ]);

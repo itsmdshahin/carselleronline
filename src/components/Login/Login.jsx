@@ -102,8 +102,11 @@ const Login = () => {
         </div>
         <div className="Loginurl text-center pt-2">
           <p className="text-light pt-2">Don't Have An Account?</p> <Link to="../Register">Register now</Link>
+          <p className="text-light pt-2">Forgot Password</p> <Link to="/forgot-password">Forgot password</Link>
         </div>
-
+        {/* <div className="Loginurl text-center pt-2">
+          <p className="text-light pt-2">Forgot Password</p> <Link to="forgot-password">Register now</Link>
+        </div> */}
         <div className="submit" >
           <button onClick={handleLogin} >Log-In</button>
         </div>

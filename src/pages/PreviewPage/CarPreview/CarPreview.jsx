@@ -77,10 +77,7 @@ const CarPreview = () => {
                 </div>
                 <div className="button">
 
-                    <button><Link to='/Buynow'>Buy Now</Link></button>
-                    <button>Place A Bid</button>
-
-                    <button>Buy Now</button>
+                    <button>Buy now</button>
                     <button> <Link to={`/bidding/${carId}`}>Place A Bid</Link></button>
 
                 </div>
