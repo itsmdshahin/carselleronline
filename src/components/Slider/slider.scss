@@ -13,7 +13,7 @@
     .backgroundimage {
       background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0, #000000 100%), url(images/c.jpg);
       height: 100vh;
-    
+
       background-size: cover;
       background-position: center;
 
@@ -84,11 +84,11 @@
               cursor: pointer;
               font-size: 20px;
               padding: 2px;
-                 
-              p{
-                font-size:larger;
-               
-              
+
+              p {
+                font-size: larger;
+
+
               }
             }
 
@@ -138,6 +138,9 @@
 
     .secondpart {
 
+      background-color: white;
+      border: 1px solid #151F28;
+      box-shadow: 0 0 10px #151F28;
       display: flex;
       justify-content: center;
 
@@ -145,15 +148,17 @@
         width: 100%;
 
         tr {
+      border: 1px solid #151F28;
 
           th {
-
+            
             font-size: 20px;
             color: #151F28;
             padding: 2%;
+
           }
 
-          td {
+          td { 
             font-family: 'Abril Fatface', cursive;
             text-align: center;
             padding-top: 15px;
