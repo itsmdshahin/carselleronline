@@ -13,13 +13,13 @@ const Profilee = () => {
     const [userProfile, setUserProfile] = useState({});
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem('userId');
-    const userEmail = localStorage.getItem('userEmail');
     const [otp, setOtp] = useState('');
     const [showModal, setShowModal] = useState(false);
+    const [showUpdateModal, setShowUpdateModal] = useState(false);
+    const [selectedCar, setSelectedCar] = useState(null); // State to keep track of the car being edited
+    const [carList, setCarList] = useState([]);
 
-    const apiURL =  `http://localhost:5000` ; // || `https://carseller-server.onrender.com` ||
-
-    console.log(userEmail + " " + userId);
+    const apiURL = `http://localhost:5000`; // || `https://carseller-server.onrender.com`
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,8 +31,7 @@ const Profilee = () => {
                 });
 
                 if (response.status === 200) {
-                    const data = response.data;
-                    setUserProfile(data);
+                    setUserProfile(response.data);
                 } else {
                     console.error('Error fetching profile data:', response.status);
                 }
@@ -44,6 +43,17 @@ const Profilee = () => {
         fetchData();
     }, [token, userId]);
 
+    useEffect(() => {
+        // Fetch car data from the API
+        axios.get(`${apiURL}/api/sellmycar`)
+            .then(response => {
+                setCarList(response.data.filter((car) => car.userId === userId));
+            })
+            .catch(error => {
+                console.error('Error fetching car data:', error);
+            });
+    }, [userId]);
+
     const handleVerifyNowClick = () => {
         sendOTPRequest(userId, userEmail);
         setShowModal(true);
@@ -51,42 +61,56 @@ const Profilee = () => {
 
     const handleVerifySubmit = async () => {
         try {
-            const response = await axios.post(
-                `${apiURL}/verifyOTP`,
-                {
-                    userId: userId,
-                    otp: otp,
-                }
-            );
-
+            const response = await axios.post(`${apiURL}/verifyOTP`, { userId, otp });
             if (response.status === 200) {
-                // Update the state to indicate successful verification
                 setVerify(true);
                 setShowModal(false);
             } else {
-                // Handle the case where OTP verification failed
                 console.error('OTP verification failed:', response.data.message);
-                // You can show an error message or take appropriate action
             }
         } catch (error) {
             console.error('Error during OTP verification:', error);
-            // Handle the error, e.g., show an error message to the user
         }
     };
 
-    const [carList, setCarList] = useState([]);
+    const handleUpdateCar = async (carId, updatedData) => {
+        try {
+          const response = await axios.put(`${apiURL}/api/updatecar/${carId}`, updatedData, {
+            headers: {
+              'Authorization': `Bearer ${token}`,
+            },
+          });
+          if (response.status === 200) {
+            setCarList(carList.map(car => car.id === carId ? { ...car, ...updatedData } : car));
+            setShowUpdateModal(false);
+            alert('Car data updated successfully!');
+          } else {
+            console.error('Failed to update car data:', response.data.message);
+            alert(`Failed to update car data: ${response.data.message}`);
+          }
+        } catch (error) {
+          console.error('Error updating car data:', error);
+          alert(`Error updating car data: ${error.message}`);
+        }
+      };
 
-    useEffect(() => {
-        // Fetch car data from the API
-        axios.get(`${apiURL}/api/sellmycar`)
-            .then(response => {
-                setCarList(response.data
-                    .filter((user) => user.userId === userId));
-            })
-            .catch(error => {
-                console.error('Error fetching car data:', error);
+    const handleDeleteCar = async (carId) => {
+        try {
+            const response = await axios.delete(`${apiURL}/api/deletecar/${carId}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
             });
-    }, []);
+            if (response.status === 200) {
+                setCarList(carList.filter(car => car.id !== carId));
+                alert('Car deleted successfully!');
+            } else {
+                console.error('Failed to delete car:', response.data.message);
+            }
+        } catch (error) {
+            console.error('Error deleting car:', error);
+        }
+    };
 
     return (
         <>
@@ -153,7 +177,25 @@ const Profilee = () => {
                     </div>
 
                 </div>
-
+                {/* Update Car Modal */}
+                <Modal
+                    isOpen={showUpdateModal}
+                    onRequestClose={() => setShowUpdateModal(false)}
+                    contentLabel="Update Car Data"
+                >
+                    <h2>Update Car Data</h2>
+                    {/* Form for updating car data */}
+                    {/* This is a simplified example, you may need more fields based on your car data structure */}
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        handleUpdateCar(selectedCar.id, { /* Pass updated car data here */ });
+                    }}>
+                        <input type="text" placeholder="Car Name" defaultValue={selectedCar?.name} />
+                        <input type="number" placeholder="Price" defaultValue={selectedCar?.price} />
+                        {/* Add other fields as needed */}
+                        <button type="submit">Update</button>
+                    </form>
+                </Modal>
                 <div className='thirddiv'>
                     <h2 className='thirddivh3'>Best Deals First <a href=""><FaAngleDown className='logo' /></a></h2>
 
@@ -180,10 +222,14 @@ const Profilee = () => {
 
                                     <div className='thirdfive'>
                                         <div className='thirdfiveone'>
-                                            <button className="btn2">Update Data</button>
+                                            <button className="btn2"   
+                                                onClick={() => {
+                                                setSelectedCar(car);
+                                                setShowUpdateModal(true);
+                                            }}>Update Data</button>
                                         </div>
                                         <div className='thirdfiveone'>
-                                            <button className="btn">Delete Now</button>
+                                            <button className="btn" onClick={() => handleDeleteCar(car._id)}>Delete Now</button>
                                         </div>
                                     </div>
                                 </div>

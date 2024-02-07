@@ -1,17 +1,20 @@
-import axios from 'axios';
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 import './payment.scss';
 
 const Buynow = () => {
-    
+    const { state } = useLocation(); // Access the location state
+    const amount = state?.amount; 
+
     const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
     const payBkash = async () => {
         try {
-            const { data } = await axios.post(`${apiURL}/api/bkash/payment/create`, { amount: 50, orderId: 1 }, { withCredentials: true });
+            const { data } = await axios.post(`${apiURL}/api/bkash/payment/create`, { amount, orderId: 1 }, { withCredentials: true });
             window.location.href = data.bkashURL;
         } catch (error) {
-            console.log(error.response.data);
+            console.error(error.response.data);
         }
     };
 

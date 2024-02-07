@@ -35,7 +35,10 @@ const Nav = () => {
                     <NavLink className="nav-link" to="/../">Home</NavLink>
                 </li>
                 <li className='navbar-list'>
-                    <NavLink className="nav-link" to="/../listing">Buy</NavLink>
+                    <NavLink className="nav-link" to="/../Brandshow">Band Car</NavLink>
+                </li>
+                <li className='navbar-list'>
+                    <NavLink className="nav-link" to="/../listing">Buy Old</NavLink>
                 </li>
                 <li className='navbar-list'>
                     <NavLink className="nav-link" to="/../sellmycar">Sell</NavLink>
