@@ -1,11 +1,122 @@
-.allcar{
-    background-color: #7d7aa4;
-    .froms{
-        .delete img{
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+.allcar {
+    background-color: #7d7aa4; // A deep purple background for contrast
+    padding: 20px;
+    min-height: 100vh; // Full height of the viewport
+    color: #fff; // White text for contrast
+  
+    .header {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px; // Spacing below the header
     }
-}
+  
+    .froms {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Center the list in the middle of the page
+  
+      ul {
+        list-style: none; // Remove default list styling
+        padding: 0;
+        width: 100%; // Full width of the container
+        max-width: 600px; // Max width for better readability
+  
+        li {
+          background-color: #5f5980; // Slightly lighter purple for the list items
+          padding: 15px;
+          margin-bottom: 15px; // Spacing between list items
+          border-radius: 8px; // Rounded corners for list items
+          display: flex;
+          justify-content: space-between; // Space out the content and buttons
+          align-items: center;
+  
+          h2, p {
+            margin: 0; // Remove default margins
+          }
+  
+          .delete {
+            margin-left: 10px; // Space between buttons
+            cursor: pointer;
+            background-color: transparent; // No background for a cleaner look
+            border: none; // Remove border
+            padding: 0;
+  
+            &:hover img {
+              transform: scale(1.1); // Enlarge the button icons on hover
+            }
+  
+            img {
+              transition: transform 0.2s ease; // Smooth transform transition
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  
+    // Update Modal Styles
+    .update-modal {
+      position: fixed; // Position the modal above everything else
+      top: 0;
+      left: 0;
+      width: 100%; // Full width
+      height: 100%; // Full height
+      background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
+      display: flex;
+      justify-content: center;
+      align-items: center; // Center the modal content
+  
+      .modal-content {
+        background-color: #fff; // White background for the modal content
+        padding: 20px;
+        border-radius: 8px; // Rounded corners for the modal
+        color: #333; // Dark text for readability
+  
+        .close {
+          float: right; // Position the close button to the right
+          cursor: pointer;
+          font-size: 24px; // Larger close icon
+          color: #333; // Dark color for the close icon
+        }
+  
+        h2 {
+          color: #333; // Dark color for modal heading
+          margin-top: 0; // Remove top margin for the heading
+        }
+  
+        form {
+          display: flex;
+          flex-direction: column;
+  
+          label {
+            margin-top: 10px; // Spacing above each label
+          }
+  
+          input {
+            padding: 10px; // Padding inside input fields
+            margin-top: 5px; // Spacing between label and input field
+            border: 1px solid #ccc; // Border for input fields
+            border-radius: 4px; // Rounded corners for input fields
+          }
+  
+          button {
+            margin-top: 20px; // Spacing above the button
+            padding: 10px 15px; // Padding inside the button
+            background-color: #7d7aa4; // Use the same purple as the background
+            color: #fff; // White text on the button
+            border: none; // Remove button border
+            border-radius: 4px; // Rounded corners for the button
+            cursor: pointer; // Pointer cursor on hover
+  
+            &:hover {
+              background-color: #6c6899; // Slightly darker purple on hover
+            }
+          }
+        }
+      }
+    }
+  }
+  

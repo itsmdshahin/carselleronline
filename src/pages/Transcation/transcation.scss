@@ -1,4 +1,31 @@
-.transcation{
-    background-color: #fff;
-    color: red;
-}
+.transcation {
+    padding: 20px;
+  
+    .transactionData {
+      h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+  
+      .dataGrid {
+        height: 600px;
+        width: 100%;
+        background-color: #fff;
+  
+        .MuiDataGrid-root {
+          border: none;
+  
+          .MuiDataGrid-columnHeaders,
+          .MuiDataGrid-cell {
+            border-bottom: 1px solid #e0e0e0;
+          }
+  
+          .MuiDataGrid-columnHeaderTitle {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  

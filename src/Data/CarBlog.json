@@ -21,7 +21,7 @@
         },
         {
             "id": 2,
-            "title": "iPhone X",
+            "title": "Farari X",
             "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
             "price": 899,
             "discountPercentage": 17.94,
@@ -29,7 +29,7 @@
             "stock": 34,
             "brand": "Apple",
             "category": "smartphones",
-            "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/2/1.jpg",
                 "https://i.dummyjson.com/data/products/2/2.jpg",
@@ -39,7 +39,7 @@
         },
         {
             "id": 3,
-            "title": "Samsung Universe 9",
+            "title": "MBBW Universe 9",
             "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
             "price": 1249,
             "discountPercentage": 15.46,
@@ -47,14 +47,14 @@
             "stock": 36,
             "brand": "Samsung",
             "category": "smartphones",
-            "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/3/1.jpg"
             ]
         },
         {
             "id": 4,
-            "title": "OPPOF19",
+            "title": "TATA",
             "description": "OPPO F19 is officially announced on April 2021.",
             "price": 280,
             "discountPercentage": 17.91,
@@ -62,7 +62,7 @@
             "stock": 123,
             "brand": "OPPO",
             "category": "smartphones",
-            "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/4/1.jpg",
                 "https://i.dummyjson.com/data/products/4/2.jpg",
@@ -73,7 +73,7 @@
         },
         {
             "id": 5,
-            "title": "Huawei P30",
+            "title": "TOYATA P30",
             "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
             "price": 499,
             "discountPercentage": 10.58,
@@ -81,7 +81,7 @@
             "stock": 32,
             "brand": "Huawei",
             "category": "smartphones",
-            "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/5/1.jpg",
                 "https://i.dummyjson.com/data/products/5/2.jpg",
@@ -90,7 +90,7 @@
         },
         {
             "id": 6,
-            "title": "MacBook Pro",
+            "title": "MBEW Pro",
             "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
             "price": 1749,
             "discountPercentage": 11.02,
@@ -98,7 +98,7 @@
             "stock": 83,
             "brand": "Apple",
             "category": "laptops",
-            "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/6/1.png",
                 "https://i.dummyjson.com/data/products/6/2.jpg",
@@ -116,7 +116,7 @@
             "stock": 50,
             "brand": "Samsung",
             "category": "laptops",
-            "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/7/1.jpg",
                 "https://i.dummyjson.com/data/products/7/2.jpg",
@@ -134,7 +134,7 @@
             "stock": 68,
             "brand": "Microsoft Surface",
             "category": "laptops",
-            "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/8/1.jpg",
                 "https://i.dummyjson.com/data/products/8/2.jpg",
@@ -153,7 +153,7 @@
             "stock": 96,
             "brand": "Infinix",
             "category": "laptops",
-            "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/9/1.jpg",
                 "https://i.dummyjson.com/data/products/9/2.png",
@@ -172,7 +172,7 @@
             "stock": 89,
             "brand": "HP Pavilion",
             "category": "laptops",
-            "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/10/1.jpg",
                 "https://i.dummyjson.com/data/products/10/2.jpg",
@@ -190,7 +190,7 @@
             "stock": 65,
             "brand": "Impression of Acqua Di Gio",
             "category": "fragrances",
-            "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/11/1.jpg",
                 "https://i.dummyjson.com/data/products/11/2.jpg",
@@ -208,7 +208,7 @@
             "stock": 52,
             "brand": "Royal_Mirage",
             "category": "fragrances",
-            "thumbnail": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+            "thumbnail": "https://th.bing.com/th/id/OIP.KMosWYXn4e6Q9UTEKWvbFwHaEK?pid=ImgDet&rs=1",
             "images": [
                 "https://i.dummyjson.com/data/products/12/1.jpg",
                 "https://i.dummyjson.com/data/products/12/2.jpg",

@@ -35,7 +35,7 @@ const Nav = () => {
                     <NavLink className="nav-link" to="/../">Home</NavLink>
                 </li>
                 <li className='navbar-list'>
-                    <NavLink className="nav-link" to="/../Brandshow">Band Car</NavLink>
+                    <NavLink className="nav-link" to="/../Brandshow">Brand Car</NavLink>
                 </li>
                 <li className='navbar-list'>
                     <NavLink className="nav-link" to="/../listing">Buy Old</NavLink>

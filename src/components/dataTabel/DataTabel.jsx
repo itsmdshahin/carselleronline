@@ -50,7 +50,7 @@ const DataTabel = () => {
             sortable: false,
             width: 160,
             valueGetter: (params) =>
-                `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+                `${params.row.name || ''} ${params.row.lastName || ''}`,
         },
         {
             field: "actions",
@@ -80,27 +80,13 @@ const DataTabel = () => {
                 className="datagrid"
                 rows={rows}
                 columns={columns}
-                initialState={{
-                    pagination: {
-                        paginationModel: {
-                            pageSize: 10,
-                        },
-                    },
-                }}
-                // Here serach filter addess slots
-                slots={{ toolbar: GridToolbar }}
-                slotProps={{
-                    toolbar: {
-                        showQuickFilter: true,
-                        quickFilterProps: { debounceMs: 500 },
-                    },
-                }}
-                pageSizeOptions={[5]}
+                pageSize={5}
+                rowsPerPageOptions={[5]}
                 checkboxSelection
-                disableRowSelectionOnClick
-                disableColumnSelector
-                disableColumnFilter
-                disableDensitySelector
+                disableSelectionOnClick
+                components={{
+                    Toolbar: GridToolbar,
+                }}
             />
         </div>
     );
