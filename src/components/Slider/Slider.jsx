@@ -16,16 +16,20 @@ const Slider = () => {
       <div className='index'>
         <div className='header'>
           <div className='backgroundimage'>
+            {/* <video autoPlay muted loop className="backgroundVideo">
+              <source src="../../assets/videos/carsellerevent.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
             <h1>#1 Marketplace to Buy & Sell Car</h1>
 
             <div className='search-container'>
               <div className="wrap">
-                <div className="search">
+                {/* <div className="search">
                   <input type="text" className="searchTerm" id="Search" placeholder='Search'></input>
                   <button type="submit" className="searchButton">
                     <p><FaSistrix /> </p>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
 

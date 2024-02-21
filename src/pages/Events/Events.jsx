@@ -10,17 +10,100 @@ import { Footer } from "../../components/headerPage/footer";
 
 
 const Events = () => {
-    const apiURL =  `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
+    const apiURL = `http://localhost:5000`; // || `https://carseller-server.onrender.com` 
 
-    const [showPopup, setShowPopup] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);   
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: ''
+    });
+
+    // Function to handle form input changes
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    // Function to submit the form data
+    const registerEvent = async (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+
+        try {
+            const response = await fetch(`${apiURL/api/eventregistrations}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                console.log('Registration successful:', data);
+                // Handle successful registration here (e.g., showing a success message)
+                setShowPopup(false); // Close the popup after successful registration
+            } else {
+                // Handle server errors or unsuccessful registration here
+                console.error('Registration failed');
+            }
+        } catch (error) {
+            console.error('Failed to register:', error);
+        }
+    };
+ 
+    const registerForEvent = async (e) => {
+        e.preventDefault(); // Prevent the default form submit action
+
+        // Collect form data
+        const name = document.querySelector('.name').value;
+        const email = document.querySelector('.email').value;
+        const phone = document.querySelector('.phone').value;
+
+        // Construct the request body
+        const requestBody = {
+            name,
+            email,
+            phone
+        };
+
+        try {
+            // Send a POST request to your backend endpoint
+            const response = await fetch(`${apiURL/api/eventregistrations}`, { // Use the correct endpoint for event registration
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to register for the event');
+            }
+
+            // Handle success
+            const result = await response.json();
+            console.log(result);
+            alert('Registration successful!');
+            setShowPopup(false); // Close the popup on successful registration
+        } catch (error) {
+            console.error('Error registering for the event:', error);
+            alert('Failed to register for the event.');
+        }
+    };
+
+
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
     };
     return (
 
-       <>
-        {/* <Header />
+        <>
+            {/* <Header />
         <div className="mainevent">
             <div className="overlay"></div>
             <video src={video} autoPlay loop muted />
@@ -49,23 +132,17 @@ const Events = () => {
                             <div className="popup">
                                 <div className="popup-content">
                                     <span className="close" onClick={togglePopup}><IoIosCloseCircle /></span>
-                                    <h2></h2>
                                     <div className="form-container">
-
-
-                                        <form className="form">
-
-                                            <input type="text" className="name" placeholder="Name" />
-                                            <input type="email" className="email" placeholder="Email" />
-                                            <input type="number" className="phone" placeholder="Phone" />
-
-                                            <button type="btn" className="submit">Register</button>
+                                        <form className="form" onSubmit={registerEvent}>
+                                            <input type="text" name="name" className="name" placeholder="Name" onChange={handleInputChange} />
+                                            <input type="email" name="email" className="email" placeholder="Email" onChange={handleInputChange} />
+                                            <input type="number" name="phone" className="phone" placeholder="Phone" onChange={handleInputChange} />
+                                            <button type="submit" className="submit">Register</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         )}
-
 
                     </div>
                     <div className="free">

@@ -130,29 +130,29 @@ export const ChartBoxUser = {
     icon: "./assets/user.png",
     title: "Total Visitor",
     dataKey: "users",
-    number: "15,233",
-    percentage: 49,
+    number: "20",
+    percentage: -49,
     chartdata: [
         {
-            name: "Sun", users: 1400
+            name: "Sun", users: 1
         },
         {
-            name: "Mon", users: 440
+            name: "Mon", users: 4
         },
         {
-            name: "Tue", users: 700
+            name: "Tue", users: 8
         },
         {
-            name: "Wed", users: 400
+            name: "Wed", users: 3
         },
         {
-            name: "Thu", users: 880
+            name: "Thu", users: 6
         },
         {
-            name: "Fri", users: 450
+            name: "Fri", users: 5
         },
         {
-            name: "Sat", users: 1900
+            name: "Sat", users: 3
         }
     ],
 }
@@ -164,29 +164,29 @@ export const Profite = {
     icon: "./assets/user.png",
     title: "Total Profit",
     dataKey: "users",
-    number: "$225,233",
+    number: "$225",
     percentage: 30,
     chartdata: [
         {
-            name: "Sun", users: 2340
+            name: "Sun", users: 2
         },
         {
-            name: "Mon", users: 4340
+            name: "Mon", users: 3
         },
         {
-            name: "Tue", users: 5400
+            name: "Tue", users: 4
         },
         {
-            name: "Wed", users: 6600
+            name: "Wed", users: 4
         },
         {
-            name: "Thu", users: 3880
+            name: "Thu", users: 3
         },
         {
-            name: "Fri", users: 8520
+            name: "Fri", users: 1
         },
         {
-            name: "Sat", users: 4900
+            name: "Sat", users: 6
         }
     ],
 }

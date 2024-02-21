@@ -14,7 +14,7 @@ function Menu() {
         </Link>
         <Link to="/admin/Profile" className='listitem'>
           <FontAwesomeIcon icon={faUser} className='icon' />
-          <span>Profile</span>
+          <span>Profile Finder</span>
         </Link>
       </div>
       <div className="item">
@@ -42,9 +42,9 @@ function Menu() {
           <FontAwesomeIcon icon={faFile} className='icon' />
           <span>Show all Cars</span>
         </Link>
-        <Link to="/admin/Setting" className='listitem'>
+        <Link to="/admin/EventAdmin" className='listitem'>
           <FontAwesomeIcon icon={faCog} className='icon' />
-          <span>Setting</span>
+          <span>Event</span>
         </Link>
       </div>
     </div>

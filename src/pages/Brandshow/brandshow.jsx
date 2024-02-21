@@ -32,60 +32,78 @@ const Brandshow = () => {
                                 </div>
                             </div>
                         </Link>
-                        <div class="img-box">
-                            <img src="../../../images/brand/Audi-BD-300x300.jpg" alt="" />
-                            <div class="transparent-box">
-                                <div class="caption">
-                                    <p>Audi</p>
-                                    <p class="opacity-low">Cinematic</p>
+                        <Link to="/BrandPrevious">
+                            <div class="img-box">
+                                <img src="../../../images/brand/Audi-BD-300x300.jpg" alt="" />
+                                <div class="transparent-box">
+                                    <div class="caption">
+                                        <p>Audi</p>
+                                        <p class="opacity-low">Cinematic</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="../../../images/brand/Land-Rover-Car-Price-in-BD-300x300.jpg" alt="" />
-                            <div class="transparent-box">
-                                <div class="caption">
-                                    <p>Land-Rover</p>
-                                    <p class="opacity-low">Composite</p>
+                        </Link>
+                        <Link to="/BrandPrevious">
+                            <div class="img-box">
+                                <img src="../../../images/brand/Land-Rover-Car-Price-in-BD-300x300.jpg" alt="" />
+                                <div class="transparent-box">
+                                    <div class="caption">
+                                        <p>Land-Rover</p>
+                                        <p class="opacity-low">Composite</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="../../../images/brand/Mercedes-Benz-Price-in-bd-300x300.png" alt="" />
-                            <div class="transparent-box">
-                                <div class="caption">
-                                    <p>Mercedes-Benz</p>
-                                    <p class="opacity-low">Landscape</p>
+                        </Link>
+                        <Link to="/BrandPrevious">
+                            <div class="img-box">
+                                <img src="../../../images/brand/Mercedes-Benz-Price-in-bd-300x300.png" alt="" />
+                                <div class="transparent-box">
+                                    <div class="caption">
+                                        <p>Mercedes-Benz</p>
+                                        <p class="opacity-low">Landscape</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="../../../images/brand/Toyota-300x300.png" alt="" />
-                            <div class="transparent-box">
-                                <div class="caption">
-                                    <p>Toyota</p>
-                                    <p class="opacity-low">Cityscape</p>
+                        </Link>
+                        <Link to="/BrandPrevious">
+                            <div class="img-box">
+                                <img src="../../../images/brand/Toyota-300x300.png" alt="" />
+                                <div class="transparent-box">
+                                    <div class="caption">
+                                        <p>Toyota</p>
+                                        <p class="opacity-low">Cityscape</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="../../../images/brand/Kia.png" alt="" />
-                            <div class="transparent-box">
-                                <div class="caption">
-                                    <p>Kia</p>
-                                    <p class="opacity-low">Cinematic</p>
+                        </Link>
+                        <Link to="/BrandPrevious">
+                            <div class="img-box">
+                                <img src="../../../images/brand/Kia.png" alt="" />
+                                <div class="transparent-box">
+                                    <div class="caption">
+                                        <p>Kia</p>
+                                        <p class="opacity-low">Cinematic</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="../../../images/brand/Nissan-Cars-Price-in-BD-300x300.jpg" alt="" />
-                            <div class="transparent-box">
-                                <div class="caption">
-                                    <p>Nissan</p>
-                                    <p class="opacity-low">Cityscape</p>
+                        </Link>
+                        <Link to="/BrandPrevious">
+                            <div class="img-box">
+                                <img src="../../../images/brand/Nissan-Cars-Price-in-BD-300x300.jpg" alt="" />
+                                <div class="transparent-box">
+                                    <div class="caption">
+                                        <p>Nissan</p>
+                                        <p class="opacity-low">Cityscape</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
+
+
+
+
+
+
                         <div class="img-box">
                             <img src="../../../images/brand/Tata-300x300.png" alt="" />
                             <div class="transparent-box">

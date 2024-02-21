@@ -16,6 +16,19 @@
 
       background-size: cover;
       background-position: center;
+      // height: 100vh;
+      // position: relative;
+      // .backgroundVideo {
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   top: 0;
+      //   left: 0;
+      //   object-fit: cover;
+      //   /* Ensure the video covers the entire div */
+      //   z-index: -1;
+      //   /* Ensure the video stays in the background */
+      // }
 
       h1 {
         display: flex;
@@ -148,17 +161,17 @@
         width: 100%;
 
         tr {
-      border: 1px solid #151F28;
+          border: 1px solid #151F28;
 
           th {
-            
+
             font-size: 20px;
             color: #151F28;
             padding: 2%;
 
           }
 
-          td { 
+          td {
             font-family: 'Abril Fatface', cursive;
             text-align: center;
             padding-top: 15px;

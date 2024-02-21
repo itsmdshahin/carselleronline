@@ -27,9 +27,9 @@ const Home = () => {
       <div className="box box3">
         <ChartBox {...Profite} />
       </div>
-      <div className="box box6">
+      {/* <div className="box box6">
         <ChartBox {...ChartBoxUsers} />
-      </div>
+      </div> */}
       {/* <div className="box box7">Box7</div> */}
       {/* <div className="box box8">Box1</div>
       <div className="box box9">Box1</div> */}

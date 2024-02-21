@@ -35,7 +35,7 @@ import Events from "./pages/Events/Events";
 import Buynow from "./pages/Payment/Buynow";
 import Error from "./pages/Payment/Error";
 import Success from "./pages/Payment/Success";
-
+import EventAdmin from "./pages/Events/EventAdmin";
 import ForgotPassword from "./components/Login/ForgotPassword"
 function Admin() {
 
@@ -82,8 +82,8 @@ function Admin() {
           element: isLoggedIn ? <Allcar /> : <Login />,
         },
         {
-          path: "/admin/setting",
-          element: isLoggedIn ? <Allcar /> : <Login />,
+          path: "/admin/EventAdmin",
+          element: isLoggedIn ? <EventAdmin /> : <Login />,
         },
       ]
     },
